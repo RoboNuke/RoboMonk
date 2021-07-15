@@ -3,7 +3,7 @@ extends Node2D
 
 var start_menu = preload("res://5. User Interfaces/Start Menu.tscn").instance()
 
-#var player = preload("res://1. Player/Player.tscn").instance()
+var player = preload("res://1. Player/Player.tscn").instance()
 #var current_level = null
 var prototype_level = preload("res://2. Levels/Prototype Level/Prototype Level.tscn").instance()
 
@@ -16,7 +16,7 @@ func _ready():
 func goto_main_menu():
 	if current_level != null:
 		remove_child(current_level)
-		#player.stop_camera()
+		player.stop_camera()
 	
 	current_level = start_menu
 	add_child(current_level)
@@ -28,8 +28,8 @@ func _on_Start_Button_pressed(nam):
 	current_level = prototype_level
 	add_child(current_level)
 	#player = player_class
-	#add_child(player)
-	#player.restart(current_level.get_player_start())
+	add_child(player)
+	player.restart(current_level.get_player_start())
 	print("Start")
 	#testing
 	

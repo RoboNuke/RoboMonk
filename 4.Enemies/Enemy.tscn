@@ -1,10 +1,10 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://4.Enemies/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://4.Enemies/State Machine.gd" type="Script" id=2]
 [ext_resource path="res://4.Enemies/Hand.gd" type="Script" id=3]
 [ext_resource path="res://4.Enemies/Shoulder.gd" type="Script" id=4]
 [ext_resource path="res://addons/luisboch.field_of_view/field_of_view.gd" type="Script" id=5]
-[ext_resource path="res://state_machine.gd" type="Script" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "idle"
@@ -83,7 +83,7 @@ __meta__ = {
 }
 
 [node name="State Machine" type="Node" parent="."]
-script = ExtResource( 6 )
+script = ExtResource( 2 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 position = Vector2( -16, 16 )
@@ -95,7 +95,7 @@ position = Vector2( -16, 16 )
 polygon = PoolVector2Array( 0, 0, 0, 0, 32, 0, 32, -32, 0, -32 )
 
 [node name="Shoulder" type="Position2D" parent="."]
-rotation = -1.24518
+rotation = -2.05941
 script = ExtResource( 4 )
 
 [node name="FieldOfView" type="Node2D" parent="Shoulder"]
