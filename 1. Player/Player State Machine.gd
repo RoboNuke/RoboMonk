@@ -23,42 +23,72 @@ func _input(event):
 				parent._jump()
 			else:
 				parent.jump_buffer.start()
+	if [states.idling, states.running, states.jumping, states.falling].has(state):
+		if event.is_action_pressed("action"):
+			parent._absorb()
+	if [states.absorbing].has(state):
+		if event.is_action_released("action") or parent.max_absorb.is_stopped():
+			parent._dash()
 		
 func _get_transition(delta):
 	match state:
 		states.idling:
-			if !parent.is_grounded:
-				if parent.velocity.y < 0:
-					return states.jumping
-				elif parent.velocity.y > 0:
-					return states.falling
-			elif abs(parent.velocity.x) > 1:
-				return states.running
-		states.running:
-			if !parent.is_grounded:
-				if parent.velocity.y < 0:
-					return states.jumping
-				elif parent.velocity.y > 0:
-					return states.falling
-			elif abs(parent.velocity.x) < idling_cutoff:
-				return states.idling
-		states.jumping:
-			if parent.is_grounded:
-				if abs(parent.velocity.x) > idling_cutoff:
+			if not parent.is_absorbing:
+				if !parent.is_grounded:
+					if parent.velocity.y < 0:
+						return states.jumping
+					elif parent.velocity.y > 0:
+						return states.falling
+				elif abs(parent.velocity.x) > 1:
 					return states.running
-				else:
+			else:
+				return states.absorbing
+			
+		states.running:
+			if not parent.is_absorbing:
+				if !parent.is_grounded:
+					if parent.velocity.y < 0:
+						return states.jumping
+					elif parent.velocity.y > 0:
+						return states.falling
+				elif abs(parent.velocity.x) < idling_cutoff:
 					return states.idling
 			else:
-				if parent.velocity.y > 0:
-					return states.falling
+				return states.absorbing
+		states.jumping:
+			if not parent.is_absorbing:
+				if parent.is_grounded:
+					if abs(parent.velocity.x) > idling_cutoff:
+						return states.running
+					else:
+						return states.idling
+				else:
+					if parent.velocity.y > 0:
+						return states.falling
+			else:
+				return states.absorbing
+				
 		states.falling:
+			if parent.is_absorbing:
+				return states.absorbing
 			if parent.is_grounded:
 				if abs(parent.velocity.x) > idling_cutoff:
 					return states.running
 				else:
 					return states.idling
-					
-			
+		states.absorbing:
+			if parent.is_dashing:
+				return states.dashing
+		states.dashing:
+			if parent.is_grounded:
+				if abs(parent.velocity.x) > idling_cutoff:
+					return states.running
+				else:
+					return states.idling
+			elif parent.is_dashing:
+				if parent.velocity.y > 0:
+					return states.falling
+		
 				
 
 
@@ -77,8 +107,10 @@ func _enter_state(new_state, old_state):
 			print("jumping")
 			parent.anim_tree_state_machine.travel("jumping")
 		states.dashing:
+			parent.anim_tree_state_machine.travel("dashing")
 			print("dashing")
 		states.absorbing:
+			parent.anim_tree_state_machine.travel("absorbing")
 			print("absorbing")
 		
 	

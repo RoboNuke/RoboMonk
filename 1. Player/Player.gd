@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 onready var coyote_timer = $"Timers/Coyote Timer"
 onready var jump_buffer = $"Timers/Jump Buffer"
+onready var max_absorb = $"Timers/Max Absorb"
+onready var dash_timer = $"Timers/Dash Timer"
 onready var ground_rays = $"Ground Rays"
 onready var animation_tree = $AnimationTree
 onready var player_rig =  $"Charecter Rig"
@@ -12,8 +14,9 @@ export var gravity = 1200
 export var move_speed = 200
 export var jump_force = 1200
 export var modifier = 1
+var dash_strength = 600
 var FLOOR_NORMAL = Vector2.UP
-
+var dash_direction = Vector2.ZERO
 
 # State Variables
 var is_jumping = false
@@ -22,6 +25,7 @@ var was_on_floor = false
 var is_dashing = false
 var anim_tree_state_machine = null
 var look_left = false
+var is_absorbing = false
 # ANIMATION vars
 export var left_shoulder = 5
 export var right_shoulder = -5
@@ -60,12 +64,36 @@ func stop_camera():
 func start_camera():
 	$Camera2D.current = true
 
-
+func norm(x):
+	if abs(x) < 1:
+		return 0
+	elif x > 0:
+		return 1
+	else:
+		return -1
+		
+func _absorb():
+	max_absorb.start()
+	dash_direction.x = norm(velocity.x)
+	dash_direction.y = norm(velocity.y)
+	print(dash_direction)
+	velocity = Vector2(0,0)
+	is_absorbing = true
+	
 func _dash():
-	pass
+	is_absorbing = false
+	is_dashing = true
+	max_absorb.stop()
+	dash_timer.start()
+	dash_direction.x = (-int(Input.is_action_pressed("ui_left")) + int(Input.is_action_pressed("ui_right")))
+	dash_direction.y = (-int(Input.is_action_pressed("ui_up")) + int(Input.is_action_pressed("ui_down")))
+	print(dash_direction)
+	velocity = dash_direction.normalized() * dash_strength
+	_face_move_direction(dash_direction.x)
+	
 	
 func _apply_gravity(delta):
-	if coyote_timer.is_stopped() and not is_dashing:
+	if coyote_timer.is_stopped() and not is_dashing and not is_absorbing:
 		velocity.y += gravity * delta * modifier
 		if is_jumping && velocity.y > 0:
 			is_jumping = false
@@ -83,16 +111,17 @@ func _jump():
 
 var facing_direction = -1
 
-func _handle_move_input():
-
-	var move_direction = (-int(Input.is_action_pressed("ui_left")) + int(Input.is_action_pressed("ui_right")))
-	
+func _face_move_direction(move_direction):
 	if facing_direction != move_direction and move_direction != 0:
 		transform *= Transform2D.FLIP_X
 		facing_direction = move_direction
-		
-	if !is_dashing:
+	
+func _handle_move_input():
+	var move_direction = (-int(Input.is_action_pressed("ui_left")) + int(Input.is_action_pressed("ui_right")))
+	
+	if !is_dashing and !is_absorbing:
 		velocity.x = lerp(velocity.x, move_direction * move_speed, _get_h_weight())
+		_face_move_direction(move_direction)
 		
 func _get_h_weight():
 	if is_grounded or not coyote_timer.is_stopped():
@@ -103,10 +132,11 @@ func _get_h_weight():
 var last_hit = null
 
 func hit(hitter):
-	#print("Player Hit")
-#	if shield_holder.will_block():
-#		#print("Blocked by shield")
-#		last_hit = hitter
-	if last_hit != hitter:
+	if is_absorbing:
+		print("I would absorb that ", hitter.name)
+	elif last_hit != hitter:
 		print("You Lose")
-		#queue_free()
+
+
+func _on_Dash_Timer_timeout():
+	is_dashing = false
