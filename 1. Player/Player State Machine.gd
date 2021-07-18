@@ -8,13 +8,23 @@ func _ready():
 	add_state("dashing")
 	add_state("jumping")
 	add_state("idling")
+	add_state("wall_sliding")
 	call_deferred("set_state", states.idling)
 	
 func _state_logic(delta):
-	parent._handle_move_input()
+	parent._update_move_direction()
+	parent._update_wall_direction()
+	print(parent.facing_direction, " ", parent.desired_look_direction)
+	if state != states.wall_sliding:
+		parent._handle_move_input()
+	else:
+		parent.desired_look_direction = -parent.wall_direction
+	parent._face_desired_direction()
 	parent._apply_gravity(delta)
+	if state == states.wall_sliding:
+		parent._cap_gravity_wall_sliding()
 	parent._apply_movement()
-
+	
 func _input(event):
 	if [states.idling, states.running].has(state):
 		if event.is_action_pressed("ui_up"):
@@ -23,7 +33,14 @@ func _input(event):
 				parent._jump()
 			else:
 				parent.jump_buffer.start()
-	if [states.idling, states.running, states.jumping, states.falling].has(state):
+	if [states.wall_sliding].has(state):
+		if event.is_action_pressed("ui_up"):
+			parent._jump(true)
+		if event.is_action_pressed("ui_right") and parent.wall_direction == -1:
+			parent.velocity.x = 50
+		if event.is_action_pressed("ui_left") and parent.wall_direction == 1:
+			parent.velocity.x = -50
+	if not [states.absorbing, states.dashing].has(state):
 		if event.is_action_pressed("action"):
 			parent._absorb()
 	if [states.absorbing].has(state):
@@ -57,6 +74,8 @@ func _get_transition(delta):
 				return states.absorbing
 		states.jumping:
 			if not parent.is_absorbing:
+				if parent.wall_direction != 0:
+					return states.wall_sliding
 				if parent.is_grounded:
 					if abs(parent.velocity.x) > idling_cutoff:
 						return states.running
@@ -71,6 +90,8 @@ func _get_transition(delta):
 		states.falling:
 			if parent.is_absorbing:
 				return states.absorbing
+			if parent.wall_direction != 0:
+				return states.wall_sliding
 			if parent.is_grounded:
 				if abs(parent.velocity.x) > idling_cutoff:
 					return states.running
@@ -81,14 +102,25 @@ func _get_transition(delta):
 				return states.dashing
 		states.dashing:
 			if parent.is_grounded:
-				if abs(parent.velocity.x) > idling_cutoff:
-					return states.running
-				else:
-					return states.idling
-			elif parent.is_dashing:
+				return states.idling
+			if parent.wall_direction != 0:
+				return states.wall_sliding
+			if !parent.is_dashing:
 				if parent.velocity.y > 0:
 					return states.falling
-		
+				else:
+					return states.jumping
+
+		states.wall_sliding:
+			if parent.is_absorbing:
+				return states.absorbing
+			if parent.is_grounded:
+				return states.idling
+			if parent.wall_direction == 0:
+				if parent.velocity.y > 0:
+					return states.falling
+				elif parent.velocity.y < 0:
+					return states.jumping
 				
 
 
@@ -112,8 +144,9 @@ func _enter_state(new_state, old_state):
 		states.absorbing:
 			parent.anim_tree_state_machine.travel("absorbing")
 			print("absorbing")
-		
-	
+		states.wall_sliding:
+			print("wall sliding")
+			parent.anim_tree_state_machine.travel("wall slide")
 func _exit_state(old_state, new_state):
 	pass
 	#if old_state == states.search:
