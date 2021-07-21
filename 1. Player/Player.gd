@@ -31,6 +31,7 @@ var anim_tree_state_machine = null
 var move_direction = 0
 var wall_direction = 0
 var desired_look_direction = 0
+var facing_direction = -1
 var is_absorbing = false
 # ANIMATION vars
 export var left_shoulder = 5
@@ -92,7 +93,7 @@ func _dash():
 	dash_timer.start()
 	dash_direction.x = (-int(Input.is_action_pressed("ui_left")) + int(Input.is_action_pressed("ui_right")))
 	dash_direction.y = (-int(Input.is_action_pressed("ui_up")) + int(Input.is_action_pressed("ui_down")))
-	print(dash_direction)
+	
 	velocity = dash_direction.normalized() * dash_strength
 	desired_look_direction = dash_direction.x
 	
@@ -140,12 +141,10 @@ func _jump(wall_jump = false):
 			
 	is_jumping = true 
 
-var facing_direction = -1
 
 func _face_desired_direction():
-	print(desired_look_direction != 0, " ", desired_look_direction != facing_direction )
+	
 	if desired_look_direction !=  0 and desired_look_direction != facing_direction:
-		print("here")
 		transform *= Transform2D.FLIP_X
 		var holder = left_rays
 		left_rays = right_rays

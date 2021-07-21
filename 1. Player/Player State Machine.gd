@@ -14,7 +14,6 @@ func _ready():
 func _state_logic(delta):
 	parent._update_move_direction()
 	parent._update_wall_direction()
-	print(parent.facing_direction, " ", parent.desired_look_direction)
 	if state != states.wall_sliding:
 		parent._handle_move_input()
 	else:
