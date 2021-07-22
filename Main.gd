@@ -1,6 +1,8 @@
 extends Node2D
 
+onready var main_bg = $ParallaxBackground/ParallaxLayer/MainBG
 
+var scifi_bg = preload("res://2. Levels/Backgrounds/scifi_platform_BG1.jpg")
 var start_menu = preload("res://5. User Interfaces/Start Menu.tscn").instance()
 
 var player = preload("res://1. Player/Player.tscn").instance()
@@ -24,6 +26,7 @@ func goto_main_menu():
 	current_level.quit_button.connect("pressed", self, "_on_Quit_Button_pressed")
 	
 func _on_Start_Button_pressed(nam):
+	main_bg.texture = scifi_bg
 	remove_child(current_level)
 	current_level = prototype_level
 	add_child(current_level)

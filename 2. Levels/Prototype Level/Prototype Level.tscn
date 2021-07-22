@@ -12,6 +12,7 @@ script = ExtResource( 2 )
 ]]
 
 [node name="TileMap2" type="TileMap" parent="Map"]
+position = Vector2( 0, -272 )
 tile_set = ExtResource( 4 )
 cell_size = Vector2( 16, 16 )
 collision_layer = 18
@@ -21,7 +22,7 @@ tile_data = PoolIntArray( 786498, 0, 131073, 786499, 0, 131074, 786500, 0, 13107
 [node name="Enimies" type="Node2D" parent="."]
 
 [node name="Enemy" parent="Enimies" instance=ExtResource( 3 )]
-position = Vector2( 974, 492 )
+position = Vector2( 960, 240 )
 
 [node name="Player Start" type="Position2D" parent="."]
-position = Vector2( 256, 352 )
+position = Vector2( 80, 224 )

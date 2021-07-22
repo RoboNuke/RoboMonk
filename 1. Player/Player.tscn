@@ -2355,6 +2355,7 @@ wait_time = 0.2
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+current = true
 
 [node name="State Machine" type="Node" parent="."]
 script = ExtResource( 3 )
