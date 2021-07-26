@@ -401,6 +401,7 @@ tracks/23/keys = {
 
 [sub_resource type="Animation" id=41]
 length = 0.1
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Charecter Rig/Body/Right Thigh:position")
 tracks/0/interp = 1
@@ -2316,6 +2317,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 2, 10 )
 shape = SubResource( 1 )
 

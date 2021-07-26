@@ -95,7 +95,7 @@ position = Vector2( -16, 16 )
 polygon = PoolVector2Array( 0, 0, 0, 0, 32, 0, 32, -32, 0, -32 )
 
 [node name="Shoulder" type="Position2D" parent="."]
-rotation = -2.05941
+rotation = -2.82423
 script = ExtResource( 4 )
 
 [node name="FieldOfView" type="Node2D" parent="Shoulder"]
