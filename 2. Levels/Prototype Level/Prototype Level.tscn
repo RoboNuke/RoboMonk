@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://4.Enemies/crawling/crawling.tscn" type="PackedScene" id=1]
 [ext_resource path="res://2. Levels/Prototype Level/Prototype Level.gd" type="Script" id=2]
-[ext_resource path="res://4.Enemies/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://4.Enemies/Base/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://2. Levels/tilesets/mega_metal.tres" type="TileSet" id=4]
 
 [node name="Prototype Level" type="Node2D"]
@@ -23,6 +24,9 @@ tile_data = PoolIntArray( 786498, 0, 131073, 786499, 0, 131074, 786500, 0, 13107
 
 [node name="Enemy" parent="Enimies" instance=ExtResource( 3 )]
 position = Vector2( 960, 240 )
+
+[node name="Enemy2" parent="Enimies" instance=ExtResource( 1 )]
+position = Vector2( 128, 240 )
 
 [node name="Player Start" type="Position2D" parent="."]
 position = Vector2( 80, 224 )

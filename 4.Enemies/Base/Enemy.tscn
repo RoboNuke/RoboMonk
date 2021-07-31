@@ -1,0 +1,205 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://addons/luisboch.field_of_view/field_of_view.gd" type="Script" id=1]
+[ext_resource path="res://4.Enemies/Base/Enemy.gd" type="Script" id=2]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends StateMachine
+
+func _ready():
+	add_state(\"search\")
+	add_state(\"chase\")
+	add_state(\"attack\")
+	call_deferred(\"set_state\", states.search)
+	
+func _state_logic(delta):
+	
+	if state == states.search:
+		parent._search()
+	elif state == states.chase:
+		parent._chase()
+	elif state == states.attack:
+		parent._attack()
+	
+func _get_transition(delta):
+	var player_in_fov = parent._check_fov()
+	match state:
+		states.search:
+			if player_in_fov[0]: # in danger zone
+				return states.attack
+			elif player_in_fov[1]:
+				return states.chase
+		states.chase:
+			if player_in_fov[0]:
+				return states.attack
+			elif !(player_in_fov[1]):
+				return states.search
+		states.attack:
+			if player_in_fov[1]:
+				return states.chase
+			elif !player_in_fov[0]:
+				return states.search
+				
+			
+	
+func _enter_state(new_state, old_state):
+	#if old_state != null:
+	#	print(\"From \", states.get_key(old_state), \" to \", states.get_key(new_state))
+	#previous_state = old_state
+	#state = new_state
+	match new_state:
+		states.search:
+			#print(\"search\")
+			parent.animation_tree.travel(\"search\")
+		states.chase:
+			#print(\"chase\")
+			parent.animation_tree.travel(\"idle\")
+		states.attack:
+			#print(\"attack\")
+			parent.animation_tree.travel(\"idle\")
+	
+func _exit_state(old_state, new_state):
+	if old_state == states.search:
+		parent.animation.stop()
+	pass
+"
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends Position2D
+
+
+func hit(hitter = null):
+	get_parent().hit(hitter)
+"
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends Position2D
+
+
+func hit(hitter=null):
+	get_parent().hit(hitter)
+	
+"
+
+[sub_resource type="Animation" id=5]
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Shoulder:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Shoulder:rotation_degrees")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -90.0, -180.0, -90.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Shoulder:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "search"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+switch_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+
+[sub_resource type="AnimationNodeStateMachine" id=11]
+states/idle/node = SubResource( 7 )
+states/idle/position = Vector2( 267, 71 )
+states/search/node = SubResource( 8 )
+states/search/position = Vector2( 535, 196 )
+transitions = [ "idle", "search", SubResource( 9 ), "search", "idle", SubResource( 10 ) ]
+start_node = "search"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=12]
+
+[node name="Enemy" type="KinematicBody2D" groups=[
+"Enemy",
+]]
+collision_layer = 4
+collision_mask = 15
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="State Machine" type="Node" parent="."]
+script = SubResource( 2 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( -16, 16 )
+color = Color( 0.94902, 0.584314, 0.584314, 1 )
+polygon = PoolVector2Array( 0, 0, 0, 0, 32, 0, 32, -32, 0, -32 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -16, 16 )
+polygon = PoolVector2Array( 0, 0, 0, 0, 32, 0, 32, -32, 0, -32 )
+
+[node name="Shoulder" type="Position2D" parent="."]
+rotation = -3.09019
+script = SubResource( 3 )
+
+[node name="FieldOfView" type="Node2D" parent="Shoulder"]
+script = ExtResource( 1 )
+field_of_view = 80
+warn_distance = 225
+danger_distance = 50
+target_groups = [ "Player" ]
+collision_mask = 3
+frequency = 0.1
+
+[node name="Polygon2D" type="Polygon2D" parent="Shoulder" groups=[
+"Enemy",
+]]
+position = Vector2( 4, -4.76837e-07 )
+rotation = 1.5708
+scale = Vector2( 0.05, 0.2625 )
+polygon = PoolVector2Array( -32, -48, 32, -48, 32, 16, -32, 16 )
+
+[node name="Hand" type="Position2D" parent="Shoulder"]
+position = Vector2( 16, 0 )
+script = SubResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+playback_speed = 0.5
+anims/idle = SubResource( 5 )
+anims/search = SubResource( 6 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 11 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 12 )

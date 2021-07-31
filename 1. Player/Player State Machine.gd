@@ -126,25 +126,26 @@ func _get_transition(delta):
 func _enter_state(new_state, old_state):
 	match new_state:
 		states.running:
-			print("running")
+			
+			#print("running")
 			parent.anim_tree_state_machine.travel("running")
 		states.idling:
-			print("idling")
+			#print("idling")
 			parent.anim_tree_state_machine.travel("idling")
 		states.falling:
-			print("falling")
+			#print("falling")
 			parent.anim_tree_state_machine.travel("falling")
 		states.jumping:
-			print("jumping")
+			#print("jumping")
 			parent.anim_tree_state_machine.travel("jumping")
 		states.dashing:
 			parent.anim_tree_state_machine.travel("dashing")
-			print("dashing")
+			#print("dashing")
 		states.absorbing:
 			parent.anim_tree_state_machine.travel("absorbing")
-			print("absorbing")
+			#print("absorbing")
 		states.wall_sliding:
-			print("wall sliding")
+			#print_debug("wall sliding")
 			parent.anim_tree_state_machine.travel("wall slide")
 func _exit_state(old_state, new_state):
 	pass

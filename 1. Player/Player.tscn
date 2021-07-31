@@ -2180,10 +2180,10 @@ tracks/25/keys = {
 "Player",
 ]]
 position = Vector2( 0, -57 )
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.25, 0.25 )
 collision_mask = 14
 script = ExtResource( 2 )
-jump_force = 700
+jump_force = 300
 
 [node name="Charecter Rig" type="Node2D" parent="."]
 
