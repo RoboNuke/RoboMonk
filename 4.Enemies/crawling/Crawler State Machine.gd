@@ -60,7 +60,7 @@ func _enter_state(new_state, old_state):
 			parent.animation.play("idle")
 		states.search:
 			print("search")
-			parent.animation.play("search")
+			parent.animation.play("search 3")
 		states.chase:
 			print("chase")
 			_update_chase_animation()

@@ -9,6 +9,7 @@ onready var animation = $AnimationPlayer
 export var speed = 100
 export var snap = Vector2(0,25)
 export var GRAVITY = 1200
+export var CLOSEST_DISTANCE = 2
 var FLOOR_NORMAL = Vector2.UP
 
 var player 
@@ -28,9 +29,14 @@ func _physics_process(delta):
 
 func _chase():
 	shoulder.look_at(player.position)
+	if abs(shoulder.rotation_degrees + 90) < 2:
+		shoulder.rotation_degrees = -90
 	# move only in x 
 	var dir: Vector2 = Vector2(1,0) if global_position.x < player.position.x else Vector2(-1,0)
-	velocity = dir * speed
+	if abs(global_position.x - player.position.x) > CLOSEST_DISTANCE:
+		velocity = dir * speed
+	else:
+		velocity = Vector2(0,0)
 
 func _search():
 	velocity = Vector2.ZERO

@@ -461,13 +461,16 @@ script = ExtResource( 5 )
 
 [node name="Shoulder" type="Position2D" parent="."]
 position = Vector2( 0, -10 )
+rotation = -2.46391
 script = ExtResource( 2 )
 
 [node name="FieldOfView" type="Node2D" parent="Shoulder"]
 script = ExtResource( 3 )
 field_of_view = 40
-warn_distance = 100
+warn_distance = 300
 danger_distance = 1
+show_fov = false
+show_target_line = false
 target_groups = [ "Player" ]
 collision_mask = 3
 frequency = 0.1
@@ -477,7 +480,7 @@ position = Vector2( 6, 0 )
 script = ExtResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-playback_speed = 0.5
+playback_speed = 0.75
 anims/search = SubResource( 54 )
 "anims/search 2" = SubResource( 55 )
 "anims/search 3" = SubResource( 56 )
@@ -497,6 +500,7 @@ visible = false
 position = Vector2( -8, -14 )
 frames = SubResource( 15 )
 animation = "idle"
+frame = 1
 speed_scale = 2.5
 playing = true
 centered = false
@@ -507,4 +511,4 @@ texture = ExtResource( 6 )
 centered = false
 hframes = 3
 vframes = 7
-frame = 14
+frame = 9
