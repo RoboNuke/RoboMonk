@@ -25,7 +25,7 @@ func goto_main_menu():
 	current_level.start_button.connect("pressed", self, "_on_Start_Button_pressed", [name])
 	current_level.quit_button.connect("pressed", self, "_on_Quit_Button_pressed")
 	
-func _on_Start_Button_pressed(nam):
+func _on_Start_Button_pressed(_nam):
 	main_bg.texture = scifi_bg
 	remove_child(current_level)
 	current_level = prototype_level

@@ -5,11 +5,16 @@ onready var hand = $Shoulder/Hand
 onready var shoulder = $Shoulder
 onready var fov = $Shoulder/FieldOfView
 onready var animation = $AnimationPlayer
+onready var rof = $ROF
 
+export var bullet = preload("res://4.Enemies/crawling/crawler_bullet/Bullet.tscn")
 export var speed = 100
 export var snap = Vector2(0,25)
 export var GRAVITY = 1200
 export var CLOSEST_DISTANCE = 2
+export var muzzle_offset = 6
+export var X_AIM_OFFSET = 0
+export var Y_AIM_OFFSET = 5
 var FLOOR_NORMAL = Vector2.UP
 
 var player 
@@ -20,7 +25,7 @@ func hit(hitter):
 	if last_hit != hitter:
 		queue_free()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	_check_fov()
 	#if player == null:
 	#	return
@@ -42,12 +47,23 @@ func _search():
 	velocity = Vector2.ZERO
 	
 func _attack():
-	shoulder.look_at(player.position)
-	var dir = (player.global_position - global_position).normalized()
-	#weapon.fire(hand.global_position, dir)
 	velocity = Vector2.ZERO
-	#shoulder.look_at(player.global_position)
+	shoulder.look_at(player.position)
+	var dir = ((player.global_position + Vector2(X_AIM_OFFSET,Y_AIM_OFFSET)) - global_position ).normalized()
+	#dir.y -= 3
+	#print(player.global_position, " ", global_position)
+	return _fire(dir)
 	
+func _fire(dir):
+	if rof.is_stopped():
+		print("Fire")
+		var b = bullet.instance()
+		get_tree().root.add_child(b)
+		b.release(hand.global_position + muzzle_offset * dir, dir)
+		rof.start()
+		return true
+	return false
+
 func _check_fov():
 	var in_warn_area = false
 	var in_danger_area = false

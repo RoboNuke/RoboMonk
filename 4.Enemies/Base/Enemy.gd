@@ -23,7 +23,7 @@ func hit(hitter):
 	if last_hit != hitter:
 		queue_free()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	_check_fov()
 	if player == null:
 		return
@@ -40,7 +40,7 @@ func _search():
 	
 func _attack():
 	shoulder.look_at(player.position)
-	var dir = (player.global_position - global_position).normalized()
+	var _dir = (player.global_position - global_position).normalized()
 	#weapon.fire(hand.global_position, dir)
 	velocity = Vector2.ZERO
 	#shoulder.look_at(player.global_position)
@@ -60,13 +60,5 @@ func _check_fov():
 			
 	return( [in_danger_area, in_warn_area] )
 	
-func _on_Zone_Of_Influence_body_entered(body):
-	pass
-#	if "Player" in body.get_groups() and "Body" in body.get_groups():
-#		player = body
-#		attack_player = true
-#	
-func _on_Zone_Of_Influence_body_exited(body):
-	pass
-#	attack_player = false
+
 

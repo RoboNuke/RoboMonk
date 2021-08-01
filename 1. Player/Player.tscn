@@ -2179,10 +2179,13 @@ tracks/25/keys = {
 [node name="Player" type="KinematicBody2D" groups=[
 "Player",
 ]]
-position = Vector2( 0, -57 )
+position = Vector2( -1, -14 )
 scale = Vector2( 0.25, 0.25 )
 collision_mask = 14
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 jump_force = 400
 
 [node name="Charecter Rig" type="Node2D" parent="."]
@@ -2317,7 +2320,6 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 2, 10 )
 shape = SubResource( 1 )
 

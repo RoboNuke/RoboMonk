@@ -46,7 +46,7 @@ func _input(event):
 		if event.is_action_released("action") or parent.max_absorb.is_stopped():
 			parent._dash()
 		
-func _get_transition(delta):
+func _get_transition(_delta):
 	match state:
 		states.idling:
 			if not parent.is_absorbing:
@@ -123,7 +123,7 @@ func _get_transition(delta):
 				
 
 
-func _enter_state(new_state, old_state):
+func _enter_state(new_state, _old_state):
 	match new_state:
 		states.running:
 			
@@ -147,7 +147,7 @@ func _enter_state(new_state, old_state):
 		states.wall_sliding:
 			#print_debug("wall sliding")
 			parent.anim_tree_state_machine.travel("wall slide")
-func _exit_state(old_state, new_state):
+func _exit_state(_old_state, _new_state):
 	pass
 	#if old_state == states.search:
 	#	parent.animation.stop()

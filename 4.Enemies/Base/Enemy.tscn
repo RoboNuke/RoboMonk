@@ -3,7 +3,7 @@
 [ext_resource path="res://addons/luisboch.field_of_view/field_of_view.gd" type="Script" id=1]
 [ext_resource path="res://4.Enemies/Base/Enemy.gd" type="Script" id=2]
 
-[sub_resource type="GDScript" id=2]
+[sub_resource type="GDScript" id=1]
 script/source = "extends StateMachine
 
 func _ready():
@@ -12,7 +12,7 @@ func _ready():
 	add_state(\"attack\")
 	call_deferred(\"set_state\", states.search)
 	
-func _state_logic(delta):
+func _state_logic(_delta):
 	
 	if state == states.search:
 		parent._search()
@@ -21,7 +21,7 @@ func _state_logic(delta):
 	elif state == states.attack:
 		parent._attack()
 	
-func _get_transition(delta):
+func _get_transition(_delta):
 	var player_in_fov = parent._check_fov()
 	match state:
 		states.search:
@@ -42,7 +42,7 @@ func _get_transition(delta):
 				
 			
 	
-func _enter_state(new_state, old_state):
+func _enter_state(new_state, _old_state):
 	#if old_state != null:
 	#	print(\"From \", states.get_key(old_state), \" to \", states.get_key(new_state))
 	#previous_state = old_state
@@ -58,13 +58,13 @@ func _enter_state(new_state, old_state):
 			#print(\"attack\")
 			parent.animation_tree.travel(\"idle\")
 	
-func _exit_state(old_state, new_state):
+func _exit_state(old_state, _new_state):
 	if old_state == states.search:
 		parent.animation.stop()
 	pass
 "
 
-[sub_resource type="GDScript" id=3]
+[sub_resource type="GDScript" id=2]
 script/source = "extends Position2D
 
 
@@ -72,7 +72,7 @@ func hit(hitter = null):
 	get_parent().hit(hitter)
 "
 
-[sub_resource type="GDScript" id=4]
+[sub_resource type="GDScript" id=3]
 script/source = "extends Position2D
 
 
@@ -81,7 +81,7 @@ func hit(hitter=null):
 	
 "
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -97,7 +97,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 10, 0 ), Vector2( -10, 0 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -125,26 +125,26 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=7]
+[sub_resource type="AnimationNodeAnimation" id=6]
 animation = "idle"
 
-[sub_resource type="AnimationNodeAnimation" id=8]
+[sub_resource type="AnimationNodeAnimation" id=7]
 animation = "search"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=9]
+[sub_resource type="AnimationNodeStateMachineTransition" id=8]
 switch_mode = 1
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=10]
+[sub_resource type="AnimationNodeStateMachineTransition" id=9]
 
-[sub_resource type="AnimationNodeStateMachine" id=11]
-states/idle/node = SubResource( 7 )
+[sub_resource type="AnimationNodeStateMachine" id=10]
+states/idle/node = SubResource( 6 )
 states/idle/position = Vector2( 267, 71 )
-states/search/node = SubResource( 8 )
+states/search/node = SubResource( 7 )
 states/search/position = Vector2( 535, 196 )
-transitions = [ "idle", "search", SubResource( 9 ), "search", "idle", SubResource( 10 ) ]
+transitions = [ "idle", "search", SubResource( 8 ), "search", "idle", SubResource( 9 ) ]
 start_node = "search"
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id=12]
+[sub_resource type="AnimationNodeStateMachinePlayback" id=11]
 
 [node name="Enemy" type="KinematicBody2D" groups=[
 "Enemy",
@@ -157,7 +157,7 @@ __meta__ = {
 }
 
 [node name="State Machine" type="Node" parent="."]
-script = SubResource( 2 )
+script = SubResource( 1 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
 position = Vector2( -16, 16 )
@@ -169,8 +169,8 @@ position = Vector2( -16, 16 )
 polygon = PoolVector2Array( 0, 0, 0, 0, 32, 0, 32, -32, 0, -32 )
 
 [node name="Shoulder" type="Position2D" parent="."]
-rotation = -3.09019
-script = SubResource( 3 )
+rotation = -2.00068
+script = SubResource( 2 )
 
 [node name="FieldOfView" type="Node2D" parent="Shoulder"]
 script = ExtResource( 1 )
@@ -191,15 +191,15 @@ polygon = PoolVector2Array( -32, -48, 32, -48, 32, 16, -32, 16 )
 
 [node name="Hand" type="Position2D" parent="Shoulder"]
 position = Vector2( 16, 0 )
-script = SubResource( 4 )
+script = SubResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 playback_speed = 0.5
-anims/idle = SubResource( 5 )
-anims/search = SubResource( 6 )
+anims/idle = SubResource( 4 )
+anims/search = SubResource( 5 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 11 )
+tree_root = SubResource( 10 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource( 12 )
+parameters/playback = SubResource( 11 )

@@ -123,7 +123,6 @@ func _apply_gravity(delta):
 func _cap_gravity_wall_sliding():
 	var max_velocity = WALL_SLIDE_MAX_VELOCITY if !Input.is_action_pressed("ui_down") else WALL_SLIDE_DOWN_MAX_VELOCITY
 	velocity.y = min(max_velocity, velocity.y)
-	
 func _check_if_grounded():
 	for ray in ground_rays.get_children():
 		ray.force_raycast_update()

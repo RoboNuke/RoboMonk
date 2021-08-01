@@ -1,9 +1,12 @@
 extends StateMachine
 var MAX_RIGHT = 45/2
-var MAX_UP_RIGHT = 45/2 + MAX_RIGHT
-var MAX_UP_LEFT = 90 + 45/2
-var MAX_LEFT = 180-45/2
+var MAX_UP_RIGHT = 45/2 + 45
+var MAX_UP = 45/2 + 90
+var MAX_UP_LEFT = 180 - 45/2
+var MAX_LEFT = 180+45/2
 
+var anim_ranges = [MAX_RIGHT, MAX_UP_RIGHT, MAX_UP, MAX_UP_LEFT, MAX_LEFT]
+var anim_names = ["_right", "_up_right", "_up", "_up_left", "_left"]
 func _ready():
 	add_state("idle")
 	add_state("search")
@@ -12,7 +15,7 @@ func _ready():
 	add_state("attack")
 	call_deferred("set_state", states.search)
 	
-func _state_logic(delta):
+func _state_logic(_delta):
 	
 	if state == states.search:
 		parent._search()
@@ -20,12 +23,14 @@ func _state_logic(delta):
 		parent._walk_search()
 	elif state == states.chase:
 		parent._chase()
+		_update_directional_animation()
 	elif state == states.attack:
-		parent._attack()
+		if parent._attack():
+			_update_directional_animation("fire")
 	elif state == states.idle:
 		parent._idle()
 	
-func _get_transition(delta):
+func _get_transition(_delta):
 	var player_in_fov = parent._check_fov()
 	match state:
 		states.search:
@@ -34,22 +39,24 @@ func _get_transition(delta):
 			elif player_in_fov[1]:
 				return states.chase
 		states.chase:
-			if player_in_fov[0]:
+			if player_in_fov[0] and parent.animation.get_current_animation()[0] != 'f' and parent.rof.is_stopped():
 				return states.attack
+			elif player_in_fov[0] and parent.animation.get_current_animation()[0] != 'f':
+				return null 
 			elif !(player_in_fov[1]):
 				return states.search
-			else:
-				_update_chase_animation()
 				
 		states.attack:
 			if player_in_fov[1]:
 				return states.chase
+			elif player_in_fov[0] and !parent.animation.is_playing() and !parent.rof.is_stopped():
+				# can still see player and have finished firing but the weapon on cd
+				return states.chase
 			elif !player_in_fov[0]:
 				return states.search
-				
 			
 	
-func _enter_state(new_state, old_state):
+func _enter_state(new_state, _old_state):
 	#if old_state != null:
 	#	print("From ", states.get_key(old_state), " to ", states.get_key(new_state))
 	#previous_state = old_state
@@ -63,34 +70,40 @@ func _enter_state(new_state, old_state):
 			parent.animation.play("search 3")
 		states.chase:
 			print("chase")
-			_update_chase_animation()
+			_update_directional_animation()
 		states.attack:
+			#_update_directional_animation()
+			_update_directional_animation("fire")
 			print("attack")
 
-func _exit_state(old_state, new_state):
+func _exit_state(old_state, _new_state):
 	if old_state == states.search:
 		parent.animation.stop()
 	pass
 
-func _set_chase_animation(anim):
-	var time = parent.animation.current_animation_position
+func _set_direction_animation(anim, on_beat=true):
+	var time = 0
+	if parent.animation.is_playing():
+		time = parent.animation.current_animation_position
 	parent.animation.play(anim)
-	parent.animation.seek(time)
-	
-func _update_chase_animation():
+	if on_beat:
+		parent.animation.seek(time)
+
+func _get_anim_idx():
 	var ang = -parent.shoulder.rotation_degrees
-	if ang < MAX_RIGHT:
-		if parent.animation.current_animation != "walk_right":
-			_set_chase_animation("walk_right")
-	elif ang < MAX_UP_RIGHT:
-		if parent.animation.current_animation != "walk_up_right":
-			_set_chase_animation("walk_up_right")
-	elif ang < MAX_UP_LEFT:
-		if parent.animation.current_animation != "walk_up":
-			_set_chase_animation("walk_up")
-	elif ang < MAX_LEFT:
-		if parent.animation.current_animation != "walk_up_left":
-			_set_chase_animation("walk_up_left")
-	else:
-		if parent.animation.current_animation != "walk_left":
-			_set_chase_animation("walk_left")
+	for i in range(len(anim_ranges)):
+		if ang < anim_ranges[i]:
+			return(i)
+	print("ERROR: FAILED TO FINE ANIMATION INDEX")
+	
+func _track_animation():
+	var idx = _get_anim_idx()
+	if !parent.animation.is_playing():
+		parent.animation.play("fire"+anim_names[idx])
+		parent.animation.seek(parent.animation.current_animation_length)
+	
+func _update_directional_animation(type="walk"):
+	var idx = _get_anim_idx()
+	var on_beat = not (type=="fire")
+	if parent.animation.current_animation != type+anim_names[idx]:
+				_set_direction_animation(type+anim_names[idx], on_beat)
