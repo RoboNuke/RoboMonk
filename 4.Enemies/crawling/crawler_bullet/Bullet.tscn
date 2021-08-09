@@ -7,8 +7,10 @@
 radius = 1.5
 height = 4.0
 
-[node name="Bullet" type="Area2D"]
-collision_layer = 8
+[node name="Bullet" type="Area2D" groups=[
+"absorbable",
+]]
+collision_layer = 0
 collision_mask = 0
 script = ExtResource( 1 )
 

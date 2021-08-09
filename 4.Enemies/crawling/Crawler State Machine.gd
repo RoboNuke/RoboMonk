@@ -94,6 +94,7 @@ func _get_anim_idx():
 	for i in range(len(anim_ranges)):
 		if ang < anim_ranges[i]:
 			return(i)
+	return(-1)
 	print("ERROR: FAILED TO FINE ANIMATION INDEX")
 	
 func _track_animation():
@@ -106,4 +107,4 @@ func _update_directional_animation(type="walk"):
 	var idx = _get_anim_idx()
 	var on_beat = not (type=="fire")
 	if parent.animation.current_animation != type+anim_names[idx]:
-				_set_direction_animation(type+anim_names[idx], on_beat)
+		_set_direction_animation(type+anim_names[idx], on_beat)

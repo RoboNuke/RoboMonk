@@ -360,7 +360,7 @@ texture = ExtResource( 6 )
 centered = false
 hframes = 3
 vframes = 14
-frame = 12
+frame = 22
 
 [node name="ROF" type="Timer" parent="."]
 one_shot = true

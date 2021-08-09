@@ -15,18 +15,24 @@ var velocity = Vector2.ZERO
 export var gravity = 1200
 export var move_speed = 200
 export var jump_force = 500
-export var WALL_JUMP_FORCE = Vector2(1,-1) * 700
+export(Vector2) var WALL_JUMP_FORCE = Vector2(1,-1) * jump_force
 export var modifier = 1
-var dash_strength = 600
 var FLOOR_NORMAL = Vector2.UP
-var dash_direction = Vector2.ZERO
 export var WALL_SLIDE_MAX_VELOCITY = 50
 export var WALL_SLIDE_DOWN_MAX_VELOCITY = 4800
+var last_hit = null
+
+# absorbtion/dash variables
+export var max_absorbtion = 2000
+#var dash_strength = 600
+var dash_direction = Vector2.ZERO
+var absorbed_momentum = 0
 # State Variables
 var is_jumping = false
 var is_grounded = false
 var was_on_floor = false
 var is_dashing = false
+var has_dashed = false ####################################
 var anim_tree_state_machine = null
 var move_direction = 0
 var wall_direction = 0
@@ -36,6 +42,9 @@ var is_absorbing = false
 # ANIMATION vars
 export var left_shoulder = 5
 export var right_shoulder = -5
+
+#signal vars
+signal player_killed
 
 func _ready():
 	anim_tree_state_machine = animation_tree["parameters/playback"]
@@ -79,23 +88,6 @@ func norm(x):
 	else:
 		return -1
 		
-func _absorb():
-	max_absorb.start()
-	dash_direction.x = norm(velocity.x)
-	dash_direction.y = norm(velocity.y)
-	velocity = Vector2(0,0)
-	is_absorbing = true
-	
-func _dash():
-	is_absorbing = false
-	is_dashing = true
-	max_absorb.stop()
-	dash_timer.start()
-	dash_direction.x = (-int(Input.is_action_pressed("ui_left")) + int(Input.is_action_pressed("ui_right")))
-	dash_direction.y = (-int(Input.is_action_pressed("ui_up")) + int(Input.is_action_pressed("ui_down")))
-	
-	velocity = dash_direction.normalized() * dash_strength
-	desired_look_direction = dash_direction.x
 	
 func _update_wall_direction():
 	var is_near_wall_left = _check_is_valid_wall(left_rays.get_children())
@@ -123,6 +115,7 @@ func _apply_gravity(delta):
 func _cap_gravity_wall_sliding():
 	var max_velocity = WALL_SLIDE_MAX_VELOCITY if !Input.is_action_pressed("ui_down") else WALL_SLIDE_DOWN_MAX_VELOCITY
 	velocity.y = min(max_velocity, velocity.y)
+	
 func _check_if_grounded():
 	for ray in ground_rays.get_children():
 		ray.force_raycast_update()
@@ -171,14 +164,39 @@ func _get_h_weight():
 		else:
 			return 0.1
 	
-var last_hit = null
 
+func _start_absorb():
+	max_absorb.start()
+	velocity = Vector2(0,0)
+	is_absorbing = true
+	absorbed_momentum = 0
+	
+func _absorb(collided_object):
+	absorbed_momentum += collided_object.momentum
+	collided_object.absorbed()    
+	
+func _dash():
+	is_absorbing = false
+	is_dashing = true
+	max_absorb.stop()
+	dash_timer.start()
+	dash_direction.x = (-int(Input.is_action_pressed("ui_left")) + int(Input.is_action_pressed("ui_right")))
+	dash_direction.y = (-int(Input.is_action_pressed("ui_up")) + int(Input.is_action_pressed("ui_down")))
+	
+	velocity = dash_direction.normalized() * absorbed_momentum
+	desired_look_direction = dash_direction.x
+	
+func _end_dash():
+	has_dashed = true
+	
 func hit(hitter):
-	if is_absorbing:
-		print("I would absorb that ", hitter.name)
+	if is_absorbing and "absorbable" in hitter.get_groups():
+		_absorb(hitter)
 	elif last_hit != hitter:
 		print("You Lose")
+		emit_signal("player_killed")
 
 
 func _on_Dash_Timer_timeout():
 	is_dashing = false
+	_end_dash()

@@ -32,16 +32,19 @@ func _input(event):
 				parent._jump()
 			else:
 				parent.jump_buffer.start()
+				
 	if [states.wall_sliding].has(state):
 		if event.is_action_pressed("ui_up"):
 			parent._jump(true)
 		if event.is_action_pressed("ui_right") and parent.wall_direction == -1:
-			parent.velocity.x = 50
+			parent.velocity.x = 50#########################################
 		if event.is_action_pressed("ui_left") and parent.wall_direction == 1:
-			parent.velocity.x = -50
+			parent.velocity.x = -50##########################################
+			
 	if not [states.absorbing, states.dashing].has(state):
-		if event.is_action_pressed("action"):
-			parent._absorb()
+		if event.is_action_pressed("action") and not parent.has_dashed:
+			parent._start_absorb()
+			
 	if [states.absorbing].has(state):
 		if event.is_action_released("action") or parent.max_absorb.is_stopped():
 			parent._dash()
@@ -124,9 +127,12 @@ func _get_transition(_delta):
 
 
 func _enter_state(new_state, _old_state):
+	if parent.has_dashed and new_state in [states.running, states.idling]:
+		parent.has_dashed = false
+		parent.player_rig.modulate = Color(1,1,1,1)
+		print("reduce mod")
 	match new_state:
 		states.running:
-			
 			#print("running")
 			parent.anim_tree_state_machine.travel("running")
 		states.idling:
