@@ -36,6 +36,9 @@ func _physics_process(delta):
 	position += direction * velocity * delta
 	#print(global_position)
 
+func get_momentum():
+	return momentum
+	
 func absorbed():
 	pass
 

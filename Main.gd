@@ -47,7 +47,9 @@ func _on_Start_Button_pressed(_nam):
 	#start_menu.queue_free()
 func _on_player_death():
 	#remove_child(player)
-	goto_main_menu()
+	#goto_main_menu()
+	player.restart(current_level.get_player_start())
+	
 
 func _on_Quit_Button_pressed():
 	get_tree().quit()

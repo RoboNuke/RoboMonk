@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://4.Enemies/Long Neck/Long Neck.gd" type="Script" id=1]
 [ext_resource path="res://4.Enemies/Long Neck/Long Neck State Machine.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://4.Enemies/Long Neck/stationary_top_improved.png" type="Texture" id=4]
 [ext_resource path="res://4.Enemies/Long Neck/fire_animation_overlay.png" type="Texture" id=5]
 [ext_resource path="res://4.Enemies/Long Neck/Fire Sprite.gd" type="Script" id=6]
+[ext_resource path="res://addons/luisboch.field_of_view/field_of_view.gd" type="Script" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6.5, 5 )
@@ -949,6 +950,9 @@ tracks/2/keys = {
 [sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 24.8534, 3.58804 )
 
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 6.57111, 11.1881 )
+
 [sub_resource type="Animation" id=27]
 resource_name = "Left_Fire"
 length = 0.12
@@ -1062,6 +1066,7 @@ tracks/3/keys = {
 [node name="Long Neck" type="KinematicBody2D" groups=[
 "Enemy",
 "Move Stopping",
+"absorbable",
 ]]
 collision_layer = 4
 collision_mask = 6
@@ -1113,10 +1118,9 @@ anims/Right_9 = SubResource( 25 )
 script = ExtResource( 3 )
 
 [node name="Fire Sprite" type="Sprite" parent="."]
-position = Vector2( -5.5, -5.5 )
+position = Vector2( 5.5, -5.5 )
 texture = ExtResource( 5 )
 hframes = 3
-frame = 2
 script = ExtResource( 6 )
 
 [node name="Area2D" type="Area2D" parent="Fire Sprite"]
@@ -1128,10 +1132,27 @@ collision_layer = 4
 position = Vector2( 32.3142, -6.08289 )
 shape = SubResource( 26 )
 
+[node name="Bounced On Area" type="Area2D" parent="Fire Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fire Sprite/Bounced On Area"]
+modulate = Color( 0, 1, 0.203922, 1 )
+position = Vector2( 14.7646, -18.7899 )
+shape = SubResource( 29 )
+
+[node name="FieldOfView" type="Node2D" parent="Fire Sprite"]
+position = Vector2( 6.08168, -5.19079 )
+script = ExtResource( 7 )
+field_of_view = 5
+
 [node name="Fire Animator" type="AnimationPlayer" parent="."]
 anims/Left_Fire = SubResource( 27 )
 anims/Right_Fire = SubResource( 28 )
 
+[node name="Stun Length" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="animation_finished" from="AnimationPlayer" to="State Machine" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="body_entered" from="Fire Sprite/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Fire Sprite/Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="Fire Sprite/Bounced On Area" to="." method="_on_Bounced_On_Area_body_entered"]

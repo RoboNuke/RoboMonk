@@ -9,15 +9,14 @@ enum HEIGHTS {lvl_0 = 0, lvl_1 = 1, lvl_2 = 2, lvl_3 = 3,lvl_4 = 4,lvl_5 = 5,lvl
 
 var current_lvl = HEIGHTS.lvl_0
 
-var current_x = -X_OFFSET
+func _ready():
+	position.x = -X_OFFSET
 
 func _process(delta):
-	if parent.desired_facing_dir == FACE_DIRS.LEFT and current_x > 0:
-		current_x = -X_OFFSET
-		position.x = current_x
-	elif parent.desired_facing_dir == FACE_DIRS.RIGHT and current_x < 0:
-		current_x = abs(X_OFFSET)
-		position.x = current_x
+	if parent.desired_facing_dir == FACE_DIRS.LEFT and position.x > 0:
+		position.x = -X_OFFSET
+	elif parent.desired_facing_dir == FACE_DIRS.RIGHT and position.x < 0:
+		position.x = abs(X_OFFSET)
 		
 	if current_lvl != parent.current_height:
 		current_lvl = parent.current_height

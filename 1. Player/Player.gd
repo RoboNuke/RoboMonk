@@ -172,7 +172,7 @@ func _start_absorb():
 	absorbed_momentum = 0
 	
 func _absorb(collided_object):
-	absorbed_momentum += collided_object.momentum
+	absorbed_momentum += collided_object.get_momentum()
 	collided_object.absorbed()    
 	
 func _dash():
@@ -190,6 +190,7 @@ func _end_dash():
 	has_dashed = true
 	
 func hit(hitter):
+	print("Player hit by:",hitter.get_groups())
 	if is_absorbing and "absorbable" in hitter.get_groups():
 		_absorb(hitter)
 	elif last_hit != hitter:

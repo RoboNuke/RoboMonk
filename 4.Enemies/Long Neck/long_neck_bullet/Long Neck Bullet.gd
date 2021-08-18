@@ -9,7 +9,6 @@ var direction = Vector2(1,0)
 export var fire_speed = 1  #seconds between shots
 
 var anim_ranges = [90, -90]
-var directions = ["right", "left"]
 var anim_loc = [6,2]
 
 func release(pos, dir):
@@ -26,6 +25,9 @@ func _physics_process(delta):
 	position += direction * velocity * delta
 	#print(global_position)
 
+func get_momentum():
+	return momentum
+	
 func absorbed():
 	pass
 

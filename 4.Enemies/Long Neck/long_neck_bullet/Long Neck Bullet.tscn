@@ -12,7 +12,7 @@ load_path = "res://.import/small_green.png-8d24bf2b8c6486de5d012f9bef4d2e6e.stex
 [node name="Long Neck Bullet" type="Area2D" groups=[
 "absorbable",
 ]]
-collision_layer = 0
+collision_layer = 8
 collision_mask = 0
 script = ExtResource( 1 )
 

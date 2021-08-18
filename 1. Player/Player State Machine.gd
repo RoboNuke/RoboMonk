@@ -130,7 +130,7 @@ func _enter_state(new_state, _old_state):
 	if parent.has_dashed and new_state in [states.running, states.idling]:
 		parent.has_dashed = false
 		parent.player_rig.modulate = Color(1,1,1,1)
-		print("reduce mod")
+		#print("reduce mod")
 	match new_state:
 		states.running:
 			#print("running")

@@ -311,6 +311,7 @@ Y_AIM_OFFSET = 13
 script = ExtResource( 5 )
 
 [node name="Shoulder" type="Position2D" parent="."]
+visible = false
 position = Vector2( 0, -10 )
 script = ExtResource( 2 )
 
@@ -319,7 +320,6 @@ script = ExtResource( 3 )
 field_of_view = 40
 warn_distance = 300
 danger_distance = 100
-show_fov = false
 target_groups = [ "Player" ]
 collision_mask = 3
 frequency = 0.1
@@ -351,6 +351,7 @@ anims/walk_up_left = SubResource( 13 )
 anims/walk_up_right = SubResource( 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, -7 )
 shape = SubResource( 15 )
 
@@ -360,7 +361,7 @@ texture = ExtResource( 6 )
 centered = false
 hframes = 3
 vframes = 14
-frame = 22
+frame = 12
 
 [node name="ROF" type="Timer" parent="."]
 one_shot = true

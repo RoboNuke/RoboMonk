@@ -3,6 +3,7 @@ extends KinematicBody2D
 onready var animation = $AnimationPlayer
 onready var animation_fire = $"Fire Animator"
 onready var rof = $ROF
+onready var stun_timer = $"Stun Length"
 onready var fire_sprite = $"Fire Sprite"
 
 export var bullet = preload("res://4.Enemies/Long Neck/long_neck_bullet/Long Neck Bullet.tscn")
@@ -28,8 +29,11 @@ var velocity = Vector2.ZERO
 
 var anim_tree_state_machine = null
 var delta_height = 1
+var old_delta_height = delta_height
 var see_player = false
 
+export var momentum = 500
+var moving_up = true
 	
 var last_hit = null
 
@@ -41,13 +45,17 @@ func _search():
 	pass
 
 func _search_step():
+	if delta_height == 0 and stun_timer.is_stopped():
+		delta_height = old_delta_height
+		print("Long Neck::Stunned Over")
+		
 	if can_turn_around and current_height + delta_height > max_height:
 		facing_dir = (facing_dir + 1 )%2
 	if current_height + delta_height > max_height or current_height + delta_height < 0:
-		delta_height = - delta_height
-	
-	
+		delta_height = (- delta_height)
+		moving_up = true if delta_height > 0 else false
 	current_height += delta_height
+	
 	
 func _attack():
 	if not can_turn_around:
@@ -71,7 +79,24 @@ func _on_Area2D_body_entered(body):
 		player = body
 		see_player = true
 
+func get_momentum():
+	if moving_up:
+		return momentum
+	else:
+		return 0
+
+func absorbed():
+	if moving_up and stun_timer.is_stopped():
+		old_delta_height = delta_height
+		delta_height = 0
+		stun_timer.start()
+		print("Long Neck::Stunned")
 
 func _on_Area2D_body_exited(body):
 	if "Player" in body.get_groups():
 		see_player = false
+
+func _on_Bounced_On_Area_body_entered(body):
+	if "Player" in body.get_groups():
+		body.hit(self)
+		print("Hit PLayer")

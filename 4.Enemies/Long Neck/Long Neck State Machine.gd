@@ -38,12 +38,12 @@ func _enter_state(new_state, _old_state):
 	var prefex = "Left_" if parent.desired_facing_dir == parent.FACE_DIRS.LEFT else "Right_"
 	match new_state:
 		states.search:
-			print("search")
+			print("Long Neck::search")
 			parent.animation.play(prefex + str(parent.current_height))
 		states.attack:
-			print("attack")
-			if parent._attack():
-				parent.animation.play(prefex+str(parent.current_height))
+			print("Long Neck::attack")
+			parent._attack()
+			parent.animation.play(prefex+str(parent.current_height))
 
 func _exit_state(old_state, _new_state):
 	pass
