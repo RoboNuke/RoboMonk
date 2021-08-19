@@ -5,22 +5,26 @@ onready var animation_fire = $"Fire Animator"
 onready var rof = $ROF
 onready var stun_timer = $"Stun Length"
 onready var fire_sprite = $"Fire Sprite"
-
-export var bullet = preload("res://4.Enemies/Long Neck/long_neck_bullet/Long Neck Bullet.tscn")
-
-export var CLOSEST_DISTANCE = 2
-export var MUZZLE_OFFSET = 10
-var INIT_MUZZLE_HEIGHT = 5
-
 enum FACE_DIRS {LEFT=0, RIGHT=1}
 enum HEIGHTS {lvl_0 = 0, lvl_1 = 1, lvl_2 = 2, lvl_3 = 3,lvl_4 = 4,lvl_5 = 5,lvl_6 = 6,lvl_7 = 7,lvl_8 = 8,lvl_9 = 9,lvl_10 = 10,lvl_11 = 11}
 
-export(FACE_DIRS) var facing_dir = FACE_DIRS.LEFT
-var desired_facing_dir = facing_dir
+
+var bullet = preload("res://4.Enemies/Bullet/Bullet.tscn")
+
+export(Texture) var bullet_texture 
+export var bullet_speed = 200
+export var bullet_momentum = 300
+export var CLOSEST_DISTANCE = 2
+export var MUZZLE_OFFSET = 10
 export(bool) var can_turn_around = true
+export(FACE_DIRS) var facing_dir = FACE_DIRS.LEFT
+export(HEIGHTS) var max_height = HEIGHTS.lvl_4
+export var momentum = 500
+
+var INIT_MUZZLE_HEIGHT = 5
+var desired_facing_dir = facing_dir
 var desired_fire_dir = Vector2.LEFT if facing_dir == FACE_DIRS.LEFT else Vector2.RIGHT
 
-export(HEIGHTS) var max_height = HEIGHTS.lvl_4
 var current_height = HEIGHTS.lvl_0
 
 var FLOOR_NORMAL = Vector2.UP
@@ -32,7 +36,6 @@ var delta_height = 1
 var old_delta_height = delta_height
 var see_player = false
 
-export var momentum = 500
 var moving_up = true
 	
 var last_hit = null
@@ -70,6 +73,9 @@ func _attack():
 func _fire():
 	if rof.is_stopped():
 		var b = bullet.instance()
+		b.set("bullet_texture", bullet_texture)
+		b.set("velocity", bullet_speed)
+		b.set("momentum", bullet_momentum)
 		get_tree().root.add_child(b)
 		b.release(global_position + Vector2(MUZZLE_OFFSET * desired_fire_dir.x, -(INIT_MUZZLE_HEIGHT + 2*current_height)), desired_fire_dir)
 		rof.start()

@@ -7,7 +7,11 @@ onready var fov = $Shoulder/FieldOfView
 onready var animation = $AnimationPlayer
 onready var rof = $ROF
 
-export var bullet = preload("res://4.Enemies/crawling/crawler_bullet/Bullet.tscn")
+var bullet = preload("res://4.Enemies/Bullet/Bullet.tscn")
+
+export(Texture) var bullet_texture
+export var bullet_speed = 200
+export var bullet_momentum = 300
 export var speed = 100
 export var snap = Vector2(0,25)
 export var GRAVITY = 1200
@@ -58,6 +62,9 @@ func _fire(dir):
 	if rof.is_stopped():
 		print("Fire")
 		var b = bullet.instance()
+		b.set("bullet_texture", bullet_texture)
+		b.set("velocity", bullet_speed)
+		b.set("momentum", bullet_momentum)
 		get_tree().root.add_child(b)
 		b.release(hand.global_position + muzzle_offset * dir, dir)
 		rof.start()

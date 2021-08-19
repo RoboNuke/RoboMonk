@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://4.Enemies/crawling/Crawler Hand.gd" type="Script" id=1]
 [ext_resource path="res://4.Enemies/crawling/Crawler Shoulder.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://4.Enemies/crawling/Crawler.gd" type="Script" id=4]
 [ext_resource path="res://4.Enemies/crawling/Crawler State Machine.gd" type="Script" id=5]
 [ext_resource path="res://4.Enemies/crawling/spider_walker.png" type="Texture" id=6]
+[ext_resource path="res://4.Enemies/Bullet/Bullet Textures/small_red.png" type="Texture" id=7]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fire_left"
@@ -305,6 +306,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
+bullet_texture = ExtResource( 7 )
 Y_AIM_OFFSET = 13
 
 [node name="State Machine" type="Node" parent="."]
