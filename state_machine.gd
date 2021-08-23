@@ -6,7 +6,10 @@ var previous_state = null
 var states = {}
 onready var parent = get_parent()
 
+var active = true
 func _physics_process(delta):
+	if !active:
+		return
 	if state != null:
 		_state_logic(delta)
 		var transition = _get_transition(delta)

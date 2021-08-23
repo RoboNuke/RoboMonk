@@ -2530,6 +2530,7 @@ wait_time = 0.1
 one_shot = true
 
 [node name="Max Absorb" type="Timer" parent="Timers"]
+wait_time = 3.0
 one_shot = true
 
 [node name="Dash Timer" type="Timer" parent="Timers"]

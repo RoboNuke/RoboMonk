@@ -45,10 +45,10 @@ func _enter_state(new_state, _old_state):
 			parent._attack()
 			parent.animation.play(prefex+str(parent.current_height))
 
-func _exit_state(old_state, _new_state):
+func _exit_state(_old_state, _new_state):
 	pass
 
-func _on_AnimationPlayer_animation_finished(anim_name):
+func _on_AnimationPlayer_animation_finished(_anim_name):
 	if state == states.attack:
 		#print("Leave due to attacking")
 		return

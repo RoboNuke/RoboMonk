@@ -49,7 +49,7 @@ func _search():
 
 func _search_step():
 	if delta_height == 0 and stun_timer.is_stopped():
-		delta_height = old_delta_height
+		delta_height = -old_delta_height
 		print("Long Neck::Stunned Over")
 		
 	if can_turn_around and current_height + delta_height > max_height:
@@ -79,11 +79,6 @@ func _fire():
 		get_tree().root.add_child(b)
 		b.release(global_position + Vector2(MUZZLE_OFFSET * desired_fire_dir.x, -(INIT_MUZZLE_HEIGHT + 2*current_height)), desired_fire_dir)
 		rof.start()
-	
-func _on_Area2D_body_entered(body):
-	if "Player" in body.get_groups():
-		player = body
-		see_player = true
 
 func get_momentum():
 	if moving_up:
@@ -98,11 +93,13 @@ func absorbed():
 		stun_timer.start()
 		print("Long Neck::Stunned")
 
-func _on_Area2D_body_exited(body):
-	if "Player" in body.get_groups():
-		see_player = false
+func _on_FieldOfView_target_enter(obj):
+	see_player = true
+	player = obj
 
-func _on_Bounced_On_Area_body_entered(body):
+func _on_FieldOfView_target_exit(_obj):
+	see_player = false
+
+func _on_Absorbtion_Area_body_entered(body):
 	if "Player" in body.get_groups():
 		body.hit(self)
-		print("Hit PLayer")

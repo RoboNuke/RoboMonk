@@ -1,6 +1,7 @@
 extends Sprite
 
 onready var parent = get_parent()
+onready var fov = $FieldOfView
 
 export var X_OFFSET = 5.5
 export var MIN_Y_OFFSET = -5.5
@@ -11,13 +12,17 @@ var current_lvl = HEIGHTS.lvl_0
 
 func _ready():
 	position.x = -X_OFFSET
-
-func _process(delta):
-	if parent.desired_facing_dir == FACE_DIRS.LEFT and position.x > 0:
+	fov.position.x = 0
+func _process(_delta):
+	if parent.facing_dir == FACE_DIRS.LEFT and position.x > 0:
 		position.x = -X_OFFSET
-	elif parent.desired_facing_dir == FACE_DIRS.RIGHT and position.x < 0:
+		fov.rotation_degrees = -180
+		flip_h = false
+	elif parent.facing_dir == FACE_DIRS.RIGHT and position.x < 0:
 		position.x = abs(X_OFFSET)
+		fov.rotation_degrees = 0
 		
+		flip_h = true
 	if current_lvl != parent.current_height:
 		current_lvl = parent.current_height
 		position.y = MIN_Y_OFFSET - 2 * current_lvl

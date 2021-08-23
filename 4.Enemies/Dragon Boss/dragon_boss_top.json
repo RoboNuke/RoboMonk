@@ -1,0 +1,109 @@
+{ "frames": {
+   "dragon_boss_top 0.ase": {
+    "frame": { "x": 0, "y": 0, "w": 42, "h": 25 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 25 },
+    "sourceSize": { "w": 42, "h": 25 },
+    "duration": 100
+   },
+   "dragon_boss_top 1.ase": {
+    "frame": { "x": 42, "y": 0, "w": 42, "h": 25 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 25 },
+    "sourceSize": { "w": 42, "h": 25 },
+    "duration": 100
+   },
+   "dragon_boss_top 2.ase": {
+    "frame": { "x": 84, "y": 0, "w": 42, "h": 25 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 25 },
+    "sourceSize": { "w": 42, "h": 25 },
+    "duration": 100
+   },
+   "dragon_boss_top 3.ase": {
+    "frame": { "x": 126, "y": 0, "w": 42, "h": 25 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 25 },
+    "sourceSize": { "w": 42, "h": 25 },
+    "duration": 100
+   },
+   "dragon_boss_top 4.ase": {
+    "frame": { "x": 168, "y": 0, "w": 42, "h": 25 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 25 },
+    "sourceSize": { "w": 42, "h": 25 },
+    "duration": 100
+   },
+   "dragon_boss_top 5.ase": {
+    "frame": { "x": 210, "y": 0, "w": 42, "h": 25 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 25 },
+    "sourceSize": { "w": 42, "h": 25 },
+    "duration": 100
+   },
+   "dragon_boss_top 6.ase": {
+    "frame": { "x": 252, "y": 0, "w": 42, "h": 25 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 25 },
+    "sourceSize": { "w": 42, "h": 25 },
+    "duration": 100
+   },
+   "dragon_boss_top 7.ase": {
+    "frame": { "x": 294, "y": 0, "w": 42, "h": 25 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 25 },
+    "sourceSize": { "w": 42, "h": 25 },
+    "duration": 100
+   },
+   "dragon_boss_top 8.ase": {
+    "frame": { "x": 336, "y": 0, "w": 42, "h": 25 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 25 },
+    "sourceSize": { "w": 42, "h": 25 },
+    "duration": 100
+   },
+   "dragon_boss_top 9.ase": {
+    "frame": { "x": 378, "y": 0, "w": 42, "h": 25 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 25 },
+    "sourceSize": { "w": 42, "h": 25 },
+    "duration": 100
+   },
+   "dragon_boss_top 10.ase": {
+    "frame": { "x": 420, "y": 0, "w": 42, "h": 25 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 42, "h": 25 },
+    "sourceSize": { "w": 42, "h": 25 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.27",
+  "image": "dragon_boss_top.png",
+  "format": "RGBA8888",
+  "size": { "w": 462, "h": 25 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Idle", "from": 0, "to": 0, "direction": "forward" },
+   { "name": "Fire", "from": 1, "to": 1, "direction": "forward" },
+   { "name": "Recoil", "from": 2, "to": 10, "direction": "forward" }
+  ],
+  "layers": [
+   { "name": "Sprite Sheet", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

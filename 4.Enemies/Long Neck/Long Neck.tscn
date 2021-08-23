@@ -8,12 +8,13 @@
 [ext_resource path="res://4.Enemies/Long Neck/Fire Sprite.gd" type="Script" id=6]
 [ext_resource path="res://addons/luisboch.field_of_view/field_of_view.gd" type="Script" id=7]
 [ext_resource path="res://4.Enemies/Bullet/Bullet Textures/small_green.png" type="Texture" id=8]
+[ext_resource path="res://4.Enemies/Long Neck/Absorbtion Area.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6.5, 5 )
 
 [sub_resource type="Animation" id=2]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -50,9 +51,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -5 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -7 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5 ]
+}
 
 [sub_resource type="Animation" id=3]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -89,9 +114,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -6 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -8 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 6 ]
+}
 
 [sub_resource type="Animation" id=4]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -128,9 +177,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -15 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -17 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 15 ]
+}
 
 [sub_resource type="Animation" id=5]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -167,9 +240,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -16 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -18 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 16 ]
+}
 
 [sub_resource type="Animation" id=6]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -206,9 +303,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -7 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -9 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 7 ]
+}
 
 [sub_resource type="Animation" id=7]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -245,9 +366,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -8 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -10 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 8 ]
+}
 
 [sub_resource type="Animation" id=8]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -284,9 +429,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -9 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -11 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 9 ]
+}
 
 [sub_resource type="Animation" id=9]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -323,9 +492,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -10 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -12 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 10 ]
+}
 
 [sub_resource type="Animation" id=10]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -362,9 +555,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -11 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -13 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 11 ]
+}
 
 [sub_resource type="Animation" id=11]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -401,9 +618,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -12 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -14 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 12 ]
+}
 
 [sub_resource type="Animation" id=12]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -440,9 +681,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -13 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -15 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 13 ]
+}
 
 [sub_resource type="Animation" id=13]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -479,9 +744,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -14 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -16 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 14 ]
+}
 
 [sub_resource type="Animation" id=14]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -518,9 +807,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -5 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -7 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 5 ]
+}
 
 [sub_resource type="Animation" id=15]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -557,9 +870,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -6 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -8 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 6 ]
+}
 
 [sub_resource type="Animation" id=16]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -596,9 +933,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -15 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -17 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 15 ]
+}
 
 [sub_resource type="Animation" id=17]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -635,9 +996,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -16 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -18 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 16 ]
+}
 
 [sub_resource type="Animation" id=18]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -674,9 +1059,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -7 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -9 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 7 ]
+}
 
 [sub_resource type="Animation" id=19]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -713,9 +1122,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -8 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -10 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 8 ]
+}
 
 [sub_resource type="Animation" id=20]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -752,9 +1185,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -9 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -11 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 9 ]
+}
 
 [sub_resource type="Animation" id=21]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -791,9 +1248,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -10 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -12 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 10 ]
+}
 
 [sub_resource type="Animation" id=22]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -830,9 +1311,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -11 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -13 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 11 ]
+}
 
 [sub_resource type="Animation" id=23]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -869,9 +1374,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -12 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -14 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 12 ]
+}
 
 [sub_resource type="Animation" id=24]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -908,9 +1437,33 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -13 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -15 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 13 ]
+}
 
 [sub_resource type="Animation" id=25]
-length = 0.25
+length = 0.0625
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
 tracks/0/interp = 1
@@ -947,15 +1500,32 @@ tracks/2/keys = {
 "update": 0,
 "values": [ -14 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -16 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 14 ]
+}
 
-[sub_resource type="RectangleShape2D" id=26]
-extents = Vector2( 24.8534, 3.58804 )
-
-[sub_resource type="RectangleShape2D" id=29]
-extents = Vector2( 6.57111, 11.1881 )
-
-[sub_resource type="Animation" id=27]
-resource_name = "Left_Fire"
+[sub_resource type="Animation" id=26]
 length = 0.12
 step = 0.04
 tracks/0/type = "value"
@@ -975,7 +1545,7 @@ tracks/1/path = NodePath("Fire Sprite:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/keys = {
 "times": PoolRealArray( 0, 0.12 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -987,7 +1557,7 @@ tracks/2/path = NodePath("Fire Sprite:flip_h")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
@@ -1008,9 +1578,20 @@ tracks/3/keys = {
 "method": "_fire"
 } ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Fire Sprite/FieldOfView:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = false
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 180.0 ]
+}
 
-[sub_resource type="Animation" id=28]
-resource_name = "Right_Fire"
+[sub_resource type="Animation" id=27]
 length = 0.12
 step = 0.04
 tracks/0/type = "value"
@@ -1030,7 +1611,7 @@ tracks/1/path = NodePath("Fire Sprite:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/keys = {
 "times": PoolRealArray( 0, 0.12 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -1042,7 +1623,7 @@ tracks/2/path = NodePath("Fire Sprite:flip_h")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
-tracks/2/enabled = true
+tracks/2/enabled = false
 tracks/2/keys = {
 "times": PoolRealArray( 0, 0.12 ),
 "transitions": PoolRealArray( 1, 1 ),
@@ -1063,16 +1644,31 @@ tracks/3/keys = {
 "method": "_fire"
 } ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("Fire Sprite/FieldOfView:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = false
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 6.5, 5 )
 
 [node name="Long Neck" type="KinematicBody2D" groups=[
 "Enemy",
-"Move Stopping",
 "absorbable",
 ]]
 collision_layer = 4
 collision_mask = 6
 script = ExtResource( 1 )
 bullet_texture = ExtResource( 8 )
+facing_dir = 1
 max_height = 11
 
 [node name="State Machine" type="Node" parent="."]
@@ -1120,41 +1716,40 @@ anims/Right_9 = SubResource( 25 )
 script = ExtResource( 3 )
 
 [node name="Fire Sprite" type="Sprite" parent="."]
-position = Vector2( 5.5, -5.5 )
+position = Vector2( -5.5, -5.5 )
 texture = ExtResource( 5 )
 hframes = 3
 script = ExtResource( 6 )
 
-[node name="Area2D" type="Area2D" parent="Fire Sprite"]
-position = Vector2( -58.8501, 5.5 )
-scale = Vector2( 2, 1 )
-collision_layer = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fire Sprite/Area2D"]
-position = Vector2( 32.3142, -6.08289 )
-shape = SubResource( 26 )
-
-[node name="Bounced On Area" type="Area2D" parent="Fire Sprite"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fire Sprite/Bounced On Area"]
-modulate = Color( 0, 1, 0.203922, 1 )
-position = Vector2( 14.7646, -18.7899 )
-shape = SubResource( 29 )
-
 [node name="FieldOfView" type="Node2D" parent="Fire Sprite"]
-position = Vector2( 6.08168, -5.19079 )
+position = Vector2( 0, 2 )
+rotation = 3.14159
 script = ExtResource( 7 )
 field_of_view = 5
+warn_distance = 100
+danger_distance = 100
+target_groups = [ "Player" ]
+collision_mask = 3
+frequency = 0.1
 
 [node name="Fire Animator" type="AnimationPlayer" parent="."]
-anims/Left_Fire = SubResource( 27 )
-anims/Right_Fire = SubResource( 28 )
+anims/Left_Fire = SubResource( 26 )
+anims/Right_Fire = SubResource( 27 )
 
 [node name="Stun Length" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
+[node name="Absorbtion Area" type="Area2D" parent="."]
+collision_layer = 0
+script = ExtResource( 9 )
+
+[node name="Absorb Box" type="CollisionShape2D" parent="Absorbtion Area"]
+modulate = Color( 0, 1, 0.0862745, 1 )
+position = Vector2( 0, -7 )
+shape = SubResource( 28 )
+
 [connection signal="animation_finished" from="AnimationPlayer" to="State Machine" method="_on_AnimationPlayer_animation_finished"]
-[connection signal="body_entered" from="Fire Sprite/Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Fire Sprite/Area2D" to="." method="_on_Area2D_body_exited"]
-[connection signal="body_entered" from="Fire Sprite/Bounced On Area" to="." method="_on_Bounced_On_Area_body_entered"]
+[connection signal="target_enter" from="Fire Sprite/FieldOfView" to="." method="_on_FieldOfView_target_enter"]
+[connection signal="target_exit" from="Fire Sprite/FieldOfView" to="." method="_on_FieldOfView_target_exit"]
+[connection signal="body_entered" from="Absorbtion Area" to="." method="_on_Absorbtion_Area_body_entered"]

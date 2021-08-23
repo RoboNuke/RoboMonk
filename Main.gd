@@ -13,6 +13,8 @@ export(PackedScene) var prototype_level_scene = preload("res://2. Levels/Prototy
 
 var current_level
 var player
+var boss
+var boss_spawned = false
 
 func _ready():
 	#add_child(current_level)
@@ -36,6 +38,8 @@ func _on_Start_Button_pressed(_nam):
 	remove_child(current_level)
 	current_level = prototype_level_scene.instance()
 	add_child(current_level)
+	current_level.get_node("Boss Trigger").connect("body_entered",self, "_boss_triggered")
+	current_level.connect("boss_action_trigger",self, "_trigger_boss_action")
 	#player = player_class
 	player = player_scene.instance()
 	add_child(player)
@@ -50,6 +54,22 @@ func _on_player_death():
 	#goto_main_menu()
 	player.restart(current_level.get_player_start())
 	
-
+func _trigger_boss_action(action):
+	if boss != null:
+		boss.trigger_action(action)
+	
+func _init_boss():
+	add_child(boss)
+	boss.player = player
+	boss.start(current_level.get_boss_start())
+	boss.set_boss_data(current_level.boss_data)
+	
+func _boss_triggered(_body):
+	if boss_spawned:
+		return
+	boss_spawned = true
+	boss = current_level.boss_scene.instance()
+	call_deferred("_init_boss")
+	
 func _on_Quit_Button_pressed():
 	get_tree().quit()

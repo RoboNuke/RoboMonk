@@ -95,7 +95,7 @@ func _get_anim_idx():
 		if ang < anim_ranges[i]:
 			return(i)
 	return(-1)
-	print("ERROR: FAILED TO FINE ANIMATION INDEX")
+	#print("ERROR: FAILED TO FINE ANIMATION INDEX")
 	
 func _track_animation():
 	var idx = _get_anim_idx()

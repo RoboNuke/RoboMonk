@@ -3,7 +3,7 @@
 [ext_resource path="res://4.Enemies/crawling/Crawler Hand.gd" type="Script" id=1]
 [ext_resource path="res://4.Enemies/crawling/Crawler Shoulder.gd" type="Script" id=2]
 [ext_resource path="res://addons/luisboch.field_of_view/field_of_view.gd" type="Script" id=3]
-[ext_resource path="res://4.Enemies/crawling/Crawler.gd" type="Script" id=4]
+[ext_resource path="res://Crawler.gd" type="Script" id=4]
 [ext_resource path="res://4.Enemies/crawling/Crawler State Machine.gd" type="Script" id=5]
 [ext_resource path="res://4.Enemies/crawling/spider_walker.png" type="Texture" id=6]
 [ext_resource path="res://4.Enemies/Bullet/Bullet Textures/small_red.png" type="Texture" id=7]
