@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://4.Enemies/Dragon Boss/dragon_boss_top.png" type="Texture" id=1]
 [ext_resource path="res://4.Enemies/Dragon Boss/dragon_boss_bot.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://4.Enemies/Dragon Boss/Absorbtion Area.gd" type="Script" id=4]
 [ext_resource path="res://4.Enemies/Dragon Boss/Dragon Boss.gd" type="Script" id=5]
 [ext_resource path="res://4.Enemies/Dragon Boss/Laser Only State Machine.gd" type="Script" id=6]
+[ext_resource path="res://4.Enemies/Beam/Beam Textures/beam_notimproved.png" type="Texture" id=8]
+[ext_resource path="res://4.Enemies/Dragon Boss/Beam Spawn.gd" type="Script" id=9]
 
 [sub_resource type="Animation" id=1]
 length = 0.1
@@ -389,6 +391,9 @@ extents = Vector2( 9.5, 7.5 )
 [node name="Dragon Boss" type="KinematicBody2D"]
 collision_layer = 4
 script = ExtResource( 5 )
+beam_texture = ExtResource( 8 )
+beam_speed = 150.0
+BEAM_OFFSET = Vector2( -20, -30 )
 
 [node name="Laser Only State Machine" type="Node" parent="."]
 script = ExtResource( 6 )
@@ -423,7 +428,7 @@ anims/Recoil = SubResource( 12 )
 texture = ExtResource( 1 )
 offset = Vector2( 0, -12.5 )
 region_enabled = true
-region_rect = Rect2( 0, 0, 42, 25 )
+region_rect = Rect2( 42, 0, 42, 25 )
 
 [node name="Base Collision Object" type="CollisionShape2D" parent="."]
 visible = false
@@ -441,3 +446,33 @@ shape = SubResource( 14 )
 disabled = true
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="Beam ROF" type="Timer" parent="."]
+one_shot = true
+
+[node name="Beam CD" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Beam Spawn" type="Position2D" parent="."]
+position = Vector2( -20, -18 )
+script = ExtResource( 9 )
+beam_location = Vector2( -18, -18 )
+
+[node name="Beam Rays" type="Node2D" parent="Beam Spawn"]
+
+[node name="Beam Ray Bot" type="RayCast2D" parent="Beam Spawn/Beam Rays"]
+position = Vector2( 0, 4 )
+rotation = 1.5708
+enabled = true
+cast_to = Vector2( 0, 500 )
+collision_mask = 3
+
+[node name="Beam Ray Top" type="RayCast2D" parent="Beam Spawn/Beam Rays"]
+position = Vector2( 0.33371, -4 )
+rotation = 1.5708
+enabled = true
+cast_to = Vector2( 0, 500 )
+collision_mask = 3
+
+[connection signal="timeout" from="Beam ROF" to="." method="_on_Beam_ROF_timeout"]

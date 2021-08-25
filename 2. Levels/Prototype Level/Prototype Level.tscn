@@ -20,7 +20,9 @@ boss_scene = ExtResource( 5 )
 "Wall",
 ]]
 
-[node name="TileMap2" type="TileMap" parent="Map"]
+[node name="TileMap2" type="TileMap" parent="Map" groups=[
+"Wall",
+]]
 position = Vector2( 0, -272 )
 tile_set = ExtResource( 4 )
 cell_size = Vector2( 16, 16 )
