@@ -39,7 +39,8 @@ func absorbed():
 func _on_Bullet_body_entered(body):
 	if "Player" in body.get_groups():
 		body.hit(self)
-		print("Hit PLayer")
+	elif "Hittable" in body.get_groups():
+		body.hit(self)
 	elif "Wall" in body.get_groups():
-		print("Hit Wall")
+		pass#print("Hit Wall")
 	self.queue_free()

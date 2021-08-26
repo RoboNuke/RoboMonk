@@ -69,6 +69,7 @@ func _boss_triggered(_body):
 		return
 	boss_spawned = true
 	boss = current_level.boss_scene.instance()
+	current_level.spawn_boss()
 	call_deferred("_init_boss")
 	
 func _on_Quit_Button_pressed():

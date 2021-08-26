@@ -1,13 +1,95 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://4.Enemies/crawling/crawling.tscn" type="PackedScene" id=1]
 [ext_resource path="res://2. Levels/Prototype Level/Prototype Level.gd" type="Script" id=2]
 [ext_resource path="res://4.Enemies/Long Neck/Long Neck.tscn" type="PackedScene" id=3]
 [ext_resource path="res://2. Levels/tilesets/mega_metal.tres" type="TileSet" id=4]
 [ext_resource path="res://4.Enemies/Dragon Boss/Dragon Boss.tscn" type="PackedScene" id=5]
+[ext_resource path="res://4.Enemies/Dragon Boss/Battery/Battery.tscn" type="PackedScene" id=6]
+[ext_resource path="res://3.World/Electric_Door_64x16.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 22 )
+extents = Vector2( 22, 6 )
+
+[sub_resource type="Animation" id=3]
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Door Sprite:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Rect2( 16, 0, 16, 64 ), Rect2( 32, 0, 16, 64 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Door Sprite:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1072, 232 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Door Sprite:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Rect2( 0, 0, 16, 64 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Door Sprite:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1096, 232 ) ]
+}
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32, 160 )
@@ -34,22 +116,45 @@ tile_data = PoolIntArray( 786498, 0, 131073, 786499, 0, 131075, 852034, 0, 19660
 [node name="Enimies" type="Node2D" parent="."]
 
 [node name="Ledger" parent="Enimies" instance=ExtResource( 1 )]
-position = Vector2( 576, 256 )
+position = Vector2( 568, 256 )
+
+[node name="Long Neck" parent="Enimies" instance=ExtResource( 3 )]
+position = Vector2( 263.5, 256 )
+
+[node name="Battery" parent="Enimies" instance=ExtResource( 6 )]
+position = Vector2( 1516, 242 )
+
+[node name="Battery2" parent="Enimies" instance=ExtResource( 6 )]
+position = Vector2( 1516, 176 )
+
+[node name="Battery3" parent="Enimies" instance=ExtResource( 6 )]
+position = Vector2( 1392, 238 )
 
 [node name="Player Start" type="Position2D" parent="."]
 position = Vector2( 1008, 224 )
 
 [node name="Boss Start" type="Position2D" parent="."]
-position = Vector2( 1520, 208 )
-
-[node name="Long Neck" parent="." instance=ExtResource( 3 )]
-position = Vector2( 263.5, 256 )
+position = Vector2( 1516, 208 )
 
 [node name="Boss Trigger" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boss Trigger"]
 position = Vector2( 1072, 232 )
+rotation = -1.5708
 shape = SubResource( 1 )
+
+[node name="Door Sprite" type="Sprite" parent="Boss Trigger"]
+position = Vector2( 1072, 232 )
+scale = Vector2( 1, 0.85 )
+texture = ExtResource( 7 )
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 64 )
+
+[node name="Door Player" type="AnimationPlayer" parent="Boss Trigger"]
+anims/Closed = SubResource( 3 )
+anims/Opened = SubResource( 4 )
 
 [node name="Left Boss Track" type="Area2D" parent="."]
 position = Vector2( 1120, 96 )
@@ -64,6 +169,16 @@ collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right Boss Track"]
 shape = SubResource( 2 )
+
+[node name="Door Stopper" type="StaticBody2D" parent="." groups=[
+"Walls",
+]]
+
+[node name="Door Stopper Collision" type="CollisionShape2D" parent="Door Stopper"]
+position = Vector2( 1072, 232 )
+rotation = 1.5708
+shape = SubResource( 1 )
+one_way_collision = true
 
 [connection signal="body_entered" from="Left Boss Track" to="." method="_on_Left_Boss_Track_body_entered"]
 [connection signal="body_entered" from="Right Boss Track" to="." method="_on_Right_Boss_Track_body_entered"]

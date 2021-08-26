@@ -33,6 +33,12 @@ func _state_logic(_delta):
 			pass
 		states.search_player:
 			parent._track_player()
+			if parent.move_dir == parent.MOVE_DIRS.DOWN:
+				parent.bot_player.play("high")
+			elif parent.move_dir == parent.MOVE_DIRS.UP:
+				parent.bot_player.play("Fly Down")
+			else:
+				parent.bot_player.play("Idle")
 
 func _get_transition(_delta):
 	match state:

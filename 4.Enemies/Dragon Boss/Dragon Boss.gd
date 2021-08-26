@@ -41,7 +41,7 @@ export var muzzle_offset = 20
 var left_x 
 var right_x
 
-var beam_width = 6.0
+export var beam_width = 5.0
 func _ready():
 	pass
 
