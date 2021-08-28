@@ -4,7 +4,7 @@
 [ext_resource path="res://4.Enemies/Dragon Boss/Battery/Battery Cell.gd" type="Script" id=2]
 [ext_resource path="res://4.Enemies/Dragon Boss/Battery/explosion16x16.png" type="Texture" id=3]
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=1]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("Explosion Sprite:region_rect")
@@ -69,7 +69,7 @@ tracks/4/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=2]
 length = 0.7
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:region_rect")
@@ -120,7 +120,7 @@ tracks/3/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 length = 0.7
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:region_rect")
@@ -171,8 +171,8 @@ tracks/3/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="CircleShape2D" id=3]
-radius = 4.0
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 4, 4 )
 
 [node name="Battery Cell" type="StaticBody2D" groups=[
 "Hittable",
@@ -182,20 +182,20 @@ collision_mask = 8
 script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Boom = SubResource( 4 )
-anims/Green = SubResource( 1 )
-anims/Red = SubResource( 2 )
+anims/Boom = SubResource( 1 )
+anims/Green = SubResource( 2 )
+anims/Red = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 48, 0, 8, 8 )
 
 [node name="Explosion Sprite" type="Sprite" parent="."]
-visible = false
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 112, 0, 16, 16 )

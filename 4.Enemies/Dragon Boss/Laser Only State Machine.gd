@@ -9,10 +9,13 @@ func _ready():
 	add_state("destroy_map")
 	add_state("shutdown")
 	add_state("search_player")
+	add_state("fire_ball")
+	add_state("ping_pong_above")
 
 func start():
 	active = true
 	call_deferred("set_state", states.idle)
+	
 	
 func _state_logic(_delta):
 	#print(state)
@@ -20,17 +23,6 @@ func _state_logic(_delta):
 		states.idle:
 			parent.bot_player.play("off")
 			parent.top_player.play("Idle")
-		states.fire_laser:
-			if parent.beam_cd.is_stopped() and parent.beam_rof.is_stopped():
-				parent._fire_laser()
-		states.change_side:
-			parent._change_side()
-		states.losing_power:
-			pass
-		states.destroy_map:
-			pass
-		states.shutdown:
-			pass
 		states.search_player:
 			parent._track_player()
 			if parent.move_dir == parent.MOVE_DIRS.DOWN:
@@ -39,11 +31,37 @@ func _state_logic(_delta):
 				parent.bot_player.play("Fly Down")
 			else:
 				parent.bot_player.play("Idle")
+		states.fire_laser:
+			if parent.beam_cd.is_stopped() and parent.beam_rof.is_stopped():
+				parent._fire_laser()
+		states.fire_ball:
+			#if parent.ball_cd.is_stopped() and parent.ball_rof.is_stopped():
+			#	parent._fire_ball()
+			pass
+		states.change_side:
+			parent._change_side()
+		states.destroy_map:
+			parent._destroy_map()
+		states.shutdown:
+			parent._shutdown()
+		states.ping_pong_above:
+			parent._ping_pong_above()
+		states.losing_power:
+			pass
 
 func _get_transition(_delta):
 	match state:
 		states.idle:
 			return states.search_player
+		states.search_player:
+			if parent.shutdown:
+				return states.shutdown
+			if parent.desired_facing_dir != parent.facing_dir:
+				return states.change_side
+			if parent._see_player() and parent.beam_cd.is_stopped():
+				return states.fire_laser
+			if parent.destroying_map and not parent.map_destroyed:
+				return states.destroy_map
 		states.fire_laser:
 			if not parent.firing:
 				if parent.desired_facing_dir == parent.facing_dir:
@@ -52,21 +70,24 @@ func _get_transition(_delta):
 					return states.search_player
 				if !parent.beam_cd.is_stopped():
 					return states.search_player
-				
 		states.change_side:
 			if parent.desired_facing_dir == parent.facing_dir:
 				return states.search_player
 		states.losing_power:
 			pass
 		states.destroy_map:
-			pass
+			if not parent.destroying_map:
+				return states.search_player
 		states.shutdown:
-			pass
-		states.search_player:
-			if parent.desired_facing_dir != parent.facing_dir:
-				return states.change_side
-			if parent._see_player() and parent.beam_cd.is_stopped():
-				return states.fire_laser
+			if parent.phase == parent.PHASES.FINAL:
+				return states.ping_pong_above
+		states.ping_pong_above:
+			if parent.ball_cd.is_stopped():
+				return states.fire_ball
+		states.fire_ball:
+			if parent.firing_balls:
+				return states.ping_pong_above
+		
 	
 func _enter_state(new_state, _old_state):
 	match new_state:
@@ -86,6 +107,12 @@ func _enter_state(new_state, _old_state):
 			print("Dragon Boss Init::Shuting Down")
 		states.search_player:
 			print("Dragon Boss Init::Search Player")
+		states.fire_ball:
+			print("Dragon Boss Init::Fire Ball")
+			parent.firing_balls = true
+			parent.bot_player.play("low_fire")
+		states.ping_pong_above:
+			print("Dragon Boss Init::Ping Pong Above")
 
 func _exit_state(old_state, _new_state):
 	match old_state:

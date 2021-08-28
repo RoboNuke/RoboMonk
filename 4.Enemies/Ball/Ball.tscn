@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://4.Enemies/Ball/Ball.gd" type="Script" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 2.0
+
+[node name="Ball" type="Area2D" groups=[
+"Projectile",
+"absorbable",
+]]
+z_index = -1
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
+"bullet",
+]]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color( 1, 0.960784, 0, 1 )
+polygon = PoolVector2Array( -1.2899, -1.51601, -1.7916, -0.856371, -2.00529, 0.0076623, -1.7916, 0.880986, -1.24345, 1.54992, -0.463033, 1.94012, 0.512488, 1.93083, 1.0978, 1.64282, 1.61808, 1.12254, 1.94325, 0.435034, 1.97112, -0.401128, 1.68311, -1.0236, 1.23716, -1.58104, 0.466034, -1.95267, -0.546649, -1.91551 )

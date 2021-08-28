@@ -13,4 +13,5 @@ func play_death():
 	player.play("Boom")
 	
 func die():
+	print("I'm dying")
 	parent.kill()

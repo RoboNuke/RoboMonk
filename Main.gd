@@ -62,7 +62,13 @@ func _init_boss():
 	add_child(boss)
 	boss.player = player
 	boss.start(current_level.get_boss_start())
+	current_level.connect_boss(boss)
 	boss.set_boss_data(current_level.boss_data)
+	#player.cam_global_x = 1328
+	#player.cam_global_y = 80
+	player.set_camera_params(current_level.boss_camera_dict)
+	#player.stop_camera()
+	#current_level.start_boss_camera()
 	
 func _boss_triggered(_body):
 	if boss_spawned:
