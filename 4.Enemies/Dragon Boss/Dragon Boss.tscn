@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://4.Enemies/Dragon Boss/dragon_boss_top.png" type="Texture" id=1]
 [ext_resource path="res://4.Enemies/Dragon Boss/dragon_boss_bot.png" type="Texture" id=2]
@@ -209,10 +209,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 9, 4 ), Vector2( 9, 4.5 ), Vector2( 9, 5 ), Vector2( 9, 5.5 ), Vector2( 9, 6 ), Vector2( 9, 6.5 ), Vector2( 9, 7 ), Vector2( 9.5, 7.5 ) ]
+"values": [ Vector2( 9, 4 ), Vector2( 9, 4.5 ), Vector2( 9, 5 ), Vector2( 9, 5.5 ), Vector2( 9, 6 ), Vector2( 9, 6.5 ), Vector2( 9, 7 ), Vector2( 9.5, 7.5 ), Vector2( 9.5, 7.5 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Absorbtion Area/Jaw Area:position")
@@ -221,10 +221,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -7.5, 9.5 ), Vector2( -7.5, 10 ), Vector2( -7.5, 10.5 ), Vector2( -7.5, 11 ), Vector2( -7.5, 11.5 ), Vector2( -7.5, 12 ), Vector2( -7.5, 12.5 ), Vector2( -7.5, 13 ) ]
+"values": [ Vector2( -7.5, 9.5 ), Vector2( -7.5, 10 ), Vector2( -7.5, 10.5 ), Vector2( -7.5, 11 ), Vector2( -7.5, 11.5 ), Vector2( -7.5, 12 ), Vector2( -7.5, 12.5 ), Vector2( -7.5, 13 ), Vector2( -7.5, 13 ) ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -252,6 +252,70 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "low_close"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/path = NodePath("Bottom Sprite:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Rect2( 672, 0, 42, 21 ), Rect2( 630, 0, 42, 21 ), Rect2( 588, 0, 42, 21 ), Rect2( 546, 0, 42, 21 ), Rect2( 504, 0, 42, 21 ), Rect2( 462, 0, 42, 21 ), Rect2( 420, 0, 42, 21 ), Rect2( 378, 0, 42, 21 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Bottom Sprite:offset")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Base Collision Object:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -0.0638428, -1.75461 ), Vector2( -1.00879, -2.54206 ), Vector2( -1.16628, -2.85704 ), Vector2( -1.16628, -3.487 ), Vector2( -0.851295, -4.11696 ), Vector2( -0.693802, -4.58943 ), Vector2( -0.693802, -4.74692 ), Vector2( 0.0936432, -5.33772 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Base Collision Object:shape:extents")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 16.6482, 22.7347 ), Vector2( 16.491, 21.5 ), Vector2( 16.491, 20.5 ), Vector2( 16.491, 20 ), Vector2( 16.491, 19.5 ), Vector2( 16.491, 19 ), Vector2( 16.491, 18.5 ), Vector2( 16.1738, 18.5778 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Absorbtion Area/Jaw Area:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=9]
@@ -287,9 +351,12 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0.2 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
 "values": [ {
+"args": [  ],
+"method": "set_firing_balls"
+}, {
 "args": [  ],
 "method": "_fire_ball"
 } ]
@@ -320,6 +387,42 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Base Collision Object:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.0936432, -1.3332 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Base Collision Object:shape:extents")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 16.2499, 22.1387 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Absorbtion Area/Jaw Area:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=11]
@@ -371,6 +474,42 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -7.5, 9.5 ), Vector2( -7.5, 10 ), Vector2( -7.5, 10.5 ), Vector2( -7.5, 11 ), Vector2( -7.5, 11.5 ), Vector2( -7.5, 12 ), Vector2( -7.5, 12.5 ), Vector2( -7.5, 13 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Base Collision Object:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0.0936432, -5.33772 ), Vector2( 0.0936432, -8.84167 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Base Collision Object:shape:extents")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Vector2( 16.1738, 18.5778 ), Vector2( 16, 15 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Absorbtion Area/Jaw Area:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.1, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
 }
 
 [sub_resource type="Animation" id=12]
@@ -482,12 +621,14 @@ tracks/1/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=16]
-extents = Vector2( 16.1738, 18.5778 )
+extents = Vector2( 16.2499, 22.1387 )
 
 [sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 9, 4.5 )
+extents = Vector2( 9.5, 7.5 )
 
-[node name="Dragon Boss" type="KinematicBody2D"]
+[node name="Dragon Boss" type="KinematicBody2D" groups=[
+"Enemy",
+]]
 position = Vector2( 0, -0.594604 )
 collision_layer = 4
 script = ExtResource( 5 )
@@ -507,9 +648,10 @@ script = ExtResource( 6 )
 texture = ExtResource( 2 )
 offset = Vector2( 0, 10.5 )
 region_enabled = true
-region_rect = Rect2( 1722, 0, 42, 21 )
+region_rect = Rect2( 1344, 0, 42, 21 )
 
 [node name="Bottom Player" type="AnimationPlayer" parent="."]
+playback_speed = 0.5
 "anims/Fly Down" = SubResource( 1 )
 "anims/Fly Up" = SubResource( 2 )
 anims/Idle = SubResource( 3 )
@@ -518,6 +660,7 @@ anims/high_fire = SubResource( 5 )
 anims/high_gun = SubResource( 6 )
 anims/high_open = SubResource( 7 )
 anims/low = SubResource( 8 )
+anims/low_close = SubResource( 18 )
 anims/low_fire = SubResource( 9 )
 anims/low_gun = SubResource( 10 )
 anims/low_open = SubResource( 11 )
@@ -535,17 +678,19 @@ region_enabled = true
 region_rect = Rect2( 42, 0, 42, 25 )
 
 [node name="Base Collision Object" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 0.0936432, -5.33772 )
+position = Vector2( 0.0936432, -1.3332 )
 shape = SubResource( 16 )
 
-[node name="Absorbtion Area" type="Area2D" parent="."]
-visible = false
+[node name="Absorbtion Area" type="Area2D" parent="." groups=[
+"Absorbable",
+]]
+collision_layer = 32
+collision_mask = 0
 script = ExtResource( 4 )
 
 [node name="Jaw Area" type="CollisionShape2D" parent="Absorbtion Area"]
 modulate = Color( 0, 1, 0.0627451, 1 )
-position = Vector2( -7.5, 10 )
+position = Vector2( -7.5, 13 )
 shape = SubResource( 17 )
 disabled = true
 
@@ -593,5 +738,6 @@ position = Vector2( -28.7093, 19.9846 )
 script = ExtResource( 7 )
 ball_location = Vector2( -18, 14 )
 
+[connection signal="animation_finished" from="Bottom Player" to="Laser Only State Machine" method="_on_Bottom_Player_animation_finished"]
 [connection signal="timeout" from="Beam ROF" to="." method="_on_Beam_ROF_timeout"]
 [connection signal="timeout" from="Ball ROF" to="." method="_on_Ball_ROF_timeout"]

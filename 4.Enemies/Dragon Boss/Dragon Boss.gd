@@ -6,7 +6,6 @@ onready var bot_player = $"Bottom Player"
 onready var top_player = $"Top Player"
 onready var tween = $"Tween"
 onready var laser_sm = $"Laser Only State Machine"
-onready var mouth_sm = $"Mouth Gun State Machine"
 onready var beam_cd = $"Beam CD"
 onready var ball_cd = $"Ball CD"
 onready var beam_rof = $"Beam ROF"
@@ -74,7 +73,6 @@ func start(pos):
 func set_boss_data(data):
 	left_x = data[0]
 	right_x = data[1]
-	print(beam_width/beam_speed)
 	beam_rof.set_wait_time(beam_width/beam_speed)
 	
 func _process(_delta):
@@ -145,43 +143,41 @@ func _fire_laser():
 		beam_rof.start()
 
 func _on_Ball_ROF_timeout():
-	print("Ball rof timeout")
-	print("Balls Fired:", balls_fired, " Total Balls:", total_balls)
 	if balls_fired == total_balls:
-		print("in ==")
-		firing_balls = false
+		bot_player.play_backwards("low_gun")
 		ball_cd.start()
 		balls_fired = 0
 		return
 	if firing_balls:
-		print("in not ==")
 		#_fire_ball()
 		bot_player.play("low_fire")
 
+func set_firing_balls():
+	firing_balls = true
+	
+var angles = [45.0/2.0,45.0,45.0+45/2.0]
 func _fire_ball():
-	print("fire ball top")
 	if ball_cd.is_stopped():
 		ball_cd.start()
 	if ball_rof.is_stopped():
-		var b = ball.instance()
-		b.set('velocity', ball_speed)
-		b.set("momentum", beam_momentum)
-		get_tree().root.add_child(b)
-		# get random direction on on side we facing
-		var angle = deg2rad(rng.randf_range(20,70))
+		for ang in angles:
+			var b = ball.instance()
+		
+			b.set('velocity', ball_speed)
+			b.set("momentum", beam_momentum)
+			get_tree().root.add_child(b)
+			# get random direction on on side we facing
+			var angle = deg2rad(rng.randf_range(20,70))
 		#var angle = deg2rad(45)
 		
-		angle = -angle if facing_dir == FACE_DIRS.RIGHT else angle
-		var dir = Vector2.UP.rotated(angle).normalized()
-		dir = -dir
-		print(angle)
-		#dir.x = -dir.x
-		print(dir)
+			#angle = -angle if facing_dir == FACE_DIRS.RIGHT else angle
+			ang = -ang if facing_dir==FACE_DIRS.RIGHT else ang
+			var dir = Vector2.UP.rotated(deg2rad(ang)).normalized()
+			dir = -dir #if facing_dir == FACE_DIRS.LEFT else dir
 		
-		b.release(ball_spawn.global_position, dir)
+			b.release(ball_spawn.global_position, dir)
 		balls_fired += 1
 		ball_rof.start()
-		print("rof started for balls")
 
 func get_beam_loc(b):
 		if beams_fired == 0:

@@ -30,11 +30,13 @@ func get_momentum():
 func absorbed():
 	pass
 
-func _on_Bullet_body_entered(body):
+func _on_Ball_body_entered(body):
+	print(body.get_groups())
 	if "Player" in body.get_groups():
 		body.hit(self)
+		print("Hit PLayer")
 	elif "Hittable" in body.get_groups():
 		body.hit(self)
 	elif "Wall" in body.get_groups():
-		pass#print("Hit Wall")
+		print("Hit Wall")
 	self.queue_free()

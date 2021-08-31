@@ -1,5 +1,7 @@
 extends StateMachine
 
+var in_fire_queue = false
+
 func _ready():
 	active = false
 	add_state("idle")
@@ -34,10 +36,10 @@ func _state_logic(_delta):
 		states.fire_laser:
 			if parent.beam_cd.is_stopped() and parent.beam_rof.is_stopped():
 				parent._fire_laser()
-		states.fire_ball:
+		#states.fire_ball:
 			#if parent.ball_cd.is_stopped() and parent.ball_rof.is_stopped():
 			#	parent._fire_ball()
-			pass
+		#	pass
 		states.change_side:
 			parent._change_side()
 		states.destroy_map:
@@ -46,9 +48,28 @@ func _state_logic(_delta):
 			parent._shutdown()
 		states.ping_pong_above:
 			parent._ping_pong_above()
+			print("in fire que: ", in_fire_queue)
+			print("current_anim: ", parent.bot_player.current_animation)
+			if not in_fire_queue and parent.bot_player.current_animation == "Idle":
+				print("starting fire queue")
+				parent.bot_player.play("low_open")
+				parent.bot_player.queue("low_gun")
+				parent.bot_player.queue("low_fire")
+				in_fire_queue = true
 		states.losing_power:
 			pass
 
+
+
+func _on_Bottom_Player_animation_finished(anim_name):
+	print(anim_name, " has finished playing")
+	if anim_name == "low_gun" and parent.firing_balls:
+		parent.bot_player.play("low_close")
+	if anim_name == "low_close" and parent.firing_balls:
+		parent.firing_balls = false
+		in_fire_queue = false
+		parent.bot_player.play("Idle")
+		
 func _get_transition(_delta):
 	match state:
 		states.idle:
@@ -82,8 +103,9 @@ func _get_transition(_delta):
 			if parent.phase == parent.PHASES.FINAL:
 				return states.ping_pong_above
 		states.ping_pong_above:
-			if parent.ball_cd.is_stopped():
-				return states.fire_ball
+			pass
+			#if parent.ball_cd.is_stopped():
+			#	return states.fire_ball
 		states.fire_ball:
 			if parent.firing_balls:
 				return states.ping_pong_above
@@ -110,7 +132,6 @@ func _enter_state(new_state, _old_state):
 		states.fire_ball:
 			print("Dragon Boss Init::Fire Ball")
 			parent.firing_balls = true
-			parent.bot_player.play("low_fire")
 		states.ping_pong_above:
 			print("Dragon Boss Init::Ping Pong Above")
 
@@ -119,5 +140,7 @@ func _exit_state(old_state, _new_state):
 		states.fire_laser:
 			parent.top_player.play("Recoil")
 			parent.top_player.queue("Idle")
+			
 
 	
+
