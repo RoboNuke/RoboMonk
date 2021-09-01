@@ -1,0 +1,123 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_EditorStory/EXP_EditorStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Story_editor"
+names = {
+"dialog": 1,
+"test_portraits": 2
+}
+story = {
+1: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "This is a test of the vinilla dialog system",
+"name": "dialog",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 441, 159 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 520, 40 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 441, 159 ),
+"slot_amount": 1,
+"text": "<left_speaker>RoboNuke</left_speaker>
+<dialog>Greetings!</dialog>
+<left_image>RoboNuke</left_image>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 60, 320 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<left_speaker>RoboNuke</left_speaker>
+<dialog>This will be a sick game</dialog>
+<left_image>RoboNuke</left_image>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 600, 340 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 442, 153 ),
+"slot_amount": 1,
+"text": "<right_speaker>Nay Sayer</right_speaker>
+<dialog>I doubt it!</dialog>
+<right_image>Big Bad</right_image>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 80, 580 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<left_speaker>RoboNuke</left_speaker>
+<dialog>Oh it will be fun!</dialog>
+<left_image>RoboNuke</left_image>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 620, 800 ),
+"links": {
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 600, 580 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<right_speaker>Nay Sayer</right_speaker>
+<dialog>I guess your right...</dialog>
+<right_image>Big Bad</right_image>",
+"type": "line"
+}
+}
+},
+2: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "List of Portrait images to load",
+"name": "test_portraits",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"RoboNuke\":\"res://3.World/Dialog/Portraits/red_guy.png\",
+	\"Big Bad\":\"res://3.World/Dialog/Portraits/3_eye.png\",
+	\"Expo Dumper\":\"res://3.World/Dialog/Portraits/glasses_alien.png\"
+}",
+"type": "line"
+}
+}
+}
+}
+available_dids = [  ]
+groups = [  ]

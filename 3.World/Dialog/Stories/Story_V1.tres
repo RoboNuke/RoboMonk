@@ -1,0 +1,75 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_EditorStory/EXP_EditorStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Story_editor"
+names = {
+"Game_Start": 1,
+"portraits": 2
+}
+story = {
+1: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "The initial dialog when the game is started",
+"name": "Game_Start",
+"nodes": {
+1: {
+"graph_offset": Vector2( 0, 0 ),
+"links": {
+0: 3
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<start>",
+"type": "line"
+},
+2: {
+"graph_offset": Vector2( 700, 420 ),
+"links": {
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<end>",
+"type": "line"
+},
+3: {
+"graph_offset": Vector2( 400, 200 ),
+"links": {
+0: 2
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<left_speaker>RoboNuke</left_speaker>
+<dialog>Good Luck!</dialog>
+<left_image>RoboNuke</left_image>",
+"type": "line"
+}
+}
+},
+2: {
+"available_nid": [  ],
+"groups": [  ],
+"human_readable_description": "List of portraits to load",
+"name": "portraits",
+"nodes": {
+1: {
+"graph_offset": Vector2( 40, 40 ),
+"links": {
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "{
+	\"RoboNuke\":\"res://3.World/Dialog/Portraits/red_guy.png\",
+	\"Big Bad\":\"res://3.World/Dialog/Portraits/3_eye.png\",
+	\"Expo Dumper\":\"res://3.World/Dialog/Portraits/glasses_alien.png\"
+}",
+"type": "line"
+}
+}
+}
+}
+available_dids = [  ]
+groups = [  ]

@@ -458,10 +458,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 9, 4 ), Vector2( 9, 4.5 ), Vector2( 9, 5 ), Vector2( 9, 5.5 ), Vector2( 9, 6 ), Vector2( 9, 6.5 ), Vector2( 9, 7 ), Vector2( 9.5, 7.5 ) ]
+"values": [ Vector2( 11.6426, 10.086 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Absorbtion Area/Jaw Area:position")
@@ -470,10 +470,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -7.5, 9.5 ), Vector2( -7.5, 10 ), Vector2( -7.5, 10.5 ), Vector2( -7.5, 11 ), Vector2( -7.5, 11.5 ), Vector2( -7.5, 12 ), Vector2( -7.5, 12.5 ), Vector2( -7.5, 13 ) ]
+"values": [ Vector2( -7.5, 13.7874 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("Base Collision Object:position")
@@ -621,16 +621,18 @@ tracks/1/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=16]
-extents = Vector2( 16.2499, 22.1387 )
+extents = Vector2( 16, 15 )
 
 [sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 9.5, 7.5 )
+extents = Vector2( 11.6426, 10.086 )
 
 [node name="Dragon Boss" type="KinematicBody2D" groups=[
+"Absorbable",
 "Enemy",
 ]]
 position = Vector2( 0, -0.594604 )
 collision_layer = 4
+collision_mask = 0
 script = ExtResource( 5 )
 beam_texture = ExtResource( 8 )
 beam_speed = 200.0
@@ -648,7 +650,7 @@ script = ExtResource( 6 )
 texture = ExtResource( 2 )
 offset = Vector2( 0, 10.5 )
 region_enabled = true
-region_rect = Rect2( 1344, 0, 42, 21 )
+region_rect = Rect2( 672, 0, 42, 21 )
 
 [node name="Bottom Player" type="AnimationPlayer" parent="."]
 playback_speed = 0.5
@@ -678,19 +680,18 @@ region_enabled = true
 region_rect = Rect2( 42, 0, 42, 25 )
 
 [node name="Base Collision Object" type="CollisionShape2D" parent="."]
-position = Vector2( 0.0936432, -1.3332 )
+position = Vector2( 0.0936432, -8.84167 )
 shape = SubResource( 16 )
 
 [node name="Absorbtion Area" type="Area2D" parent="." groups=[
 "Absorbable",
 ]]
-collision_layer = 32
-collision_mask = 0
+collision_layer = 4
 script = ExtResource( 4 )
 
 [node name="Jaw Area" type="CollisionShape2D" parent="Absorbtion Area"]
 modulate = Color( 0, 1, 0.0627451, 1 )
-position = Vector2( -7.5, 13 )
+position = Vector2( -7.5, 13.7874 )
 shape = SubResource( 17 )
 disabled = true
 
@@ -739,5 +740,6 @@ script = ExtResource( 7 )
 ball_location = Vector2( -18, 14 )
 
 [connection signal="animation_finished" from="Bottom Player" to="Laser Only State Machine" method="_on_Bottom_Player_animation_finished"]
+[connection signal="body_entered" from="Absorbtion Area" to="." method="_on_Absorbtion_Area_body_entered"]
 [connection signal="timeout" from="Beam ROF" to="." method="_on_Beam_ROF_timeout"]
 [connection signal="timeout" from="Ball ROF" to="." method="_on_Ball_ROF_timeout"]

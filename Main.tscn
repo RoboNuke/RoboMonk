@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://3.World/Dialog/Dialog Player.tscn" type="PackedScene" id=2]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,3 +15,13 @@ motion_scale = Vector2( 0.5, 0.5 )
 position = Vector2( 2675.95, 44.8984 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 6395, 742 )
+
+[node name="Boss Defeated" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Dialog Player" parent="." instance=ExtResource( 2 )]
+pause_mode = 2
+
+[connection signal="timeout" from="Boss Defeated" to="." method="_on_Boss_Defeated_timeout"]
+[connection signal="dialog_complete" from="Dialog Player" to="." method="_on_Dialog_Player_dialog_complete"]

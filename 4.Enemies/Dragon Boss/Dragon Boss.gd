@@ -13,6 +13,7 @@ onready var ball_rof = $"Ball ROF"
 onready var beam_rays = $"Beam Spawn/Beam Rays"
 onready var beam_spawn = $"Beam Spawn"
 onready var ball_spawn = $"Ball Spawn"
+onready var base_collision = $"Base Collision Object"
 var player
 
 enum FACE_DIRS {LEFT=0, RIGHT=1}
@@ -63,8 +64,15 @@ var shutdown = false
 signal destroy_map
 var rng = RandomNumberGenerator.new()
 var restart_pos
+var dead = false
+export var init_collision_mask = 4
+export var floor_collision_mask = 2
+
+signal boss_defeated
+
 func _ready():
 	rng.randomize()
+	#set_collision_mask(init_collision_mask)
 
 func start(pos):
 	global_position = pos
@@ -76,6 +84,17 @@ func set_boss_data(data):
 	beam_rof.set_wait_time(beam_width/beam_speed)
 	
 func _process(_delta):
+	if dead:
+		if tween.is_active():
+			tween.stop_all()
+		velocity.y = speed.y/5
+		velocity.x = 0
+		velocity = move_and_slide(velocity,Vector2.UP)
+		if is_on_floor():
+			emit_signal("boss_defeated")
+			print("Good Bye Cruel World")
+			queue_free()
+			
 	if firing and beams_fired >= max_beam_length:
 		firing = false
 		beams_fired = 0
@@ -114,6 +133,8 @@ func _ping_pong_above():
 			facing_dir = FACE_DIRS.RIGHT
 			top_sprite.flip_h = true
 			bot_sprite.flip_h = true
+			
+			
 func _track_player():
 	if abs(player.global_position.y - global_position.y + muzzle_offset) < 5:
 		move_dir = MOVE_DIRS.NONE 
@@ -187,6 +208,14 @@ func get_beam_loc(b):
 		else:
 			return(b.BEAM_LOCS.MIDDLE)
 
+func absorbed():
+	print("I have been absorbed, Dragon Boss")
+	bot_player.stop()
+	bot_player.clear_queue()
+	bot_player.play("Die")
+	dead = true
+	set_collision_mask(floor_collision_mask)
+	
 func _change_side():
 	if desired_facing_dir == facing_dir:
 		return
@@ -234,5 +263,17 @@ func _shutdown():
 	position = restart_pos
 	_destroy_map()
 	
+func get_momentum():
+	return 0
 
 
+
+func _on_Absorbtion_Area_body_entered(body):
+	#print(body.get_groups())
+	if "Player" in body.get_groups():
+		body.hit(self)
+		#print("Hit PLayer")
+	elif "Hittable" in body.get_groups():
+		body.hit(self)
+	elif "Wall" in body.get_groups():
+		pass

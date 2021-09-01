@@ -219,7 +219,9 @@ func _end_dash():
 	
 func hit(hitter):
 	print("Player hit by:",hitter.get_groups())
-	if is_absorbing and "absorbable" in hitter.get_groups():
+	print("Player is Absorbing: ", is_absorbing)
+	if is_absorbing and "Absorbable" in hitter.get_groups():
+		print("I am absorbing")
 		_absorb(hitter)
 	elif last_hit != hitter:
 		print("You Lose")

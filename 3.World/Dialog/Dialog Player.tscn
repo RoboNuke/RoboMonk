@@ -1,0 +1,216 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://3.World/Dialog/Dialog Player.gd" type="Script" id=1]
+[ext_resource path="res://3.World/Dialog/Portraits/glasses_alien.png" type="Texture" id=2]
+[ext_resource path="res://Dialog-System-Example/textures/menu_section_9patch.png" type="Texture" id=3]
+[ext_resource path="res://5. User Interfaces/PixelMechaBold.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://3.World/Dialog/Portraits/red_guy.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "Text Display"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=5]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
+}
+
+[node name="Dialog Player" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Dialog Box" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Dialog Box"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -300.0
+margin_top = -120.0
+margin_right = 300.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 600, 100 )
+texture = ExtResource( 3 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialog Box/NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 24.0
+margin_right = -8.0
+margin_bottom = -18.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body Label" type="Label" parent="Dialog Box/NinePatchRect/MarginContainer"]
+margin_right = 584.0
+margin_bottom = 58.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 6 )
+text = "Hello World Sometimes I have a lot to say But other times I do not 
+"
+align = 1
+autowrap = true
+clip_text = true
+
+[node name="Body_AnimationPlayer" type="AnimationPlayer" parent="Dialog Box/NinePatchRect/MarginContainer/Body Label"]
+"anims/Text Display" = SubResource( 2 )
+
+[node name="Left Speaker NinePatchRect" type="NinePatchRect" parent="Dialog Box/NinePatchRect"]
+margin_left = -12.0
+margin_top = -23.0
+margin_right = 168.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 180, 45 )
+texture = ExtResource( 3 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left Speaker Label" type="Label" parent="Dialog Box/NinePatchRect/Left Speaker NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "Speaker Name"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right Speaker NinePatchRect" type="NinePatchRect" parent="Dialog Box/NinePatchRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -168.0
+margin_top = -23.0
+margin_right = 12.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 180, 45 )
+texture = ExtResource( 3 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right Speaker Label" type="Label" parent="Dialog Box/NinePatchRect/Right Speaker NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+text = "Other Speaker"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Space_NinePatchRect" type="NinePatchRect" parent="Dialog Box/NinePatchRect"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -115.0
+margin_top = -35.0
+margin_right = 5.0
+margin_bottom = 5.0
+texture = ExtResource( 3 )
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Space_Label" type="Label" parent="Dialog Box/NinePatchRect/Space_NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 7 )
+text = "Press Spacebar"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Dialog Box/NinePatchRect/Space_NinePatchRect"]
+autoplay = "Dancing"
+anims/Dancing = SubResource( 5 )
+
+[node name="Left Portrait" type="TextureRect" parent="Dialog Box/NinePatchRect"]
+margin_left = 45.0
+margin_top = -90.0
+margin_right = 109.0
+margin_bottom = -26.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Right Portrait" type="TextureRect" parent="Dialog Box/NinePatchRect"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -110.0
+margin_top = -90.0
+margin_right = -46.0
+margin_bottom = -26.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="animation_finished" from="Dialog Box/NinePatchRect/MarginContainer/Body Label/Body_AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

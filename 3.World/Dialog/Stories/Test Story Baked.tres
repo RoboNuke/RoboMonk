@@ -1,0 +1,81 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/EXP-System-Dialog/Resource_BakedStory/EXP_BakedStory.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+TYPE = "EXP_Baked_Story"
+story = {
+1: {
+"nodes": {
+1: {
+"links": {
+0: 2
+},
+"text": "<start>"
+},
+2: {
+"links": {
+0: 3
+},
+"text": "<left_speaker>RoboNuke</left_speaker>
+<dialog>Greetings!</dialog>
+<left_image>RoboNuke</left_image>"
+},
+3: {
+"links": {
+0: 4
+},
+"text": "<left_speaker>RoboNuke</left_speaker>
+<dialog>This will be a sick game</dialog>
+<left_image>RoboNuke</left_image>"
+},
+4: {
+"links": {
+0: 5
+},
+"text": "<right_speaker>Nay Sayer</right_speaker>
+<dialog>I doubt it!</dialog>
+<right_image>Big Bad</right_image>"
+},
+5: {
+"links": {
+0: 7
+},
+"text": "<left_speaker>RoboNuke</left_speaker>
+<dialog>Oh it will be fun!</dialog>
+<left_image>RoboNuke</left_image>"
+},
+6: {
+"links": {
+},
+"text": "<end>"
+},
+7: {
+"links": {
+0: 6
+},
+"text": "<right_speaker>Nay Sayer</right_speaker>
+<dialog>I guess your right...</dialog>
+<right_image>Big Bad</right_image>"
+}
+}
+},
+2: {
+"nodes": {
+1: {
+"links": {
+},
+"text": "{
+	\"RoboNuke\":\"res://3.World/Dialog/Portraits/red_guy.png\",
+	\"Big Bad\":\"res://3.World/Dialog/Portraits/3_eye.png\",
+	\"Expo Dumper\":\"res://3.World/Dialog/Portraits/glasses_alien.png\"
+}"
+}
+}
+}
+}
+names = {
+"dialog": 1,
+"test_portraits": 2
+}

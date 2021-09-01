@@ -48,10 +48,8 @@ func _state_logic(_delta):
 			parent._shutdown()
 		states.ping_pong_above:
 			parent._ping_pong_above()
-			print("in fire que: ", in_fire_queue)
-			print("current_anim: ", parent.bot_player.current_animation)
-			if not in_fire_queue and parent.bot_player.current_animation == "Idle":
-				print("starting fire queue")
+			if not in_fire_queue:# and parent.bot_player.current_animation == "Idle":
+				#print("starting fire queue")
 				parent.bot_player.play("low_open")
 				parent.bot_player.queue("low_gun")
 				parent.bot_player.queue("low_fire")
@@ -62,7 +60,7 @@ func _state_logic(_delta):
 
 
 func _on_Bottom_Player_animation_finished(anim_name):
-	print(anim_name, " has finished playing")
+	#print(anim_name, " has finished playing")
 	if anim_name == "low_gun" and parent.firing_balls:
 		parent.bot_player.play("low_close")
 	if anim_name == "low_close" and parent.firing_balls:
@@ -71,6 +69,8 @@ func _on_Bottom_Player_animation_finished(anim_name):
 		parent.bot_player.play("Idle")
 		
 func _get_transition(_delta):
+	if parent.dead:
+		return states.losing_power
 	match state:
 		states.idle:
 			return states.search_player
@@ -95,6 +95,7 @@ func _get_transition(_delta):
 			if parent.desired_facing_dir == parent.facing_dir:
 				return states.search_player
 		states.losing_power:
+			print("I lost power")
 			pass
 		states.destroy_map:
 			if not parent.destroying_map:
