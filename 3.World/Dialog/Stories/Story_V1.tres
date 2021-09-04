@@ -17,7 +17,7 @@ story = {
 "name": "Game_Start",
 "nodes": {
 1: {
-"graph_offset": Vector2( 0, 0 ),
+"graph_offset": Vector2( 0, -20 ),
 "links": {
 0: 3
 },
@@ -27,7 +27,7 @@ story = {
 "type": "line"
 },
 2: {
-"graph_offset": Vector2( 700, 420 ),
+"graph_offset": Vector2( 480, 1060 ),
 "links": {
 },
 "rect_size": Vector2( 324, 137 ),
@@ -36,14 +36,134 @@ story = {
 "type": "line"
 },
 3: {
-"graph_offset": Vector2( 400, 200 ),
+"graph_offset": Vector2( 0, 160 ),
+"links": {
+0: 4
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<left_speaker>RoboNuke</left_speaker>
+<dialog>Please calm down, this is not the way to make things better</dialog>
+<left_image>RoboNuke</left_image>",
+"type": "line"
+},
+4: {
+"graph_offset": Vector2( 500, 160 ),
+"links": {
+0: 5
+},
+"rect_size": Vector2( 441, 150 ),
+"slot_amount": 1,
+"text": "<right_speaker>Big Bad</right_speaker>
+<dialog>Then what should I do?</dialog>
+<right_image>Big Bad</right_image>",
+"type": "line"
+},
+5: {
+"graph_offset": Vector2( 0, 340 ),
+"links": {
+0: 6
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<left_speaker>RoboNuke</left_speaker>
+<dialog>I don't know, but hurting people will only cause more pain.</dialog>
+<left_image>RoboNuke</left_image>",
+"type": "line"
+},
+6: {
+"graph_offset": Vector2( 500, 340 ),
+"links": {
+0: 7
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<right_speaker>Big Bad</right_speaker>
+<dialog>Doing nothing will only lead to more pain and suffering for robots everywhere!</dialog>
+<right_image>Big Bad</right_image>",
+"type": "line"
+},
+7: {
+"graph_offset": Vector2( 0, 520 ),
+"links": {
+0: 8
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<left_speaker>RoboNuke</left_speaker>
+<dialog>Please calm down, your behaving no better than them!</dialog>
+<left_image>RoboNuke</left_image>",
+"type": "line"
+},
+8: {
+"graph_offset": Vector2( 500, 520 ),
+"links": {
+0: 9
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<right_speaker>Big Bad</right_speaker>
+<dialog>I am nothing like them!</dialog>
+<right_image>Big Bad</right_image>",
+"type": "line"
+},
+9: {
+"graph_offset": Vector2( 0, 700 ),
+"links": {
+0: 10
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<left_speaker>RoboNuke</left_speaker>
+<dialog>...</dialog>
+<left_image>RoboNuke</left_image>",
+"type": "line"
+},
+10: {
+"graph_offset": Vector2( 480, 700 ),
+"links": {
+0: 11
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<right_speaker>Big Bad</right_speaker>
+<dialog>If you won't help, then don't get in my way!</dialog>
+<right_image>Big Bad</right_image>",
+"type": "line"
+},
+11: {
+"graph_offset": Vector2( 0, 880 ),
+"links": {
+0: 12
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<left_speaker>RoboNuke</left_speaker>
+<dialog>You know I can't do that.</dialog>
+<left_image>RoboNuke</left_image>",
+"type": "line"
+},
+12: {
+"graph_offset": Vector2( 480, 880 ),
+"links": {
+0: 13
+},
+"rect_size": Vector2( 324, 137 ),
+"slot_amount": 1,
+"text": "<right_speaker>Big Bad</right_speaker>
+<dialog>Then forgive me for trapping you here.</dialog>
+<right_image>Big Bad</right_image>",
+"type": "line"
+},
+13: {
+"graph_offset": Vector2( 0, 1060 ),
 "links": {
 0: 2
 },
 "rect_size": Vector2( 324, 137 ),
 "slot_amount": 1,
 "text": "<left_speaker>RoboNuke</left_speaker>
-<dialog>Good Luck!</dialog>
+<dialog>What!</dialog>
 <left_image>RoboNuke</left_image>",
 "type": "line"
 }

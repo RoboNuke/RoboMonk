@@ -166,7 +166,7 @@ position = Vector2( 1104, -12 )
 position = Vector2( 1100, -96 )
 
 [node name="Player Start" type="Position2D" parent="."]
-position = Vector2( 1008, 224 )
+position = Vector2( 96, 192 )
 
 [node name="Boss Start" type="Position2D" parent="."]
 position = Vector2( 1516, 208 )

@@ -1,17 +1,13 @@
 extends Node2D
 
-
-onready var main_bg = $ParallaxBackground/ParallaxLayer/MainBG
 onready var boss_timer = $"Boss Defeated"
 onready var dialog_player = $"Dialog Player"
-# backgrounds
-var scifi_bg = preload("res://2. Levels/Backgrounds/scifi_platform_BG1.jpg")
 
 # Packed Scenes
 export(PackedScene) var start_menu_scene = preload("res://5. User Interfaces/Start Menu.tscn")#.instance()
 export(PackedScene) var player_scene = preload("res://1. Player/Player.tscn")
-export(PackedScene) var prototype_level_scene = preload("res://2. Levels/Prototype Level/Prototype Level.tscn")
-
+#export(PackedScene) var prototype_level_scene = preload("res://2. Levels/Prototype Level/Prototype Level.tscn")
+export(PackedScene) var prototype_level_scene = preload("res://2. Levels/1.1 Underground Escape/1-1 Underground Escape.tscn")
 var current_level
 var player
 var boss
@@ -43,23 +39,28 @@ func goto_main_menu():
 
 func _load_level(level=prototype_level_scene):
 	
-	main_bg.texture = scifi_bg
 	current_level.queue_free()
 	current_level = prototype_level_scene.instance()
 	add_child(current_level)
-	current_level.get_node("Boss Trigger").connect("body_entered",self, "_boss_triggered")
-	current_level.connect("boss_action_trigger",self, "_trigger_boss_action")
+	#current_level.get_node("Boss Trigger").connect("body_entered",self, "_boss_triggered")
+	#current_level.connect("boss_action_trigger",self, "_trigger_boss_action")
 
 func _add_player():
 	player = player_scene.instance()
 	add_child(player)
 	player.restart(current_level.get_player_start())
 	player.connect("player_killed", self, "_on_player_death")
+	current_level.player = player
+	
 	
 func _on_Start_Button_pressed(_nam):
 	remove_child(current_level)
 	_load_level()
-	dialog_player.play_dialog("Game_Start")
+	_add_player()
+	#dialog_player.play_dialog("Game_Start")
+	#call_deferred("_pause_game")
+	
+func _pause_game():
 	get_tree().paused = true
 	
 func _on_player_death():
@@ -109,5 +110,6 @@ func _on_Boss_Defeated_timeout():
 func _on_Dialog_Player_dialog_complete():
 	#get_tree().paused = true
 	#_load_level()
-	_add_player()
+	#_add_player()
+	current_level.rumble()
 	

@@ -1,0 +1,27 @@
+extends Node2D
+
+onready var anim_player = $AnimationPlayer
+onready var camera = $Camera2D
+onready var rumble_timer = $"Rumble Timer"
+var player
+
+var total_rumbles = 2
+var rumbles = 0
+func get_player_start():
+	return $"Player Start".global_position
+
+func rumble():
+	camera.add_trauma(4)
+	AudioPlayer.play("res://2. Levels/1.1 Underground Escape/lowFrequency_explosion_000.ogg")
+	AudioPlayer.play("res://2. Levels/1.1 Underground Escape/lowFrequency_explosion_001.ogg")
+	rumbles += 1
+	rumble_timer.start()
+	
+
+func _on_Rumble_Timer_timeout():
+	if rumbles < total_rumbles:
+		AudioPlayer.play("res://2. Levels/1.1 Underground Escape/lowFrequency_explosion_001.ogg")
+		rumbles += 1
+		rumble_timer.start()
+	else:
+		rumbles = 0

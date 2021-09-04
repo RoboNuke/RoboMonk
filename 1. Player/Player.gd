@@ -100,7 +100,7 @@ func _apply_movement():
 func restart(pos):
 	position = pos
 	velocity = Vector2.ZERO
-	start_camera()
+	#start_camera()
 	
 func stop_camera():
 	$Camera2D.current = false

@@ -2,11 +2,11 @@
 
 [ext_resource path="res://3.World/Dialog/Dialog Player.gd" type="Script" id=1]
 [ext_resource path="res://3.World/Dialog/Portraits/glasses_alien.png" type="Texture" id=2]
-[ext_resource path="res://Dialog-System-Example/textures/menu_section_9patch.png" type="Texture" id=3]
+[ext_resource path="res://3.World/Dialog/Textures/area_default.png" type="Texture" id=3]
 [ext_resource path="res://5. User Interfaces/PixelMechaBold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://3.World/Dialog/Portraits/red_guy.png" type="Texture" id=5]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=1]
 size = 24
 font_data = ExtResource( 4 )
 
@@ -29,7 +29,7 @@ tracks/0/keys = {
 size = 24
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 4 )
 
 [sub_resource type="Animation" id=5]
@@ -68,10 +68,10 @@ margin_right = 300.0
 margin_bottom = -20.0
 rect_min_size = Vector2( 600, 100 )
 texture = ExtResource( 3 )
-patch_margin_left = 3
-patch_margin_top = 3
-patch_margin_right = 3
-patch_margin_bottom = 3
+patch_margin_left = 14
+patch_margin_top = 14
+patch_margin_right = 14
+patch_margin_bottom = 14
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -79,20 +79,20 @@ __meta__ = {
 [node name="MarginContainer" type="MarginContainer" parent="Dialog Box/NinePatchRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 8.0
+margin_left = 16.0
 margin_top = 24.0
-margin_right = -8.0
-margin_bottom = -18.0
+margin_right = -16.0
+margin_bottom = -24.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Body Label" type="Label" parent="Dialog Box/NinePatchRect/MarginContainer"]
-margin_right = 584.0
-margin_bottom = 58.0
+margin_right = 568.0
+margin_bottom = 52.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 1 )
 text = "Hello World Sometimes I have a lot to say But other times I do not 
 "
 align = 1
@@ -109,10 +109,10 @@ margin_right = 168.0
 margin_bottom = 22.0
 rect_min_size = Vector2( 180, 45 )
 texture = ExtResource( 3 )
-patch_margin_left = 3
-patch_margin_top = 3
-patch_margin_right = 3
-patch_margin_bottom = 3
+patch_margin_left = 14
+patch_margin_top = 14
+patch_margin_right = 14
+patch_margin_bottom = 14
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -137,10 +137,10 @@ margin_right = 12.0
 margin_bottom = 22.0
 rect_min_size = Vector2( 180, 45 )
 texture = ExtResource( 3 )
-patch_margin_left = 3
-patch_margin_top = 3
-patch_margin_right = 3
-patch_margin_bottom = 3
+patch_margin_left = 14
+patch_margin_top = 14
+patch_margin_right = 14
+patch_margin_bottom = 14
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -166,10 +166,10 @@ margin_top = -35.0
 margin_right = 5.0
 margin_bottom = 5.0
 texture = ExtResource( 3 )
-patch_margin_left = 3
-patch_margin_top = 3
-patch_margin_right = 3
-patch_margin_bottom = 3
+patch_margin_left = 14
+patch_margin_top = 14
+patch_margin_right = 14
+patch_margin_bottom = 14
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -177,7 +177,7 @@ __meta__ = {
 [node name="Space_Label" type="Label" parent="Dialog Box/NinePatchRect/Space_NinePatchRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 4 )
 text = "Press Spacebar"
 align = 1
 valign = 1

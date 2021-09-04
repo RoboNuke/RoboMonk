@@ -39,6 +39,7 @@ config/icon="res://icon.png"
 [autoload]
 
 StateMachine="*res://state_machine.gd"
+AudioPlayer="*res://AudioStreamPlayer.gd"
 
 [display]
 
