@@ -16,7 +16,6 @@ func _ready():
 	
 func spawn_spike():
 	var s = spike.instance()
-	print("made instance")
 	s.set("spike_texture", spike_texture)
 	s.set("velocity", spike_speed)
 	s.set("momentum", spike_momentum)

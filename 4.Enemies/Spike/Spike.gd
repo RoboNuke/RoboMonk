@@ -10,7 +10,6 @@ export(Texture) var spike_texture
 
 func _ready():
 	sprite.texture = spike_texture
-	print("Spike Ready")
 	#drop(Vector2(100,75))
 	
 func drop(pos):
