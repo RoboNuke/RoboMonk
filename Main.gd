@@ -80,10 +80,7 @@ func _init_boss():
 	current_level.connect_boss(boss)
 	boss.set_boss_data(current_level.boss_data)
 	boss.connect("boss_defeated", self, "_boss_defeat")
-	#player.cam_global_x = 1328
-	#player.cam_global_y = 80
 	player.set_camera_params(current_level.boss_camera_dict)
-	#player.stop_camera()
 	#current_level.start_boss_camera()
 
 func _boss_triggered(_body):
@@ -112,4 +109,6 @@ func _on_Dialog_Player_dialog_complete():
 	#_load_level()
 	#_add_player()
 	current_level.rumble()
+	get_tree().paused = false
+	_add_player()
 	

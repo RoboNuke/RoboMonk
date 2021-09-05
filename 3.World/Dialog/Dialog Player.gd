@@ -75,7 +75,6 @@ func _get_next_node():
 	left_portrait.visible = false
 	if _nid == _final_nid:
 		dialog_box.visible = false
-		get_tree().paused = false
 		emit_signal("dialog_complete")
 		
 func _get_tagged_text(tag : String, text : String) -> String:

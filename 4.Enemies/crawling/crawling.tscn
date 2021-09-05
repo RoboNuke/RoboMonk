@@ -300,6 +300,7 @@ extents = Vector2( 8, 7 )
 [node name="Crawler" type="KinematicBody2D" groups=[
 "Enemy",
 ]]
+scale = Vector2( 1.5, 1.5 )
 collision_layer = 4
 collision_mask = 7
 script = ExtResource( 4 )
