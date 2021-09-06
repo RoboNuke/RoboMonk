@@ -22,7 +22,8 @@ func _state_logic(_delta):
 	elif state == states.walk_search:
 		parent._walk_search()
 	elif state == states.chase:
-		parent._chase()
+		if parent.can_move:
+			parent._chase()
 		_update_directional_animation()
 	elif state == states.attack:
 		if parent._attack():

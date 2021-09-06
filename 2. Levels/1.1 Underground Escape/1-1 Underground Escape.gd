@@ -3,6 +3,11 @@ extends Node2D
 onready var anim_player = $AnimationPlayer
 onready var camera = $Camera2D
 onready var rumble_timer = $"Rumble Timer"
+
+onready var y_shift_start = $"Y-Shift Start"
+onready var y_shift_end = $"Y-Shift End"
+
+
 var player
 
 var audio_file = "res://2. Levels/1.1 Underground Escape/Sound Effects/"

@@ -1,24 +1,25 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://3.World/Spikes/spike_magma_A2.png" type="Texture" id=1]
-[ext_resource path="res://4.Enemies/Spike/Spike.gd" type="Script" id=2]
+[ext_resource path="res://3.World/Spike/Spike.gd" type="Script" id=1]
+[ext_resource path="res://3.World/Spikes/spike_magma_A2.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 2, 16 )
+extents = Vector2( 3, 16 )
 
 [node name="Spike" type="Area2D" groups=[
 "Absorbable",
 ]]
+z_index = 5
 collision_layer = 8
 collision_mask = 0
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 velocity = 2
-spike_texture = ExtResource( 1 )
+spike_texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [connection signal="body_entered" from="." to="." method="_on_Spike_body_entered"]

@@ -81,9 +81,9 @@ func _apply_movement():
 	var snap: Vector2 = Vector2(0,25) if !is_jumping and !is_dashing else Vector2.ZERO
 	
 	was_on_floor = _check_if_grounded()
-	#print(velocity)
+	print(velocity)
 	velocity = move_and_slide_with_snap(velocity, snap, FLOOR_NORMAL, false, 4, deg2rad(60))
-	
+	#velocity = move_and_slide(velocity)
 	# coyote timer stuff
 	if not _check_if_grounded() and was_on_floor and not is_jumping and not is_dashing:
 		coyote_timer.start()
@@ -115,8 +115,8 @@ func norm(x):
 		return 1
 	else:
 		return -1
-		
 	
+
 func _update_wall_direction():
 	var is_near_wall_left = _check_is_valid_wall(left_rays.get_children())
 	var is_near_wall_right = _check_is_valid_wall(right_rays.get_children())
@@ -139,11 +139,13 @@ func _apply_gravity(delta):
 		velocity.y += gravity * delta * modifier
 		if is_jumping && velocity.y > 0:
 			is_jumping = false
-			
+	
+
 func _cap_gravity_wall_sliding():
 	var max_velocity = WALL_SLIDE_MAX_VELOCITY if !Input.is_action_pressed("ui_down") else WALL_SLIDE_DOWN_MAX_VELOCITY
 	velocity.y = min(max_velocity, velocity.y)
 	
+
 func _check_if_grounded():
 	for ray in ground_rays.get_children():
 		ray.force_raycast_update()
@@ -161,9 +163,7 @@ func _jump(wall_jump = false):
 			
 	is_jumping = true 
 
-
 func _face_desired_direction():
-	
 	if desired_look_direction !=  0 and desired_look_direction != facing_direction:
 		transform *= Transform2D.FLIP_X
 		var holder = left_rays
@@ -174,13 +174,12 @@ func _face_desired_direction():
 func _update_move_direction():
 	move_direction = (-int(Input.is_action_pressed("ui_left")) + int(Input.is_action_pressed("ui_right")))
 
-
 func _handle_move_input():
 	if !is_dashing and !is_absorbing:
 		velocity.x = lerp(velocity.x, move_direction * move_speed, _get_h_weight())
 		desired_look_direction = move_direction
 		
-		
+
 func _get_h_weight():
 	if is_grounded or not coyote_timer.is_stopped():
 		return .2
@@ -199,10 +198,12 @@ func _start_absorb():
 	is_absorbing = true
 	absorbed_momentum = 0
 	
+
 func _absorb(collided_object):
 	absorbed_momentum += collided_object.get_momentum()
 	collided_object.absorbed()    
 	
+
 func _dash():
 	is_absorbing = false
 	is_dashing = true
@@ -217,6 +218,7 @@ func _dash():
 func _end_dash():
 	has_dashed = true
 	
+
 func hit(hitter):
 	print("Player hit by:",hitter.get_groups())
 	print("Player is Absorbing: ", is_absorbing)
@@ -226,7 +228,6 @@ func hit(hitter):
 	elif last_hit != hitter:
 		print("You Lose")
 		emit_signal("player_killed")
-
 
 func _on_Dash_Timer_timeout():
 	is_dashing = false

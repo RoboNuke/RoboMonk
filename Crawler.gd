@@ -9,6 +9,7 @@ onready var rof = $ROF
 
 var bullet = preload("res://4.Enemies/Bullet/Bullet.tscn")
 
+export(bool) var can_move = true
 export(Texture) var bullet_texture
 export var bullet_speed = 200
 export var bullet_momentum = 300

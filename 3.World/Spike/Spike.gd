@@ -14,7 +14,8 @@ func _ready():
 	
 func drop(pos):
 	position = pos
-	print(sprite.texture)
+	print("dropping")
+	
 func _process(_delta):
 	position.y += velocity
 	

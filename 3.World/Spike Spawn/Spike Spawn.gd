@@ -2,7 +2,7 @@ extends RigidBody2D
 
 
 
-var spike = preload("res://4.Enemies/Spike/Spike.tscn")
+export(PackedScene) var spike
 
 export(Texture) var spike_texture 
 export var spike_speed = 2
