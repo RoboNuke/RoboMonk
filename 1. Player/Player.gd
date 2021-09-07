@@ -81,7 +81,6 @@ func _apply_movement():
 	var snap: Vector2 = Vector2(0,25) if !is_jumping and !is_dashing else Vector2.ZERO
 	
 	was_on_floor = _check_if_grounded()
-	print(velocity)
 	velocity = move_and_slide_with_snap(velocity, snap, FLOOR_NORMAL, false, 4, deg2rad(60))
 	#velocity = move_and_slide(velocity)
 	# coyote timer stuff

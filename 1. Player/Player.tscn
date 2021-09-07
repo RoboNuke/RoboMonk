@@ -89,22 +89,22 @@ animation = "wall slide"
 
 [sub_resource type="AnimationNodeStateMachine" id=38]
 states/absorbing/node = SubResource( 2 )
-states/absorbing/position = Vector2( 559, 200 )
+states/absorbing/position = Vector2( 322.5, 333.5 )
 states/dashing/node = SubResource( 3 )
-states/dashing/position = Vector2( 932, 325 )
+states/dashing/position = Vector2( 942, 395.5 )
 states/falling/node = SubResource( 4 )
-states/falling/position = Vector2( 912, 118 )
+states/falling/position = Vector2( 956.5, 178.5 )
 states/idling/node = SubResource( 5 )
-states/idling/position = Vector2( 185, 265 )
+states/idling/position = Vector2( 345, 144 )
 states/jumping/node = SubResource( 6 )
-states/jumping/position = Vector2( 571, 65 )
+states/jumping/position = Vector2( 547.5, -36 )
 states/running/node = SubResource( 7 )
-states/running/position = Vector2( 554, 362 )
+states/running/position = Vector2( 605, 422.5 )
 "states/wall slide/node" = SubResource( 8 )
 "states/wall slide/position" = Vector2( 790, 18 )
 transitions = [ "falling", "running", SubResource( 9 ), "running", "falling", SubResource( 10 ), "running", "jumping", SubResource( 11 ), "jumping", "falling", SubResource( 12 ), "jumping", "running", SubResource( 13 ), "falling", "jumping", SubResource( 14 ), "idling", "jumping", SubResource( 15 ), "idling", "falling", SubResource( 16 ), "idling", "running", SubResource( 17 ), "running", "idling", SubResource( 18 ), "jumping", "idling", SubResource( 19 ), "falling", "idling", SubResource( 20 ), "jumping", "absorbing", SubResource( 21 ), "falling", "absorbing", SubResource( 22 ), "running", "absorbing", SubResource( 23 ), "idling", "absorbing", SubResource( 24 ), "absorbing", "dashing", SubResource( 25 ), "dashing", "falling", SubResource( 26 ), "dashing", "jumping", SubResource( 27 ), "dashing", "running", SubResource( 28 ), "dashing", "idling", SubResource( 29 ), "jumping", "wall slide", SubResource( 30 ), "falling", "wall slide", SubResource( 31 ), "wall slide", "jumping", SubResource( 32 ), "wall slide", "absorbing", SubResource( 33 ), "wall slide", "falling", SubResource( 34 ), "wall slide", "dashing", SubResource( 35 ), "wall slide", "idling", SubResource( 36 ), "wall slide", "running", SubResource( 37 ) ]
 start_node = "idling"
-graph_offset = Vector2( 33, -60 )
+graph_offset = Vector2( 276, -121 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=39]
 

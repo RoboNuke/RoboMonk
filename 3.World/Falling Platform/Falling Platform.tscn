@@ -1,0 +1,111 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://2. Levels/1.1 Underground Escape/Textures/cave_magma.tres" type="TileSet" id=1]
+[ext_resource path="res://3.World/Falling Platform/Falling Platform.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24, 8 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Fall"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+
+[node name="Falling Platform" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="." groups=[
+"Platform",
+]]
+collision_layer = 2
+motion/sync_to_physics = true
+
+[node name="TileMap" type="TileMap" parent="KinematicBody2D"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+collision_layer = 2
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -3, 27, 0, -2, 26, 0, -1, 28, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -24, -8 )
+shape = SubResource( 2 )
+
+[node name="Stable Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Fall = SubResource( 3 )
+
+[node name="Rays" type="Node2D" parent="."]
+position = Vector2( 0, -16.05 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Rays"]
+position = Vector2( 1.83541, -4.08795 )
+enabled = true
+cast_to = Vector2( 0, -25 )
+collision_mask = 3
+
+[node name="RayCast2D2" type="RayCast2D" parent="Rays"]
+position = Vector2( -8, 0 )
+enabled = true
+cast_to = Vector2( 0, -25 )
+collision_mask = 3
+
+[node name="RayCast2D5" type="RayCast2D" parent="Rays"]
+position = Vector2( -16, 0 )
+enabled = true
+cast_to = Vector2( 0, -25 )
+collision_mask = 3
+
+[node name="RayCast2D3" type="RayCast2D" parent="Rays"]
+position = Vector2( -24, 0 )
+enabled = true
+cast_to = Vector2( 0, -25 )
+collision_mask = 3
+
+[node name="RayCast2D6" type="RayCast2D" parent="Rays"]
+position = Vector2( -32, 0 )
+enabled = true
+cast_to = Vector2( 0, -25 )
+collision_mask = 3
+
+[node name="RayCast2D7" type="RayCast2D" parent="Rays"]
+position = Vector2( -40, 0 )
+enabled = true
+cast_to = Vector2( 0, -25 )
+collision_mask = 3
+
+[node name="RayCast2D4" type="RayCast2D" parent="Rays"]
+position = Vector2( -48, 0 )
+enabled = true
+cast_to = Vector2( 0, -25 )
+collision_mask = 3
+
+[connection signal="timeout" from="Stable Timer" to="." method="_on_Stable_Timer_timeout"]

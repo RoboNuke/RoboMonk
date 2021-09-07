@@ -11,7 +11,7 @@
 [ext_resource path="res://4.Enemies/Long Neck/Absorbtion Area.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 6.5, 5 )
+extents = Vector2( 6.5, 10 )
 
 [sub_resource type="Animation" id=2]
 length = 0.0625
@@ -1658,7 +1658,7 @@ tracks/4/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=28]
-extents = Vector2( 6.5, 5 )
+extents = Vector2( 6.5, 10 )
 
 [node name="Long Neck" type="KinematicBody2D" groups=[
 "Enemy",
@@ -1675,7 +1675,7 @@ max_height = 11
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -5 )
+position = Vector2( 0, -10 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -1684,6 +1684,7 @@ texture = ExtResource( 4 )
 centered = false
 hframes = 14
 vframes = 2
+frame = 10
 
 [node name="ROF" type="Timer" parent="."]
 one_shot = true
@@ -1746,7 +1747,7 @@ script = ExtResource( 9 )
 
 [node name="Absorb Box" type="CollisionShape2D" parent="Absorbtion Area"]
 modulate = Color( 0, 1, 0.0862745, 1 )
-position = Vector2( 0, -7 )
+position = Vector2( 0, -12 )
 shape = SubResource( 28 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="State Machine" method="_on_AnimationPlayer_animation_finished"]

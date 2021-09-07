@@ -8,28 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node",
-"class": "AsepriteImportData",
-"language": "GDScript",
-"path": "res://addons/aseprite_importer/classes/AsepriteImportData.gd"
-}, {
-"base": "Node",
-"class": "AsepriteImporter",
-"language": "GDScript",
-"path": "res://addons/aseprite_importer/classes/AsepriteImporter.gd"
-}, {
-"base": "Node",
-"class": "EditorTheme",
-"language": "GDScript",
-"path": "res://addons/aseprite_importer/classes/EditorTheme.gd"
-} ]
-_global_script_class_icons={
-"AsepriteImportData": "",
-"AsepriteImporter": "",
-"EditorTheme": ""
-}
-
 [application]
 
 config/name="RoboMonk"
@@ -51,7 +29,7 @@ window/stretch/mode="2d"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/AsepriteWizard/plugin.cfg", "res://addons/EXP-System-Dialog/plugin.cfg", "res://addons/aseprite_importer/plugin.cfg", "res://addons/luisboch.field_of_view/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/EXP-System-Dialog/plugin.cfg", "res://addons/luisboch.field_of_view/plugin.cfg" )
 
 [importer_defaults]
 
