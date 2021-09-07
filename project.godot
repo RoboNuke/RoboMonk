@@ -8,6 +8,28 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "AsepriteImportData",
+"language": "GDScript",
+"path": "res://addons/aseprite_importer/classes/AsepriteImportData.gd"
+}, {
+"base": "Node",
+"class": "AsepriteImporter",
+"language": "GDScript",
+"path": "res://addons/aseprite_importer/classes/AsepriteImporter.gd"
+}, {
+"base": "Node",
+"class": "EditorTheme",
+"language": "GDScript",
+"path": "res://addons/aseprite_importer/classes/EditorTheme.gd"
+} ]
+_global_script_class_icons={
+"AsepriteImportData": "",
+"AsepriteImporter": "",
+"EditorTheme": ""
+}
+
 [application]
 
 config/name="RoboMonk"
@@ -18,10 +40,11 @@ config/icon="res://icon.png"
 
 StateMachine="*res://state_machine.gd"
 AudioPlayer="*res://AudioStreamPlayer.gd"
+Globals="*res://Globals.gd"
 
 [display]
 
-window/size/width=512
+window/size/width=519
 window/size/height=272
 window/size/test_width=1280
 window/size/test_height=720

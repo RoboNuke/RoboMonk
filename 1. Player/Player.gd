@@ -9,16 +9,11 @@ onready var animation_tree = $AnimationTree
 onready var player_rig =  $"Charecter Rig"
 onready var left_rays = $"Wall Rays/Left Rays"
 onready var right_rays = $"Wall Rays/Right Rays"
-onready var camera = $Camera2D
-# camera vars
-var cam_limits = [10000000,-10000000,10000000,-10000000] # right, left, down, up
-var cam_global_x = null
-var cam_global_y = null
 
 # motion variables
 var velocity = Vector2.ZERO
 export var gravity = 1200
-export var move_speed = 200
+export var move_speed = 10 * Globals.TILE_WIDTH
 export var jump_force = 500
 export(Vector2) var WALL_JUMP_FORCE = Vector2(1,-1) * jump_force
 export var modifier = 1
@@ -53,29 +48,6 @@ signal player_killed
 
 func _ready():
 	anim_tree_state_machine = animation_tree["parameters/playback"]
-
-func set_camera_params(camera_dict):
-	camera.boss_mode = true
-	camera.mean_x = camera_dict['mean x']
-	camera.mean_y = camera_dict['mean y']
-	camera.max_x = camera_dict['max x']
-	camera.max_y = camera_dict['max y']
-	camera.min_x = camera_dict['min x']
-	camera.min_y =  camera_dict['min y']
-	camera.h_value = camera_dict['h value']
-	camera.motion_scaler = camera_dict['motion scaler']
-
-func revert_camera_params():
-	camera.global_position = global_position
-	cam_global_x = null
-	cam_global_y = null
-	
-
-func _process(_delta):
-	if cam_global_x != null:
-		camera.global_position.x = cam_global_x
-	if cam_global_y != null:
-		camera.global_position.y = cam_global_y
 	
 func _apply_movement():
 	var snap: Vector2 = Vector2(0,25) if !is_jumping and !is_dashing else Vector2.ZERO
@@ -99,13 +71,6 @@ func _apply_movement():
 func restart(pos):
 	position = pos
 	velocity = Vector2.ZERO
-	#start_camera()
-	
-func stop_camera():
-	$Camera2D.current = false
-	
-func start_camera():
-	$Camera2D.current = true
 
 func norm(x):
 	if abs(x) < 1:

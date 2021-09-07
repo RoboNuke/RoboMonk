@@ -15,8 +15,8 @@ var boss_spawned = false
 
 func _ready():
 	#add_child(current_level)
-	goto_main_menu()
-	
+	#goto_main_menu()
+	_on_Start_Button_pressed(1)
 func goto_main_menu():
 	if current_level != null:
 		boss_spawned = false
@@ -27,8 +27,6 @@ func goto_main_menu():
 		current_level.queue_free()
 		remove_child(player)
 		player.queue_free()
-		player.stop_camera()
-		#player.queue_free()
 	
 	current_level = start_menu_scene.instance()
 
@@ -38,8 +36,8 @@ func goto_main_menu():
 		
 
 func _load_level(level=prototype_level_scene):
-	
-	current_level.queue_free()
+	if current_level != null:
+		current_level.queue_free()
 	current_level = prototype_level_scene.instance()
 	add_child(current_level)
 	#current_level.get_node("Boss Trigger").connect("body_entered",self, "_boss_triggered")

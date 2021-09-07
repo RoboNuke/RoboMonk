@@ -3,10 +3,10 @@
 [ext_resource path="res://2. Levels/1.1 Underground Escape/Textures/cave_magma.tres" type="TileSet" id=1]
 [ext_resource path="res://3.World/Falling Platform/Falling Platform.gd" type="Script" id=2]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24, 8 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 resource_name = "Fall"
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
@@ -55,19 +55,18 @@ tile_data = PoolIntArray( -3, 27, 0, -2, 26, 0, -1, 28, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( -24, -8 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Stable Timer" type="Timer" parent="."]
 one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Fall = SubResource( 3 )
+anims/Fall = SubResource( 2 )
 
 [node name="Rays" type="Node2D" parent="."]
 position = Vector2( 0, -16.05 )
 
 [node name="RayCast2D" type="RayCast2D" parent="Rays"]
-position = Vector2( 1.83541, -4.08795 )
 enabled = true
 cast_to = Vector2( 0, -25 )
 collision_mask = 3
