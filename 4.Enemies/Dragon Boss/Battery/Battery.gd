@@ -17,6 +17,7 @@ var dead = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	cells = [bc1, bc2, bc3, bc4]
+	print("Ready")
 
 func hit(body):
 	if "Projectile" in body.get_groups():
