@@ -58,24 +58,16 @@ func _get_transition(_delta):
 			
 	
 func _enter_state(new_state, _old_state):
-	#if old_state != null:
-	#	print("From ", states.get_key(old_state), " to ", states.get_key(new_state))
-	#previous_state = old_state
-	#state = new_state
 	match new_state:
 		states.idle:
-			print("idling")
 			parent.animation.play("idle")
 		states.search:
-			print("search")
 			parent.animation.play("search 3")
 		states.chase:
-			print("chase")
 			_update_directional_animation()
 		states.attack:
 			#_update_directional_animation()
 			_update_directional_animation("fire")
-			print("attack")
 
 func _exit_state(old_state, _new_state):
 	if old_state == states.search:
@@ -96,7 +88,6 @@ func _get_anim_idx():
 		if ang < anim_ranges[i]:
 			return(i)
 	return(-1)
-	#print("ERROR: FAILED TO FINE ANIMATION INDEX")
 	
 func _track_animation():
 	var idx = _get_anim_idx()

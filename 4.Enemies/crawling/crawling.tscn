@@ -71,7 +71,6 @@ func _attack():
 	
 func _fire(dir):
 	if rof.is_stopped():
-		print(\"Fire\")
 		var b = bullet.instance()
 		b.set(\"bullet_texture\", bullet_texture)
 		b.set(\"velocity\", bullet_speed)

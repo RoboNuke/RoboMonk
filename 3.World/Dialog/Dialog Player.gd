@@ -95,11 +95,9 @@ func _play_node():
 		var library_key = _get_tagged_text("right_image",text)
 		_display_right_image(library_key) 
 	if "<left_speaker>" in text:
-		print("left speaker")
 		var speaker = _get_tagged_text("left_speaker", text)
 		_display_left_speaker(speaker)
 	if "<right_speaker>" in text:
-		print("right speaker")
 		var speaker = _get_tagged_text("right_speaker", text)
 		_display_right_speaker(speaker)
 	body_label.text = dialog
@@ -127,7 +125,6 @@ func _display_right_image(key : String):
 	
 
 func _load_textures():
-	print(story_reader.get_dids())
 	var did = story_reader.get_did_via_record_name(portrait_name)
 	var json_text = story_reader.get_text(did, 1)
 	var raw_texture_library : Dictionary = parse_json(json_text)

@@ -68,7 +68,7 @@ func _on_player_death():
 	#player.restart(current_level.get_player_start())
 	
 func _trigger_boss_action(action):
-	print(boss)
+	#print(boss)
 	if is_instance_valid(boss):
 		boss.trigger_action(action)
 	

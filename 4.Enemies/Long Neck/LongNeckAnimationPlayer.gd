@@ -11,6 +11,7 @@ var TOTAL_FRAMES = 24
 #var timer
 var INIT_CBOX_HEIGHT = 5
 var CBOX_WIDTH = 6.5
+
 func _ready():
 	for i in range(TOTAL_FRAMES):
 		var new_anim = Animation.new()
@@ -25,7 +26,7 @@ func _ready():
 		new_anim.add_track(0)
 		new_anim.add_track(0)
 		new_anim.add_track(0)
-		new_anim.length = 0.25/4
+		new_anim.length = 0.25
 		
 		var path = String(sprite.get_path()) + ":frame"
 		new_anim.track_set_path(0, path)

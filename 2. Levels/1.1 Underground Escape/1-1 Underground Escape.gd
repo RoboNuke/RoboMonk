@@ -4,6 +4,8 @@ onready var anim_player = $AnimationPlayer
 onready var camera = $Camera2D
 onready var rumble_timer = $"Rumble Timer"
 onready var key_pts = $"Key Points"
+onready var player_start = $"Player Start"
+onready var far_pt = $"Farthest Point"
 var player
 
 var audio_file = "res://2. Levels/1.1 Underground Escape/Sound Effects/"
@@ -13,7 +15,7 @@ var total_rumbles = 2
 var rumbles = 0
 
 func get_player_start():
-	return $"Key Points/Player Start".global_position
+	return player_start.global_position
 
 func rumble():
 	camera.add_trauma(4)
@@ -30,3 +32,7 @@ func _on_Rumble_Timer_timeout():
 		rumble_timer.start()
 	else:
 		rumbles = 0
+
+
+func _on_Win_Area_body_entered(body):
+	print("You Win!")

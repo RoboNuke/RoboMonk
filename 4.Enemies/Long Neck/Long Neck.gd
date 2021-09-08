@@ -18,7 +18,7 @@ export var CLOSEST_DISTANCE = 2
 export var MUZZLE_OFFSET = 10
 export(bool) var can_turn_around = true
 export(FACE_DIRS) var facing_dir = FACE_DIRS.LEFT
-export(HEIGHTS) var max_height = HEIGHTS.lvl_4
+export(HEIGHTS) var max_height = HEIGHTS.lvl_11
 export var momentum = 500
 
 var INIT_MUZZLE_HEIGHT = 5
@@ -50,7 +50,6 @@ func _search():
 func _search_step():
 	if delta_height == 0 and stun_timer.is_stopped():
 		delta_height = -old_delta_height
-		print("Long Neck::Stunned Over")
 		
 	if can_turn_around and current_height + delta_height > max_height:
 		facing_dir = (facing_dir + 1 )%2
@@ -77,7 +76,7 @@ func _fire():
 		b.set("velocity", bullet_speed)
 		b.set("momentum", bullet_momentum)
 		get_tree().root.add_child(b)
-		b.release(global_position + Vector2(MUZZLE_OFFSET * desired_fire_dir.x, -(INIT_MUZZLE_HEIGHT + 2*current_height)), desired_fire_dir)
+		b.release(fire_sprite.global_position + Vector2(MUZZLE_OFFSET * desired_fire_dir.x, 0), desired_fire_dir)
 		rof.start()
 
 func get_momentum():
@@ -91,7 +90,6 @@ func absorbed():
 		old_delta_height = delta_height
 		delta_height = 0
 		stun_timer.start()
-		print("Long Neck::Stunned")
 
 func _on_FieldOfView_target_enter(obj):
 	see_player = true
