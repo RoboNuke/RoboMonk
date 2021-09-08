@@ -19,8 +19,8 @@ func spawn_spike():
 	s.set("spike_texture", spike_texture)
 	s.set("velocity", spike_speed)
 	s.set("momentum", spike_momentum)
-	get_tree().root.add_child(s)
+	get_tree().root.call_deferred("add_child",s)
 	s.drop(global_position + Vector2(0, DROP_OFFSET))
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	spawn_spike()

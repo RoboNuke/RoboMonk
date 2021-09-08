@@ -2362,7 +2362,6 @@ scale = Vector2( 0.25, 0.25 )
 z_index = 5
 collision_mask = 14
 script = ExtResource( 2 )
-jump_force = 400
 
 [node name="Charecter Rig" type="Node2D" parent="."]
 __meta__ = {

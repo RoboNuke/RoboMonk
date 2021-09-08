@@ -12,12 +12,18 @@ onready var right_rays = $"Wall Rays/Right Rays"
 
 # motion variables
 var velocity = Vector2.ZERO
-export var gravity = 1200
-export var move_speed = 10 * Globals.TILE_WIDTH
-export var jump_force = 500
-export(Vector2) var WALL_JUMP_FORCE = Vector2(1,-1) * jump_force
-export var modifier = 1
 var FLOOR_NORMAL = Vector2.UP
+export var move_speed = 9 * Globals.TILE_WIDTH
+var max_jump_velocity
+var min_jump_velocity
+var max_jump_height = 3.5 * Globals.TILE_WIDTH
+var min_jump_height = .8 * Globals.TILE_WIDTH
+var jump_duration = .3
+
+var gravity
+export var modifier = 1
+
+export(Vector2) var WALL_JUMP_FORCE
 export var WALL_SLIDE_MAX_VELOCITY = 50
 export var WALL_SLIDE_DOWN_MAX_VELOCITY = 4800
 var last_hit = null
@@ -39,39 +45,38 @@ var wall_direction = 0
 var desired_look_direction = 0
 var facing_direction = -1
 var is_absorbing = false
-# ANIMATION vars
-export var left_shoulder = 5
-export var right_shoulder = -5
 
 #signal vars
 signal player_killed
 
 func _ready():
 	anim_tree_state_machine = animation_tree["parameters/playback"]
+	gravity = 2 * max_jump_height / pow(jump_duration, 2)
+	max_jump_velocity = -sqrt(2 * gravity * max_jump_height)
+	min_jump_velocity = -sqrt(2 * gravity * min_jump_height)
+	WALL_JUMP_FORCE = Vector2(1,-1) * max_jump_velocity
 	
 func _apply_movement():
 	var snap: Vector2 = Vector2(0,25) if !is_jumping and !is_dashing else Vector2.ZERO
 	
 	was_on_floor = _check_if_grounded()
 	velocity = move_and_slide_with_snap(velocity, snap, FLOOR_NORMAL, false, 4, deg2rad(60))
-	#velocity = move_and_slide(velocity)
+
 	# coyote timer stuff
 	if not _check_if_grounded() and was_on_floor and not is_jumping and not is_dashing:
 		coyote_timer.start()
 		velocity.y = 0
 	# jump buffer
 	if _check_if_grounded() and !jump_buffer.is_stopped() and velocity.y == 0:
-		#print("buffered jump")
 		jump_buffer.stop()
 		_jump()
 	
 	is_grounded = _check_if_grounded()
-	#print(is_grounded, " && ", is_on_floor())
-
+	
 func restart(pos):
 	position = pos
 	velocity = Vector2.ZERO
-
+	
 func norm(x):
 	if abs(x) < 1:
 		return 0
@@ -80,7 +85,6 @@ func norm(x):
 	else:
 		return -1
 	
-
 func _update_wall_direction():
 	var is_near_wall_left = _check_is_valid_wall(left_rays.get_children())
 	var is_near_wall_right = _check_is_valid_wall(right_rays.get_children())
@@ -89,7 +93,7 @@ func _update_wall_direction():
 		wall_direction = move_direction
 	else:
 		wall_direction = -int(is_near_wall_left) + int(is_near_wall_right)
-
+	
 func _check_is_valid_wall(rays):
 	for ray in rays:
 		if ray.is_colliding():
@@ -97,36 +101,34 @@ func _check_is_valid_wall(rays):
 			if dot > PI * 0.35 and dot < PI * .55:
 				return true
 	return false
-
+	
 func _apply_gravity(delta):
 	if coyote_timer.is_stopped() and not is_dashing and not is_absorbing:
 		velocity.y += gravity * delta * modifier
 		if is_jumping && velocity.y > 0:
 			is_jumping = false
 	
-
 func _cap_gravity_wall_sliding():
 	var max_velocity = WALL_SLIDE_MAX_VELOCITY if !Input.is_action_pressed("ui_down") else WALL_SLIDE_DOWN_MAX_VELOCITY
 	velocity.y = min(max_velocity, velocity.y)
 	
-
 func _check_if_grounded():
 	for ray in ground_rays.get_children():
 		ray.force_raycast_update()
 		if ray.is_colliding():
 			return true
 	return false
-
+	
 func _jump(wall_jump = false):
 	if !wall_jump:
-		velocity.y = -jump_force
+		velocity.y = max_jump_velocity
 	else:
 		velocity = WALL_JUMP_FORCE
 		if sign(velocity.x) != facing_direction:
 			velocity.x *= -1
 			
 	is_jumping = true 
-
+	
 func _face_desired_direction():
 	if desired_look_direction !=  0 and desired_look_direction != facing_direction:
 		transform *= Transform2D.FLIP_X
@@ -134,16 +136,16 @@ func _face_desired_direction():
 		left_rays = right_rays
 		right_rays = holder
 		facing_direction = desired_look_direction
-
+	
 func _update_move_direction():
 	move_direction = (-int(Input.is_action_pressed("ui_left")) + int(Input.is_action_pressed("ui_right")))
-
+	
 func _handle_move_input():
 	if !is_dashing and !is_absorbing:
 		velocity.x = lerp(velocity.x, move_direction * move_speed, _get_h_weight())
 		desired_look_direction = move_direction
 		
-
+	
 func _get_h_weight():
 	if is_grounded or not coyote_timer.is_stopped():
 		return .2
@@ -155,19 +157,16 @@ func _get_h_weight():
 		else:
 			return 0.1
 	
-
 func _start_absorb():
 	max_absorb.start()
 	velocity = Vector2(0,0)
 	is_absorbing = true
 	absorbed_momentum = 0
 	
-
 func _absorb(collided_object):
 	absorbed_momentum += collided_object.get_momentum()
 	collided_object.absorbed()    
 	
-
 func _dash():
 	is_absorbing = false
 	is_dashing = true
@@ -181,18 +180,13 @@ func _dash():
 	
 func _end_dash():
 	has_dashed = true
+	is_dashing = false
 	
-
 func hit(hitter):
-	print("Player hit by:",hitter.get_groups())
-	print("Player is Absorbing: ", is_absorbing)
 	if is_absorbing and "Absorbable" in hitter.get_groups():
-		print("I am absorbing")
 		_absorb(hitter)
 	elif last_hit != hitter:
-		print("You Lose")
 		emit_signal("player_killed")
-
+	
 func _on_Dash_Timer_timeout():
-	is_dashing = false
 	_end_dash()

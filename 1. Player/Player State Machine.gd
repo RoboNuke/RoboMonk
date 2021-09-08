@@ -33,6 +33,10 @@ func _input(event):
 			else:
 				parent.jump_buffer.start()
 				
+	if [states.jumping].has(state):
+		if event.is_action_released("ui_up") and parent.velocity.y < parent.min_jump_velocity:
+				parent.velocity.y = parent.min_jump_velocity
+				
 	if [states.wall_sliding].has(state):
 		if event.is_action_pressed("ui_up"):
 			parent._jump(true)

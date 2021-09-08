@@ -16,9 +16,9 @@ func _ready():
 		var new_anim = Animation.new()
 		var frame_count = int((i - i%2)/2)
 		if i % 2 == 0:
-			self.add_animation("Left_" + str(frame_count), new_anim)
+			var _returned = self.add_animation("Left_" + str(frame_count), new_anim)
 		else:
-			self.add_animation("Right_" + str(frame_count), new_anim)
+			var _returned = self.add_animation("Right_" + str(frame_count), new_anim)
 		
 		new_anim.add_track(0)
 		new_anim.add_track(0)
