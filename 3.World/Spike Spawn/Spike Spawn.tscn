@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://3.World/Spike Spawn/Spike Spawn.gd" type="Script" id=1]
-[ext_resource path="res://2. Levels/1.1 Underground Escape/Textures/spikes_A2.png" type="Texture" id=2]
+[ext_resource path="res://2. Levels/1. The Chase/1.1 Underground Escape/Textures/spikes_A2.png" type="Texture" id=2]
 [ext_resource path="res://3.World/Spikes/spike_magma_A2.png" type="Texture" id=3]
 [ext_resource path="res://3.World/Spike/Spike.tscn" type="PackedScene" id=4]
 

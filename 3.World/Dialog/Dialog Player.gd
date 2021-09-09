@@ -2,6 +2,7 @@ extends Node
 
 onready var body_anim_player = find_node("Body_AnimationPlayer")
 onready var body_label = find_node("Body Label")
+onready var skip_label = find_node("Skip_NinePatchRect")
 onready var dialog_box = find_node("Dialog Box")
 onready var left_label = find_node("Left Speaker Label")
 onready var left_patch = find_node("Left Speaker NinePatchRect")
@@ -12,33 +13,41 @@ onready var left_portrait = find_node("Left Portrait")
 onready var right_portrait = find_node("Right Portrait")
 
 export(String) var portrait_name = "portraits"
+export(PackedScene) var story = preload("res://3.World/Dialog/Stories/Story_V1 Baked.tres")
 var _did = 0
 var _nid = 0
 var _final_nid=0
 var story_reader
 var _texture_library : Dictionary = {}
 
+var _skip_counter = 0
+var _max_skip_presses = 2
 signal dialog_complete
 # Virtual
 func _ready():
 	var story_reader_class = load("res://addons/EXP-System-Dialog/Reference_StoryReader/EXP_StoryReader.gd")
 	story_reader = story_reader_class.new()
 	
-	var story = load("res://3.World/Dialog/Stories/Story_V1 Baked.tres")
-	
 	story_reader.read(story)
 	
 	_load_textures()
+	_reset()
+
+func _reset():
+	_skip_counter = 0
 	dialog_box.visible = false
 	space_icon.visible = false
 	left_patch.visible = false
 	right_patch.visible = false
-	#play_dialog("Game_Start")
+	skip_label.visible = false
 	
+
 func _input(event):
 	if event is InputEventKey:
 		if event.scancode == KEY_SPACE and event.pressed == true:
 			_on_Dialog_Player_pressed_spacebar()
+		if event.scancode == KEY_ESCAPE and event.pressed == true:
+			_skip_dialog()
 	
 # Callback Methods
 func _on_Dialog_Player_pressed_spacebar():
@@ -47,7 +56,18 @@ func _on_Dialog_Player_pressed_spacebar():
 		_get_next_node()
 		if _is_playing():
 			_play_node()
-			
+	else:
+		_skip_counter += 1 
+		#print("Skip Counter: ", _skip_counter)
+		if _skip_counter >= _max_skip_presses:
+			skip_label.visible = true
+
+func _skip_dialog():
+	if _skip_counter >= _max_skip_presses:
+		dialog_box.visible = false
+		emit_signal("dialog_complete")
+		_reset()
+
 func _on_AnimationPlayer_animation_finished(_anim_name):
 	space_icon.visible = true
 
@@ -76,6 +96,7 @@ func _get_next_node():
 	if _nid == _final_nid:
 		dialog_box.visible = false
 		emit_signal("dialog_complete")
+		_reset()
 		
 func _get_tagged_text(tag : String, text : String) -> String:
 	var start_tag = "<" + tag + ">"

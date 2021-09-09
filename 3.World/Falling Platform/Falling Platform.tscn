@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://2. Levels/1.1 Underground Escape/Textures/cave_magma.tres" type="TileSet" id=1]
+[ext_resource path="res://2. Levels/1. The Chase/1.1 Underground Escape/Textures/cave_magma.tres" type="TileSet" id=1]
 [ext_resource path="res://3.World/Falling Platform/Falling Platform.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]

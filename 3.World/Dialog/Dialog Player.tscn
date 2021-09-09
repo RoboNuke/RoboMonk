@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://3.World/Dialog/Dialog Player.gd" type="Script" id=1]
 [ext_resource path="res://3.World/Dialog/Portraits/glasses_alien.png" type="Texture" id=2]
@@ -47,6 +47,9 @@ tracks/0/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
 }
 
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 4 )
+
 [node name="Dialog Player" type="Node"]
 script = ExtResource( 1 )
 
@@ -62,11 +65,11 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -300.0
+margin_left = -244.5
 margin_top = -120.0
-margin_right = 300.0
+margin_right = 245.5
 margin_bottom = -20.0
-rect_min_size = Vector2( 600, 100 )
+rect_min_size = Vector2( 490, 100 )
 texture = ExtResource( 3 )
 patch_margin_left = 14
 patch_margin_top = 14
@@ -88,7 +91,7 @@ __meta__ = {
 }
 
 [node name="Body Label" type="Label" parent="Dialog Box/NinePatchRect/MarginContainer"]
-margin_right = 568.0
+margin_right = 458.0
 margin_bottom = 52.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -104,9 +107,9 @@ clip_text = true
 
 [node name="Left Speaker NinePatchRect" type="NinePatchRect" parent="Dialog Box/NinePatchRect"]
 margin_left = -12.0
-margin_top = -23.0
+margin_top = -30.0
 margin_right = 168.0
-margin_bottom = 22.0
+margin_bottom = 15.0
 rect_min_size = Vector2( 180, 45 )
 texture = ExtResource( 3 )
 patch_margin_left = 14
@@ -132,9 +135,9 @@ __meta__ = {
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -168.0
-margin_top = -23.0
+margin_top = -30.0
 margin_right = 12.0
-margin_bottom = 22.0
+margin_bottom = 15.0
 rect_min_size = Vector2( 180, 45 )
 texture = ExtResource( 3 )
 patch_margin_left = 14
@@ -162,9 +165,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -115.0
-margin_top = -35.0
+margin_top = -25.0
 margin_right = 5.0
-margin_bottom = 5.0
+margin_bottom = 15.0
 texture = ExtResource( 3 )
 patch_margin_left = 14
 patch_margin_top = 14
@@ -177,6 +180,8 @@ __meta__ = {
 [node name="Space_Label" type="Label" parent="Dialog Box/NinePatchRect/Space_NinePatchRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 1.0
+margin_right = 1.0
 custom_fonts/font = SubResource( 4 )
 text = "Press Spacebar"
 align = 1
@@ -189,11 +194,44 @@ __meta__ = {
 autoplay = "Dancing"
 anims/Dancing = SubResource( 5 )
 
+[node name="Skip_NinePatchRect" type="NinePatchRect" parent="Dialog Box/NinePatchRect"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -498.567
+margin_top = -246.0
+margin_right = -378.567
+margin_bottom = -206.0
+rect_min_size = Vector2( 130, 40 )
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+patch_margin_left = 14
+patch_margin_top = 14
+patch_margin_right = 14
+patch_margin_bottom = 14
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Skip_Label" type="Label" parent="Dialog Box/NinePatchRect/Skip_NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_right = 1.0
+custom_fonts/font = SubResource( 6 )
+text = "Press ESC to Skip"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Left Portrait" type="TextureRect" parent="Dialog Box/NinePatchRect"]
 margin_left = 45.0
-margin_top = -90.0
+margin_top = -95.0
 margin_right = 109.0
-margin_bottom = -26.0
+margin_bottom = -31.0
 rect_min_size = Vector2( 64, 64 )
 texture = ExtResource( 5 )
 __meta__ = {
@@ -204,9 +242,9 @@ __meta__ = {
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -110.0
-margin_top = -90.0
+margin_top = -95.0
 margin_right = -46.0
-margin_bottom = -26.0
+margin_bottom = -31.0
 rect_min_size = Vector2( 64, 64 )
 texture = ExtResource( 2 )
 __meta__ = {

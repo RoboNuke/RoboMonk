@@ -45,6 +45,7 @@ var wall_direction = 0
 var desired_look_direction = 0
 var facing_direction = -1
 var is_absorbing = false
+var max_fall_dist
 
 #signal vars
 signal player_killed
@@ -73,9 +74,13 @@ func _apply_movement():
 	
 	is_grounded = _check_if_grounded()
 	
-func restart(pos):
+	if position.y > max_fall_dist:
+		emit_signal("player_killed")
+	
+func restart(pos, fall_dist):
 	position = pos
 	velocity = Vector2.ZERO
+	max_fall_dist = fall_dist
 	
 func norm(x):
 	if abs(x) < 1:
