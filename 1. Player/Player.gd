@@ -26,6 +26,7 @@ export var modifier = 1
 export(Vector2) var WALL_JUMP_FORCE
 export var WALL_SLIDE_MAX_VELOCITY = 50
 export var WALL_SLIDE_DOWN_MAX_VELOCITY = 4800
+export var starting_face_dir = -1
 var last_hit = null
 
 # absorbtion/dash variables
@@ -51,6 +52,7 @@ var max_fall_dist
 signal player_killed
 
 func _ready():
+	desired_look_direction = starting_face_dir
 	anim_tree_state_machine = animation_tree["parameters/playback"]
 	gravity = 2 * max_jump_height / pow(jump_duration, 2)
 	max_jump_velocity = -sqrt(2 * gravity * max_jump_height)
@@ -80,6 +82,9 @@ func _apply_movement():
 func restart(pos, fall_dist):
 	position = pos
 	velocity = Vector2.ZERO
+	max_fall_dist = fall_dist
+
+func set_fall_dist(fall_dist):
 	max_fall_dist = fall_dist
 	
 func norm(x):

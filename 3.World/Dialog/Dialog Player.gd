@@ -68,9 +68,6 @@ func _skip_dialog():
 		emit_signal("dialog_complete")
 		_reset()
 
-func _on_AnimationPlayer_animation_finished(_anim_name):
-	space_icon.visible = true
-
 # Public Functions
 func play_dialog(record_name : String):
 	_did = story_reader.get_did_via_record_name(record_name)
@@ -154,3 +151,7 @@ func _load_textures():
 		var texture_path = raw_texture_library[key]
 		var loaded_texture = load(texture_path)
 		_texture_library[key] = loaded_texture
+
+
+func _on_Body_AnimationPlayer_animation_finished(anim_name):
+	space_icon.visible = true
