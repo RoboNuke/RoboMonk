@@ -1,9 +1,253 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://2. Levels/1. The Chase/1-4 Highrise Spaceport/1-4 Highrise Spaceport.gd" type="Script" id=1]
 [ext_resource path="res://2. Levels/1. The Chase/1-1 Underground Escape/Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://1. Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://2. Levels/1. The Chase/1-4 Highrise Spaceport/Backgrounds/bg_towers.png" type="Texture" id=4]
+[ext_resource path="res://2. Levels/1. The Chase/1-4 Highrise Spaceport/Textures/terrain_terrace_spritesheep.png" type="Texture" id=5]
+[ext_resource path="res://2. Levels/1. The Chase/1-4 Highrise Spaceport/Backgrounds/bg_stars.png" type="Texture" id=6]
+[ext_resource path="res://2. Levels/1. The Chase/1-4 Highrise Spaceport/Textures/terrain_doodad.png" type="Texture" id=7]
+[ext_resource path="res://2. Levels/1. The Chase/1-4 Highrise Spaceport/Textures/terrain_block.png" type="Texture" id=8]
+[ext_resource path="res://2. Levels/1. The Chase/1-4 Highrise Spaceport/Textures/terrain_bg_pillar.png" type="Texture" id=9]
+[ext_resource path="res://2. Levels/1. The Chase/1-4 Highrise Spaceport/Textures/terrain_bg.png" type="Texture" id=10]
+[ext_resource path="res://2. Levels/1. The Chase/1-4 Highrise Spaceport/Textures/platform_spritesheet.png" type="Texture" id=11]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0, 0, 50, 0, 50, 22, 0, 22 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( -86, 0, -86, 0, -86, 16, -86, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=17]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=10]
+0/name = "terrain_terrace_spritesheep.png 0"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 152, 16 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 1, 0 ), 320, Vector2( 2, 0 ), 64, Vector2( 3, 0 ), 260, Vector2( 4, 0 ), 325, Vector2( 5, 0 ), 65, Vector2( 6, 0 ), 4, Vector2( 7, 0 ), 5, Vector2( 8, 0 ), 1 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 16, 16 )
+0/autotile/spacing = 1
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 4, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 5, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 6, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 7, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 8, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "terrain_block.png 1"
+1/texture = ExtResource( 8 )
+1/tex_offset = Vector2( -1, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 7, 9, 50, 22 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 12 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "platform_spritesheet.png 2"
+2/texture = ExtResource( 11 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 50, 16 )
+2/tile_mode = 1
+2/autotile/bitmask_mode = 1
+2/autotile/bitmask_flags = [ Vector2( 0, 0 ), 48, Vector2( 1, 0 ), 56, Vector2( 2, 0 ), 24 ]
+2/autotile/icon_coordinate = Vector2( 0, 0 )
+2/autotile/tile_size = Vector2( 16, 16 )
+2/autotile/spacing = 1
+2/autotile/occluder_map = [  ]
+2/autotile/navpoly_map = [  ]
+2/autotile/priority_map = [  ]
+2/autotile/z_index_map = [  ]
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 14 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 8, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 14 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 17 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+
+[sub_resource type="TileSet" id=13]
+0/name = "terrain_bg.png 0"
+0/texture = ExtResource( 10 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 67, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "terrain_bg_pillar.png 1"
+1/texture = ExtResource( 9 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "terrain_doodad.png 2"
+2/texture = ExtResource( 7 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 8, 67, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 64, 48 )
 
 [node name="1-4 Highrise Spaceport" type="Node2D"]
@@ -18,17 +262,39 @@ position = Vector2( 0, -96 )
 "Wall",
 ]]
 z_index = 1
+tile_set = SubResource( 10 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 collision_layer = 18
 collision_mask = 9
 format = 1
+tile_data = PoolIntArray( 589831, 2, 0, 589832, 2, 1, 589833, 2, 1, 589834, 2, 1, 589835, 2, 2, 720901, 1, 0, 917505, 1, 0, 1114115, 1, 0, 1179655, 0, 0, 1179656, 0, 1, 1179657, 0, 1, 1179658, 0, 1, 1179659, 0, 1, 1179660, 0, 1, 1179661, 0, 1, 1179662, 0, 1, 1179663, 0, 1, 1179664, 0, 2, 1245191, 0, 3, 1245192, 0, 4, 1245193, 0, 4, 1245194, 0, 4, 1245195, 0, 4, 1245196, 0, 4, 1245197, 0, 4, 1245198, 0, 4, 1245199, 0, 4, 1245200, 0, 5, 1245202, 0, 0, 1245203, 0, 1, 1245204, 0, 2, 1245206, 0, 0, 1245207, 0, 1, 1245208, 0, 1, 1245209, 0, 2, 1310727, 0, 3, 1310728, 0, 4, 1310729, 0, 4, 1310730, 0, 4, 1310731, 0, 4, 1310732, 0, 4, 1310733, 0, 4, 1310734, 0, 4, 1310735, 0, 4, 1310736, 0, 5, 1310738, 0, 3, 1310739, 0, 4, 1310740, 0, 5, 1310742, 0, 3, 1310743, 0, 4, 1310744, 0, 4, 1310745, 0, 5, 1376263, 0, 3, 1376264, 0, 4, 1376265, 0, 4, 1376266, 0, 4, 1376267, 0, 4, 1376268, 0, 4, 1376269, 0, 4, 1376270, 0, 4, 1376271, 0, 4, 1376272, 0, 5, 1376274, 0, 3, 1376275, 0, 4, 1376276, 0, 5, 1376278, 0, 3, 1376279, 0, 4, 1376280, 0, 4, 1376281, 0, 5, 1441799, 0, 3, 1441800, 0, 4, 1441801, 0, 4, 1441802, 0, 4, 1441803, 0, 4, 1441804, 0, 4, 1441805, 0, 4, 1441806, 0, 4, 1441807, 0, 4, 1441808, 0, 5, 1441810, 0, 3, 1441811, 0, 4, 1441812, 0, 5, 1441814, 0, 3, 1441815, 0, 4, 1441816, 0, 4, 1441817, 0, 5, 1507335, 0, 6, 1507336, 0, 7, 1507337, 0, 7, 1507338, 0, 7, 1507339, 0, 7, 1507340, 0, 7, 1507341, 0, 7, 1507342, 0, 7, 1507343, 0, 7, 1507344, 0, 8, 1507346, 0, 6, 1507347, 0, 7, 1507348, 0, 8, 1507350, 0, 6, 1507351, 0, 7, 1507352, 0, 7, 1507353, 0, 8 )
+
+[node name="Terrain Bg" type="TileMap" parent="Map"]
+z_index = -1
+tile_set = SubResource( 13 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+collision_layer = 18
+collision_mask = 9
+format = 1
+tile_data = PoolIntArray( 589833, 1, 0, 655369, 1, 0, 720905, 1, 0, 720911, 0, 0, 786438, 1, 0, 786441, 1, 0, 786447, 0, 0, 851974, 1, 0, 851983, 0, 0, 917510, 1, 0, 917519, 0, 0, 983042, 1, 0, 983046, 1, 0, 983055, 0, 0, 1048578, 1, 0, 1048582, 1, 0, 1048591, 0, 0, 1114114, 1, 0, 1114118, 1, 0, 1114127, 0, 0, 1179650, 1, 0, 1179652, 1, 0, 1179654, 1, 0, 1179663, 0, 0, 1245186, 1, 0, 1245188, 1, 0, 1245190, 1, 0, 1245199, 0, 0, 1310722, 1, 0, 1310724, 1, 0, 1310726, 1, 0, 1310735, 0, 0, 1376258, 1, 0, 1376260, 1, 0, 1376262, 1, 0, 1376271, 0, 0, 1441794, 1, 0, 1441796, 1, 0, 1441798, 1, 0, 1441807, 0, 0 )
+
+[node name="Terrain Spice" type="TileMap" parent="Map"]
+z_index = 2
+tile_set = SubResource( 13 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+collision_layer = 18
+collision_mask = 9
+format = 1
+tile_data = PoolIntArray( 1245194, 2, 0, 1376278, 2, 0, 1507341, 2, 0 )
 
 [node name="Win Area" type="Area2D" parent="Map"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Win Area"]
 position = Vector2( 3744, -128 )
-shape = SubResource( 1 )
+shape = SubResource( 11 )
 
 [node name="Enimies" type="Node2D" parent="."]
 
@@ -47,6 +313,7 @@ motion_mirroring = Vector2( 517, 0 )
 
 [node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
 z_index = -3
+texture = ExtResource( 6 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 517, 272 )
@@ -58,6 +325,7 @@ motion_mirroring = Vector2( 517, 0 )
 
 [node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 z_index = -2
+texture = ExtResource( 4 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 517, 272 )
@@ -91,6 +359,9 @@ position = Vector2( 32, 196 )
 position = Vector2( 3824, -176 )
 
 [node name="Key Points" type="Node2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 192, 176 )
 
 [connection signal="body_entered" from="Map/Win Area" to="." method="_on_Win_Area_body_entered"]
 [connection signal="visibility_changed" from="Camera2D" to="Camera2D" method="_on_Camera2D_visibility_changed"]

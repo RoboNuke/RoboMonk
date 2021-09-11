@@ -18,7 +18,6 @@ export(PackedScene) var main_menu_scene = preload("res://5. User Interfaces/Star
 var total_rumbles = 2
 var rumbles = 0
 var fall_dist = 700
-
 func player_death():
 	print("Better luck next time")
 

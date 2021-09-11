@@ -18,6 +18,7 @@ func _ready():
 	call_deferred("_cam_setup")
 
 func _cam_setup():
+	return
 	y_diffs = [0]
 	var pts = parent.key_pts.get_children()
 	if len(pts) == 0:
@@ -47,6 +48,7 @@ func _get_x_diff(region):
 	return cam_pts[region+1] - cam_pts[region]
 	
 func _process(delta):
+	return
 	if parent.player != null:
 		global_position.x = max(parent.player.global_position.x - projectResolution.x/2, 0)
 		global_position.x = min(global_position.x, max_x)
