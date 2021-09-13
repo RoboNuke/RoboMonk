@@ -57,7 +57,7 @@ func _ready():
 	gravity = 2 * max_jump_height / pow(jump_duration, 2)
 	max_jump_velocity = -sqrt(2 * gravity * max_jump_height)
 	min_jump_velocity = -sqrt(2 * gravity * min_jump_height)
-	WALL_JUMP_FORCE = Vector2(1,-1) * max_jump_velocity
+	WALL_JUMP_FORCE = Vector2(1,-1) * max_jump_velocity * 2
 	
 func _apply_movement():
 	var snap: Vector2 = Vector2(0,25) if !is_jumping and !is_dashing else Vector2.ZERO

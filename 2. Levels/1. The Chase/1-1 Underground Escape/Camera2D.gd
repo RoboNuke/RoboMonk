@@ -18,7 +18,7 @@ func _ready():
 	call_deferred("_cam_setup")
 
 func _cam_setup():
-	return
+	max_x = parent.far_pt.global_position.x - projectResolution.x
 	y_diffs = [0]
 	var pts = parent.key_pts.get_children()
 	if len(pts) == 0:
@@ -29,7 +29,6 @@ func _cam_setup():
 	y_diffs.push_back(0)
 	cam_pts.push_back(pts[len(pts)-1].global_position.x)
 	
-	max_x = parent.far_pt.global_position.x - projectResolution.x
 
 func _is_player_x_between(pt1, pt2):
 	return (parent.player.global_position.x > pt1 and parent.player.global_position.x < pt2)
@@ -48,10 +47,12 @@ func _get_x_diff(region):
 	return cam_pts[region+1] - cam_pts[region]
 	
 func _process(delta):
-	return
+	
 	if parent.player != null:
 		global_position.x = max(parent.player.global_position.x - projectResolution.x/2, 0)
 		global_position.x = min(global_position.x, max_x)
+		if len(parent.key_pts.get_children()) == 0:
+			return
 		var region = _get_cam_region()
 		var y_pt = 0
 		for i in range(region): # add all previous y_diffs

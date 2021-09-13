@@ -78,6 +78,7 @@ StateMachine="*res://state_machine.gd"
 AudioPlayer="*res://AudioStreamPlayer.gd"
 Globals="*res://Globals.gd"
 LastOpenedFiles="*res://addons/file-editor/scripts/LastOpenedFiles.gd"
+Level="*res://2. Levels/Level.gd"
 
 [display]
 
