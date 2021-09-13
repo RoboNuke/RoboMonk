@@ -19,3 +19,6 @@ func get_fall_dist():
 func player_death():
 	pass
 	
+func player_win():
+	pass
+	
