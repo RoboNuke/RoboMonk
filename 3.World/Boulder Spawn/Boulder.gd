@@ -3,21 +3,21 @@ extends Area2D
 onready var collision_cap = $CollisionShape2D
 onready var sprite = $Sprite
 
-export var velocity = 20
+export var grav = Vector2(0,10)
+export var velocity = Vector2(0,0)
 export var momentum = 30  #momentum for absorbtion
-export(Texture) var spike_texture 
+export(Texture) var boulder_texture
 
 
 func _ready():
-	sprite.texture = spike_texture
-	#drop(Vector2(100,75))
+	sprite.texture = boulder_texture
 	
 func drop(pos):
 	position = pos
 	
-func _process(_delta):
-	position.y += velocity
-	
+func _process(delta):
+	velocity += grav
+	position += velocity
 
 func get_momentum():
 	return momentum
@@ -32,6 +32,8 @@ func _on_Boulder_body_entered(body):
 	elif "Hittable" in body.get_groups():
 		body.hit(self)
 	elif "Wall" in body.get_groups():
-		pass
-		#print("Hit Wall")
+		print("Hit Wall")
+	elif "Deadly Floor" in body.get_groups():
+		if velocity.y <= 0:
+			return
 	self.queue_free()

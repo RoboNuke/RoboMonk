@@ -1,21 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://3.World/Spike/Spike.gd" type="Script" id=1]
-[ext_resource path="res://3.World/Spikes/spike_magma_A2.png" type="Texture" id=2]
+[ext_resource path="res://3.World/Boulder Spawn/Boulder.gd" type="Script" id=1]
 [ext_resource path="res://3.World/Boulder Spawn/terrain_giant_rock.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 13.0
 
-[node name="Spike" type="Area2D" groups=[
+[node name="Boulder" type="Area2D" groups=[
 "Absorbable",
 ]]
 z_index = 5
 collision_layer = 8
 collision_mask = 0
 script = ExtResource( 1 )
-velocity = 2
-spike_texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -1 )
@@ -24,4 +21,4 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 3 )
 
-[connection signal="body_entered" from="." to="." method="_on_Spike_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_Boulder_body_entered"]

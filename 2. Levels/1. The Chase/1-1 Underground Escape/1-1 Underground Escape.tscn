@@ -3844,7 +3844,7 @@ position = Vector2( 3072, 96 )
 position = Vector2( 3632, -48 )
 
 [node name="Player" parent="." instance=ExtResource( 15 )]
-position = Vector2( 69.308, 203.5 )
+position = Vector2( 2080, 80 )
 starting_face_dir = 1
 
 [node name="Dialog Player" parent="." instance=ExtResource( 16 )]

@@ -4,11 +4,12 @@ onready var drop_timer = $"Drop Timer"
 onready var shake_timer = $"Shake Timer"
 
 
-export(PackedScene) var spike
+export(PackedScene) var boulder = preload("res://3.World/Boulder Spawn/Boulder.tscn")
 
-export(Texture) var spike_texture 
-export var spike_speed = 2
-export var spike_momentum = 300
+export(Texture) var boulder_texture 
+export var boulder_speed = Vector2(0,0)
+export var boulder_gravity = Vector2(0,10.0/60.0)
+export var boulder_momentum = 300
 export var DROP_OFFSET = 17
 
 export var decay = 0.8  # How quickly the shaking stops [0, 1].
@@ -44,13 +45,13 @@ func shake():
 	position.y = max_offset.y * rand_range(-1, 1) + init_position.y
 
 func spawn_spike():
-	print("Drop Boulder")
-	var s = spike.instance()
-	s.set("spike_texture", spike_texture)
-	s.set("velocity", spike_speed)
-	s.set("momentum", spike_momentum)
-	get_tree().root.call_deferred("add_child",s)
+	var s = boulder.instance()
+	s.set("boulder_texture", boulder_texture)
+	s.set("velocity", boulder_speed)
+	s.set("momentum", boulder_momentum)
+	s.set("grav", boulder_gravity)
 	s.drop(global_position + Vector2(0, DROP_OFFSET))
+	get_tree().root.call_deferred("add_child",s)
 
 
 func _on_Drop_Timer_timeout():

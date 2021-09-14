@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://3.World/Boulder Spawn/Boulder Spawn.gd" type="Script" id=1]
-[ext_resource path="res://3.World/Boulder Spawn/Boulder.tscn" type="PackedScene" id=2]
 [ext_resource path="res://3.World/Boulder Spawn/terrain_giant_rock.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -37,8 +36,7 @@ collision_layer = 0
 collision_mask = 2
 mode = 1
 script = ExtResource( 1 )
-spike = ExtResource( 2 )
-spike_texture = ExtResource( 4 )
+boulder_texture = ExtResource( 4 )
 DROP_OFFSET = 1
 max_offset = Vector2( 1, 1 )
 

@@ -13,7 +13,7 @@ onready var right_rays = $"Wall Rays/Right Rays"
 # motion variables
 var velocity = Vector2.ZERO
 var FLOOR_NORMAL = Vector2.UP
-export var move_speed = 9 * Globals.TILE_WIDTH
+var move_speed = 9 * Globals.TILE_WIDTH
 var max_jump_velocity
 var min_jump_velocity
 var max_jump_height = 3.5 * Globals.TILE_WIDTH
@@ -27,7 +27,6 @@ export(Vector2) var WALL_JUMP_FORCE
 export var WALL_SLIDE_MAX_VELOCITY = 50
 export var WALL_SLIDE_DOWN_MAX_VELOCITY = 4800
 export var starting_face_dir = -1
-var last_hit = null
 
 # absorbtion/dash variables
 export var max_absorbtion = 2000
@@ -77,6 +76,7 @@ func _apply_movement():
 	is_grounded = _check_if_grounded()
 	
 	if position.y > max_fall_dist:
+		print("Fall Death: ", position.y)
 		emit_signal("player_killed")
 	
 func restart(pos, fall_dist):
@@ -195,7 +195,12 @@ func _end_dash():
 func hit(hitter):
 	if is_absorbing and "Absorbable" in hitter.get_groups():
 		_absorb(hitter)
-	elif last_hit != hitter:
+	elif "Deadly Floor" in hitter.get_groups():
+		print("Hit deadly floor")
+		emit_signal("player_killed")
+	elif "Wall" in hitter.get_groups():
+		return
+	else:
 		emit_signal("player_killed")
 	
 func _on_Dash_Timer_timeout():
