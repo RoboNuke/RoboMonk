@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=81 format=2]
 
 [ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/1-2 Volcanic Dash.gd" type="Script" id=1]
 [ext_resource path="res://2. Levels/1. The Chase/1-1 Underground Escape/Camera2D.gd" type="Script" id=2]
@@ -32,6 +32,10 @@
 [ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Lava Overlay.tres" type="Texture" id=30]
 [ext_resource path="res://3.World/Dialog/Dialog Player.tscn" type="PackedScene" id=31]
 [ext_resource path="res://3.World/Boulder Spawn/Boulder Launcher.tscn" type="PackedScene" id=32]
+[ext_resource path="res://4.Enemies/crawling/crawling.tscn" type="PackedScene" id=33]
+[ext_resource path="res://3.World/Moving Platform/Moving Platform.tscn" type="PackedScene" id=34]
+[ext_resource path="res://4.Enemies/Long Neck/Long Neck.tscn" type="PackedScene" id=35]
+[ext_resource path="res://3.World/Falling Platform/Falling Platform.tscn" type="PackedScene" id=36]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
@@ -506,6 +510,514 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 [sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 64, 48 )
 
+[sub_resource type="Curve2D" id=20]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 96, 0, 0, 0, 0, 128, 96 )
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "ping pong"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.99 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.95, 0.0 ]
+}
+
+[sub_resource type="Curve2D" id=22]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, -32, 0, 0, 0, 0, 0, 64, 0, 0, 0, 0, -112, 64, 0, 0, 0, 0, -112, -48 )
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "ping pong"
+length = 2.0
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Path2D/PathFollow2D:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.95, 0.0 ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "Fall"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "Fall"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "Fall"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "Fall"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "Fall"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "Fall"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="GDScript" id=30]
+script/source = "extends Position2D
+
+
+func hit(hitter = null):
+	get_parent().hit(hitter)
+"
+
+[sub_resource type="Animation" id=31]
+length = 0.12
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 21, 22, 23, 3 ]
+}
+
+[sub_resource type="Animation" id=32]
+length = 0.12
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 24, 25, 26, 6 ]
+}
+
+[sub_resource type="Animation" id=33]
+length = 0.12
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 27, 28, 29, 12 ]
+}
+
+[sub_resource type="Animation" id=34]
+length = 0.12
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 33, 34, 35, 9 ]
+}
+
+[sub_resource type="Animation" id=35]
+length = 0.12
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 30, 31, 32, 17 ]
+}
+
+[sub_resource type="Animation" id=36]
+length = 2.0
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.375, 0.625, 0.875, 1.125, 1.375, 1.625, 1.875 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 9, 12, 15, 8, 15, 18, 9, 3 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Shoulder:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -180.0, -90.0, 0.0, -90.0, -180.0 ]
+}
+
+[sub_resource type="Animation" id=37]
+length = 2.0
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.375, 0.625, 0.875, 1.125, 1.375, 1.625, 1.875 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 10, 13, 16, 7, 16, 19, 10, 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Shoulder:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -180.0, -90.0, 0.0, -90.0, -180.0 ]
+}
+
+[sub_resource type="Animation" id=38]
+length = 2.0
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.375, 0.625, 0.875, 1.125, 1.375, 1.625, 1.875 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 11, 14, 17, 6, 17, 20, 11, 5 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Shoulder:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -180.0, -90.0, 0.0, -90.0, -180.0 ]
+}
+
+[sub_resource type="Animation" id=39]
+length = 0.375
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=40]
+length = 0.375
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8 ]
+}
+
+[sub_resource type="Animation" id=41]
+length = 3.25
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Shoulder:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.125, 0.875, 1.625, 2.375, 3.125 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -90.0, -180.0, -90.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1, 1.125, 1.25, 1.375, 1.5, 1.625, 1.75, 1.875, 2, 2.125, 2.25, 2.375, 2.5, 2.625, 2.75, 2.875, 3, 3.125, 3.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 17, 16, 15, 20, 19, 18, 11, 10, 9, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15, 16, 17, 8, 7, 6 ]
+}
+
+[sub_resource type="Animation" id=42]
+length = 0.375
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 13, 14 ]
+}
+
+[sub_resource type="Animation" id=43]
+length = 0.375
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11 ]
+}
+
+[sub_resource type="Animation" id=44]
+length = 0.375
+loop = true
+step = 0.125
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.125, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 15, 16, 17 ]
+}
+
 [node name="1-2 Volcanic Dash" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -524,7 +1036,7 @@ cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 collision_layer = 18
 collision_mask = 9
 format = 1
-tile_data = PoolIntArray( 851985, 3, 0, 851989, 0, 0, 851993, 0, 0, 851997, 9, 0, 852001, 0, 0, 852005, 0, 0, 852009, 9, 0, 852013, 0, 0, 852017, 0, 0, 852021, 0, 0 )
+tile_data = PoolIntArray( 655553, 3, 0, 655557, 9, 0, 655561, 0, 0, 655565, 0, 0, 655569, 0, 0, 655573, 0, 0, 655577, 9, 0, 655581, 0, 0, 655585, 1, 0, 786457, 3, 0, 786461, 9, 0, 786465, 1, 0, 786773, 3, 0, 786777, 1, 0, 852133, 3, 0, 852137, 9, 0, 852141, 0, 0, 852145, 0, 0, 852149, 0, 0, 852153, 9, 0, 852157, 1, 0, 852394, 3, 0, 852398, 0, 0, 852402, 9, 0, 852406, 0, 0, 852410, 9, 0, 852414, 0, 0, 852418, 9, 0, 852422, 1, 0, 852427, 3, 0, 852431, 9, 0, 852435, 0, 0, 852439, 0, 0, 852443, 9, 0, 852447, 0, 0, 917517, 3, 0, 917521, 9, 0, 917525, 1, 0, 983077, 3, 0, 983081, 9, 0, 983085, 1, 0, 983440, 3, 0, 983444, 0, 0, 983448, 9, 0, 983452, 0, 0, 983456, 0, 0, 983460, 9, 0, 983464, 1, 0, 1048576, 3, 0, 1048580, 9, 0, 1048584, 1, 0, 1048726, 3, 0, 1048730, 9, 0, 1048734, 1, 0, 1114202, 3, 0, 1114206, 9, 0, 1114210, 1, 0, 1114228, 3, 0, 1114232, 9, 0, 1114236, 1, 0, 1114246, 3, 0, 1114250, 9, 0, 1114254, 1, 0, 1114362, 3, 0, 1114366, 1, 0, 1179729, 6, 0, 1179733, 7, 0, 1179930, 3, 0, 1179934, 1, 0, 1245257, 3, 0, 1245261, 2, 0, 1245264, 5, 0, 1376306, 3, 0, 1376310, 1, 0, 1376311, 1, 0 )
 
 [node name="Lava" type="TileMap" parent="Map" groups=[
 "Deadly Floor",
@@ -536,7 +1048,7 @@ cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 collision_layer = 16
 collision_mask = 16
 format = 1
-tile_data = PoolIntArray( 1376256, 1, 0, 1376257, 1, 0, 1376258, 1, 0, 1376259, 1, 0, 1376260, 1, 0, 1376261, 1, 0, 1376262, 1, 0, 1376263, 1, 0, 1376264, 1, 0, 1376265, 1, 0, 1376266, 1, 0, 1376267, 1, 0, 1376268, 1, 0, 1376269, 1, 0, 1376270, 1, 0, 1376271, 1, 0, 1376272, 1, 0, 1376273, 1, 0, 1376274, 1, 0, 1376275, 1, 0, 1376276, 1, 0, 1376277, 1, 0, 1376278, 1, 0, 1376280, 1, 0, 1376281, 1, 0, 1376282, 1, 0, 1376283, 1, 0, 1376284, 1, 0, 1376285, 1, 0, 1376286, 1, 0, 1376287, 1, 0, 1376288, 1, 0, 1376289, 1, 0, 1376290, 1, 0, 1376291, 1, 0, 1376292, 1, 0, 1376293, 1, 0, 1376294, 1, 0, 1376295, 1, 0, 1376296, 1, 0, 1376297, 1, 0, 1376298, 1, 0, 1376299, 1, 0, 1376300, 1, 0, 1376302, 1, 0, 1376303, 1, 0, 1376304, 1, 0, 1376305, 1, 0, 1376306, 1, 0, 1376307, 1, 0, 1376308, 1, 0, 1376309, 1, 0, 1376310, 1, 0, 1376311, 1, 0, 1376312, 1, 0, 1376313, 1, 0, 1376314, 1, 0, 1376315, 1, 0, 1376316, 1, 0, 1376317, 1, 0, 1376318, 1, 0, 1376319, 1, 0, 1376321, 1, 0, 1376322, 1, 0, 1376323, 1, 0, 1376324, 1, 0, 1376325, 1, 0, 1376326, 1, 0, 1376327, 1, 0, 1376328, 1, 0, 1376329, 1, 0, 1376330, 1, 0, 1376331, 1, 0, 1376332, 1, 0, 1376333, 1, 0, 1376334, 1, 0, 1376335, 1, 0, 1376336, 1, 0, 1376337, 1, 0, 1376338, 1, 0 )
+tile_data = PoolIntArray( 1376256, 1, 0, 1376258, 1, 0, 1376260, 1, 0, 1376262, 1, 0, 1376264, 1, 0, 1376266, 1, 0, 1376268, 1, 0, 1376270, 1, 0, 1376272, 1, 0, 1376274, 1, 0, 1376276, 1, 0, 1376278, 1, 0, 1376280, 1, 0, 1376282, 1, 0, 1376284, 1, 0, 1376286, 1, 0, 1376288, 1, 0, 1376290, 1, 0, 1376292, 1, 0, 1376294, 1, 0, 1376296, 1, 0, 1376298, 1, 0, 1376300, 1, 0, 1376302, 1, 0, 1376304, 1, 0, 1376306, 1, 0, 1376308, 1, 0, 1376310, 1, 0, 1376312, 1, 0, 1376314, 1, 0, 1376316, 1, 0, 1376318, 1, 0, 1376320, 1, 0, 1376322, 1, 0, 1376324, 1, 0, 1376326, 1, 0, 1376328, 1, 0, 1376330, 1, 0, 1376332, 1, 0, 1376334, 1, 0, 1376336, 1, 0, 1376338, 1, 0, 1376340, 1, 0, 1376342, 1, 0, 1376344, 1, 0, 1376346, 1, 0, 1376348, 1, 0, 1376350, 1, 0, 1376352, 1, 0, 1376354, 1, 0, 1376356, 1, 0, 1376358, 1, 0, 1376360, 1, 0, 1376362, 1, 0, 1376364, 1, 0, 1376366, 1, 0, 1376368, 1, 0, 1376370, 1, 0, 1376372, 1, 0, 1376374, 1, 0, 1376376, 1, 0, 1376378, 1, 0, 1376380, 1, 0, 1376382, 1, 0, 1376384, 1, 0, 1376386, 1, 0, 1376388, 1, 0, 1376390, 1, 0, 1376392, 1, 0, 1376394, 1, 0, 1376396, 1, 0, 1376398, 1, 0, 1376400, 1, 0, 1376402, 1, 0, 1376404, 1, 0, 1376406, 1, 0, 1376408, 1, 0, 1376410, 1, 0, 1376412, 1, 0, 1376414, 1, 0, 1376416, 1, 0, 1376418, 1, 0, 1376420, 1, 0, 1376422, 1, 0, 1376424, 1, 0, 1376426, 1, 0, 1376428, 1, 0, 1376430, 1, 0, 1376432, 1, 0, 1376434, 1, 0, 1376436, 1, 0, 1376438, 1, 0, 1376440, 1, 0, 1376442, 1, 0, 1376444, 1, 0, 1376446, 1, 0, 1376448, 1, 0, 1376450, 1, 0, 1376452, 1, 0, 1376454, 1, 0, 1376456, 1, 0, 1376458, 1, 0, 1376460, 1, 0, 1376462, 1, 0, 1376464, 1, 0, 1376466, 1, 0, 1376468, 1, 0, 1376470, 1, 0, 1376472, 1, 0, 1376474, 1, 0, 1376476, 1, 0, 1376478, 1, 0, 1376480, 1, 0, 1376482, 1, 0, 1376484, 1, 0, 1376486, 1, 0, 1376488, 1, 0, 1376490, 1, 0, 1376492, 1, 0, 1376494, 1, 0, 1376496, 1, 0 )
 
 [node name="Ladder" type="TileMap" parent="Map" groups=[
 "Wall",
@@ -548,7 +1060,6 @@ cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 collision_layer = 18
 collision_mask = 9
 format = 1
-tile_data = PoolIntArray( 1769475, 1, 0, 1900547, 0, 0, 1966083, 0, 0, 2031619, 0, 0, 2097155, 0, 0, 2162691, 0, 0, 2228227, 0, 0, 2293763, 0, 0, 2359299, 0, 0 )
 
 [node name="Supports-Extras" type="TileMap" parent="Map" groups=[
 "Wall",
@@ -559,7 +1070,7 @@ cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 collision_layer = 18
 collision_mask = 9
 format = 1
-tile_data = PoolIntArray( 2097181, 2, 0, 2097193, 2, 0, 2424861, 0, 0, 2424873, 0, 0, 2752541, 1, 0, 2752553, 1, 0 )
+tile_data = PoolIntArray( 1966084, 7, 0 )
 
 [node name="Supports-BG" type="TileMap" parent="Map" groups=[
 "Wall",
@@ -571,19 +1082,201 @@ cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 collision_layer = 18
 collision_mask = 9
 format = 1
-tile_data = PoolIntArray( 1769503, 5, 0, 1769515, 5, 0, 2097183, 5, 0, 2097195, 5, 0, 2424863, 4, 0, 2424875, 3, 0, 2752543, 4, 0, 2752555, 3, 0 )
+tile_data = PoolIntArray( 1441823, 6, 0, 1703950, 6, 0, 1703956, 7, 0, 1835046, 7, 0 )
 
 [node name="Win Area" type="Area2D" parent="Map"]
+position = Vector2( 48, 288 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Win Area"]
 position = Vector2( 3744, -128 )
 shape = SubResource( 19 )
 
-[node name="Boulder Launcher" parent="Map" instance=ExtResource( 32 )]
-position = Vector2( 64, 363 )
+[node name="Launchers" type="Node2D" parent="Map"]
+
+[node name="Boulder Launcher" parent="Map/Launchers" instance=ExtResource( 32 )]
+position = Vector2( 1056, 348 )
+boulder_velocity = Vector2( 0, -12 )
+boulder_gravity = Vector2( 0, 0.25 )
 Boulder_ROF = 2.0
 
+[node name="Boulder Launcher2" parent="Map/Launchers" instance=ExtResource( 32 )]
+position = Vector2( 1184, 352 )
+boulder_velocity = Vector2( 0, -12 )
+boulder_gravity = Vector2( 0, 0.25 )
+Boulder_ROF = 2.0
+
+[node name="Boulder Launcher3" parent="Map/Launchers" instance=ExtResource( 32 )]
+position = Vector2( 1312, 352 )
+boulder_velocity = Vector2( 0, -12 )
+boulder_gravity = Vector2( 0, 0.25 )
+Boulder_ROF = 2.0
+
+[node name="Boulder Launcher4" parent="Map/Launchers" instance=ExtResource( 32 )]
+position = Vector2( 2368, 348 )
+boulder_velocity = Vector2( 0, -12 )
+boulder_gravity = Vector2( 0, 0.25 )
+Boulder_ROF = 2.0
+
+[node name="Boulder Launcher5" parent="Map/Launchers" instance=ExtResource( 32 )]
+position = Vector2( 2672, 348 )
+boulder_velocity = Vector2( 0, -12 )
+boulder_gravity = Vector2( 0, 0.25 )
+Boulder_ROF = 2.0
+
+[node name="Boulder Launcher6" parent="Map/Launchers" instance=ExtResource( 32 )]
+position = Vector2( 2848, 348 )
+boulder_velocity = Vector2( 0, -12 )
+boulder_gravity = Vector2( 0, 0.25 )
+Boulder_ROF = 2.0
+
+[node name="Boulder Launcher7" parent="Map/Launchers" instance=ExtResource( 32 )]
+position = Vector2( 3056, 352 )
+boulder_velocity = Vector2( 0, -12 )
+boulder_gravity = Vector2( 0, 0.25 )
+Boulder_ROF = 2.0
+
+[node name="Boulder Launcher8" parent="Map/Launchers" instance=ExtResource( 32 )]
+position = Vector2( 3152, 352 )
+boulder_velocity = Vector2( 0, -12 )
+boulder_gravity = Vector2( 0, 0.25 )
+Boulder_ROF = 2.0
+
+[node name="Boulder Launcher9" parent="Map/Launchers" instance=ExtResource( 32 )]
+position = Vector2( 3668, 352 )
+boulder_velocity = Vector2( 0, -12 )
+boulder_gravity = Vector2( 0, 0.25 )
+Boulder_ROF = 2.0
+
+[node name="Platforms" type="Node2D" parent="Map"]
+
+[node name="Moving Platform" parent="Map/Platforms" instance=ExtResource( 34 )]
+position = Vector2( 480, 230.375 )
+
+[node name="Moving Platform2" parent="Map/Platforms" instance=ExtResource( 34 )]
+position = Vector2( 1872, 176 )
+
+[node name="Path2D" parent="Map/Platforms/Moving Platform2" index="0"]
+curve = SubResource( 20 )
+
+[node name="AnimationPlayer" parent="Map/Platforms/Moving Platform2" index="1"]
+"anims/ping pong" = SubResource( 21 )
+
+[node name="Moving Platform3" parent="Map/Platforms" instance=ExtResource( 34 )]
+position = Vector2( 2112, 208 )
+
+[node name="Path2D" parent="Map/Platforms/Moving Platform3" index="0"]
+position = Vector2( 112, 0 )
+curve = SubResource( 22 )
+
+[node name="PathFollow2D" parent="Map/Platforms/Moving Platform3/Path2D" index="0"]
+position = Vector2( -112, 50.0692 )
+offset = 219.403
+
+[node name="AnimationPlayer" parent="Map/Platforms/Moving Platform3" index="1"]
+"anims/ping pong" = SubResource( 23 )
+
+[node name="KinematicBody2D" parent="Map/Platforms/Moving Platform3" index="2"]
+position = Vector2( 0, 50.0692 )
+
+[node name="Falling Platform" parent="Map/Platforms" instance=ExtResource( 36 )]
+position = Vector2( 896, 319.5 )
+
+[node name="Stable Timer" parent="Map/Platforms/Falling Platform" index="1"]
+wait_time = 0.25
+
+[node name="Falling Platform2" parent="Map/Platforms" instance=ExtResource( 36 )]
+position = Vector2( 2056, 240 )
+
+[node name="Stable Timer" parent="Map/Platforms/Falling Platform2" index="1"]
+wait_time = 0.25
+
+[node name="AnimationPlayer" parent="Map/Platforms/Falling Platform2" index="2"]
+anims/Fall = SubResource( 24 )
+
+[node name="Falling Platform3" parent="Map/Platforms" instance=ExtResource( 36 )]
+position = Vector2( 2432, 263 )
+
+[node name="Stable Timer" parent="Map/Platforms/Falling Platform3" index="1"]
+wait_time = 0.25
+
+[node name="AnimationPlayer" parent="Map/Platforms/Falling Platform3" index="2"]
+anims/Fall = SubResource( 25 )
+
+[node name="Falling Platform4" parent="Map/Platforms" instance=ExtResource( 36 )]
+position = Vector2( 2528, 240 )
+
+[node name="Stable Timer" parent="Map/Platforms/Falling Platform4" index="1"]
+wait_time = 0.25
+
+[node name="AnimationPlayer" parent="Map/Platforms/Falling Platform4" index="2"]
+anims/Fall = SubResource( 26 )
+
+[node name="Falling Platform5" parent="Map/Platforms" instance=ExtResource( 36 )]
+position = Vector2( 2608, 208 )
+
+[node name="Stable Timer" parent="Map/Platforms/Falling Platform5" index="1"]
+wait_time = 0.25
+
+[node name="AnimationPlayer" parent="Map/Platforms/Falling Platform5" index="2"]
+anims/Fall = SubResource( 27 )
+
+[node name="Falling Platform6" parent="Map/Platforms" instance=ExtResource( 36 )]
+position = Vector2( 2976, 208 )
+
+[node name="Stable Timer" parent="Map/Platforms/Falling Platform6" index="1"]
+wait_time = 0.25
+
+[node name="AnimationPlayer" parent="Map/Platforms/Falling Platform6" index="2"]
+anims/Fall = SubResource( 28 )
+
+[node name="Falling Platform7" parent="Map/Platforms" instance=ExtResource( 36 )]
+position = Vector2( 3128, 352 )
+
+[node name="Stable Timer" parent="Map/Platforms/Falling Platform7" index="1"]
+wait_time = 0.25
+
+[node name="AnimationPlayer" parent="Map/Platforms/Falling Platform7" index="2"]
+anims/Fall = SubResource( 29 )
+
 [node name="Enimies" type="Node2D" parent="."]
+
+[node name="Crawler" parent="Enimies" instance=ExtResource( 33 )]
+position = Vector2( 432, 240 )
+can_move = false
+
+[node name="Crawler2" parent="Enimies" instance=ExtResource( 33 )]
+position = Vector2( 2032, 176 )
+can_move = false
+
+[node name="Shoulder" parent="Enimies/Crawler2" index="1"]
+visible = true
+rotation = -2.52898
+script = SubResource( 30 )
+
+[node name="FieldOfView" parent="Enimies/Crawler2/Shoulder" index="0"]
+warn_distance = 125
+danger_distance = 125
+
+[node name="AnimationPlayer" parent="Enimies/Crawler2" index="2"]
+anims/fire_left = SubResource( 31 )
+anims/fire_right = SubResource( 32 )
+anims/fire_up = SubResource( 33 )
+anims/fire_up_left = SubResource( 34 )
+anims/fire_up_right = SubResource( 35 )
+anims/search = SubResource( 36 )
+"anims/search 2" = SubResource( 37 )
+"anims/search 3" = SubResource( 38 )
+anims/walk_left = SubResource( 39 )
+anims/walk_right = SubResource( 40 )
+anims/walk_search = SubResource( 41 )
+anims/walk_up = SubResource( 42 )
+anims/walk_up_left = SubResource( 43 )
+anims/walk_up_right = SubResource( 44 )
+
+[node name="Long Neck" parent="Enimies" instance=ExtResource( 35 )]
+position = Vector2( 688, 208 )
+can_turn_around = false
+max_height = 5
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -645,12 +1338,12 @@ region_rect = Rect2( 0, 0, 517, 272 )
 position = Vector2( 32, 196 )
 
 [node name="Farthest Point" type="Position2D" parent="."]
-position = Vector2( 3824, -176 )
+position = Vector2( 3856, 107.1 )
 
 [node name="Key Points" type="Node2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 16 )]
-position = Vector2( 223, 98 )
+position = Vector2( 3520, 95.95 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
@@ -662,3 +1355,16 @@ z_index = 100
 [connection signal="body_entered" from="Map/Win Area" to="." method="_on_Win_Area_body_entered"]
 [connection signal="visibility_changed" from="Camera2D" to="Camera2D" method="_on_Camera2D_visibility_changed"]
 [connection signal="player_killed" from="Player" to="." method="_on_Player_player_killed"]
+
+[editable path="Map/Platforms/Moving Platform"]
+[editable path="Map/Platforms/Moving Platform2"]
+[editable path="Map/Platforms/Moving Platform3"]
+[editable path="Map/Platforms/Falling Platform"]
+[editable path="Map/Platforms/Falling Platform2"]
+[editable path="Map/Platforms/Falling Platform3"]
+[editable path="Map/Platforms/Falling Platform4"]
+[editable path="Map/Platforms/Falling Platform5"]
+[editable path="Map/Platforms/Falling Platform6"]
+[editable path="Map/Platforms/Falling Platform7"]
+[editable path="Enimies/Crawler"]
+[editable path="Enimies/Crawler2"]
