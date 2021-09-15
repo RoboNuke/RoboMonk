@@ -8,64 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node",
-"class": "AsepriteImportData",
-"language": "GDScript",
-"path": "res://addons/aseprite_importer/classes/AsepriteImportData.gd"
-}, {
-"base": "Node",
-"class": "AsepriteImporter",
-"language": "GDScript",
-"path": "res://addons/aseprite_importer/classes/AsepriteImporter.gd"
-}, {
-"base": "Control",
-"class": "CSVEditor",
-"language": "GDScript",
-"path": "res://addons/file-editor/scripts/CSVEditor.gd"
-}, {
-"base": "Node",
-"class": "EditorTheme",
-"language": "GDScript",
-"path": "res://addons/aseprite_importer/classes/EditorTheme.gd"
-}, {
-"base": "HTTPRequest",
-"class": "GoogleTranslateAPI",
-"language": "GDScript",
-"path": "res://addons/file-editor/scripts/GoogleTranslatorAPI.gd"
-}, {
-"base": "PanelContainer",
-"class": "JsonDock",
-"language": "GDScript",
-"path": "res://addons/json_editor/json_dock.gd"
-}, {
-"base": "Node",
-"class": "List",
-"language": "GDScript",
-"path": "res://addons/todot/model/List.gd"
-}, {
-"base": "Node",
-"class": "Model",
-"language": "GDScript",
-"path": "res://addons/todot/model/Model.gd"
-}, {
-"base": "Node",
-"class": "Task",
-"language": "GDScript",
-"path": "res://addons/todot/model/Task.gd"
-} ]
-_global_script_class_icons={
-"AsepriteImportData": "",
-"AsepriteImporter": "",
-"CSVEditor": "",
-"EditorTheme": "",
-"GoogleTranslateAPI": "",
-"JsonDock": "",
-"List": "",
-"Model": "",
-"Task": ""
-}
-
 [application]
 
 config/name="RoboMonk"
