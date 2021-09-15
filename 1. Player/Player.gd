@@ -74,10 +74,10 @@ func _apply_movement():
 		_jump()
 	
 	is_grounded = _check_if_grounded()
-	
-	if position.y > max_fall_dist:
-		print("Fall Death: ", position.y)
-		emit_signal("player_killed")
+	if max_fall_dist:
+		if position.y > max_fall_dist:
+			print("Fall Death: ", position.y)
+			emit_signal("player_killed")
 	
 func restart(pos, fall_dist):
 	position = pos

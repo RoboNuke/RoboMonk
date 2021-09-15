@@ -1,38 +1,37 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/1-2 Volcanic Dash.gd" type="Script" id=1]
 [ext_resource path="res://2. Levels/1. The Chase/1-1 Underground Escape/Camera2D.gd" type="Script" id=2]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Backgrounds/bg_far.png" type="Texture" id=3]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Backgrounds/bg_pillars_1.png" type="Texture" id=4]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Backgrounds/bg_pillars_2.png" type="Texture" id=5]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Backgrounds/bg_pillars_3.png" type="Texture" id=6]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/terrain_ladder.png" type="Texture" id=7]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/terrain_ladder_top.png" type="Texture" id=8]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/lava.png" type="Texture" id=9]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Lava Overlay.tres" type="Texture" id=10]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/lava.tres" type="Texture" id=11]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_middle.png" type="Texture" id=12]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_end_right_with_connector.png" type="Texture" id=13]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_end_right.png" type="Texture" id=14]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_end_left.png" type="Texture" id=15]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/rail_short.png" type="Texture" id=3]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/terrain_support_bg.png" type="Texture" id=4]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/terrain_support_fg_lava.png" type="Texture" id=5]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_support_top.png" type="Texture" id=6]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/terrain_support_bg_lava.png" type="Texture" id=7]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/terrain_support_fg.png" type="Texture" id=8]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/terrain_support_fg_lava_top.png" type="Texture" id=9]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Backgrounds/bg_far.png" type="Texture" id=10]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_connector.png" type="Texture" id=11]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Backgrounds/bg_pillars_2.png" type="Texture" id=12]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_hook_holder_connector_both.png" type="Texture" id=13]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/terrain_support_bg_lava_top.png" type="Texture" id=14]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/terrain_ladder_top.png" type="Texture" id=15]
 [ext_resource path="res://1. Player/Player.tscn" type="PackedScene" id=16]
 [ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_hook_holder_connector_right.png" type="Texture" id=17]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_end_left_with_connector.png" type="Texture" id=18]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_connector.png" type="Texture" id=19]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_hook_holder_connector_both.png" type="Texture" id=20]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_hook_holder_connector_left.png" type="Texture" id=21]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/rail_long.png" type="Texture" id=22]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/terrain_support_fg_lava_top.png" type="Texture" id=23]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/terrain_support_bg_lava.png" type="Texture" id=24]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_support_top.png" type="Texture" id=25]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/terrain_support_bg.png" type="Texture" id=26]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/terrain_support_fg_lava.png" type="Texture" id=27]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/rail_short.png" type="Texture" id=28]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/terrain_support_fg.png" type="Texture" id=29]
-[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/terrain_support_bg_lava_top.png" type="Texture" id=30]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_hook_holder_connector_left.png" type="Texture" id=18]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_end_right.png" type="Texture" id=19]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_end_left_with_connector.png" type="Texture" id=20]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_end_right_with_connector.png" type="Texture" id=21]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_end_left.png" type="Texture" id=22]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Backgrounds/bg_pillars_1.png" type="Texture" id=23]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Terrain/terrain_middle.png" type="Texture" id=24]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/terrain_ladder.png" type="Texture" id=25]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Supports/rail_long.png" type="Texture" id=26]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Backgrounds/bg_pillars_3.png" type="Texture" id=27]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/lava.png" type="Texture" id=28]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/lava.tres" type="Texture" id=29]
+[ext_resource path="res://2. Levels/1. The Chase/1-2 Volcanic Dash/Textures/Lava Overlay.tres" type="Texture" id=30]
 [ext_resource path="res://3.World/Dialog/Dialog Player.tscn" type="PackedScene" id=31]
 [ext_resource path="res://3.World/Boulder Spawn/Boulder Launcher.tscn" type="PackedScene" id=32]
-[ext_resource path="res://3.World/Boulder Spawn/Boulder Spawn.tscn" type="PackedScene" id=33]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
@@ -66,7 +65,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 16.0203, 24.0956, 16.0203, 19.9458, 
 
 [sub_resource type="TileSet" id=11]
 0/name = "terrain_middle.png 0"
-0/texture = ExtResource( 12 )
+0/texture = ExtResource( 24 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 32, 16 )
@@ -87,7 +86,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 16.0203, 24.0956, 16.0203, 19.9458, 
 } ]
 0/z_index = 0
 1/name = "terrain_end_right.png 1"
-1/texture = ExtResource( 14 )
+1/texture = ExtResource( 19 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 32, 16 )
@@ -108,7 +107,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 16.0203, 24.0956, 16.0203, 19.9458, 
 } ]
 1/z_index = 0
 2/name = "terrain_end_right_with_connector.png 2"
-2/texture = ExtResource( 13 )
+2/texture = ExtResource( 21 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 32, 16 )
@@ -129,7 +128,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 16.0203, 24.0956, 16.0203, 19.9458, 
 } ]
 2/z_index = 0
 3/name = "terrain_end_left.png 3"
-3/texture = ExtResource( 15 )
+3/texture = ExtResource( 22 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( -8, 0, 32, 16 )
@@ -150,7 +149,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 16.0203, 24.0956, 16.0203, 19.9458, 
 } ]
 3/z_index = 0
 4/name = "terrain_end_left_with_connector.png 4"
-4/texture = ExtResource( 18 )
+4/texture = ExtResource( 20 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( -8, 0, 32, 16 )
@@ -171,7 +170,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 16.0203, 24.0956, 16.0203, 19.9458, 
 } ]
 4/z_index = 0
 5/name = "terrain_connector.png 5"
-5/texture = ExtResource( 19 )
+5/texture = ExtResource( 11 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 8, 16 )
@@ -192,7 +191,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 16.0203, 24.0956, 16.0203, 19.9458, 
 } ]
 5/z_index = 0
 6/name = "terrain_hook_holder_connector_both.png 6"
-6/texture = ExtResource( 20 )
+6/texture = ExtResource( 13 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, -8, 32, 32 )
@@ -213,7 +212,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 16.0203, 24.0956, 16.0203, 19.9458, 
 } ]
 6/z_index = 0
 7/name = "terrain_hook_holder_connector_left.png 7"
-7/texture = ExtResource( 21 )
+7/texture = ExtResource( 18 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, -8, 32, 32 )
@@ -255,7 +254,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 16.0203, 24.0956, 16.0203, 19.9458, 
 } ]
 8/z_index = 0
 9/name = "terrain_support_top.png 9"
-9/texture = ExtResource( 25 )
+9/texture = ExtResource( 6 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 32, 48 )
@@ -284,7 +283,7 @@ points = PoolVector2Array( 32, 24, 0, 24, 0, 0, 32, 0 )
 
 [sub_resource type="TileSet" id=14]
 0/name = "Lava Overlay.tres 0"
-0/texture = ExtResource( 10 )
+0/texture = ExtResource( 30 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 32, 32 )
@@ -298,7 +297,7 @@ points = PoolVector2Array( 32, 24, 0, 24, 0, 0, 32, 0 )
 0/shapes = [  ]
 0/z_index = 0
 1/name = "lava.tres 1"
-1/texture = ExtResource( 11 )
+1/texture = ExtResource( 29 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 32, 32 )
@@ -319,7 +318,7 @@ points = PoolVector2Array( 32, 24, 0, 24, 0, 0, 32, 0 )
 } ]
 1/z_index = 0
 2/name = "lava.png 2"
-2/texture = ExtResource( 9 )
+2/texture = ExtResource( 28 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 8, 32, 24 )
@@ -348,7 +347,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 
 [sub_resource type="TileSet" id=17]
 0/name = "terrain_ladder.png 0"
-0/texture = ExtResource( 7 )
+0/texture = ExtResource( 25 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 32, 8 )
@@ -369,7 +368,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 } ]
 0/z_index = 0
 1/name = "terrain_ladder_top.png 1"
-1/texture = ExtResource( 8 )
+1/texture = ExtResource( 15 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 32, 16 )
@@ -392,7 +391,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 
 [sub_resource type="TileSet" id=18]
 0/name = "terrain_support_fg_lava_top.png 0"
-0/texture = ExtResource( 23 )
+0/texture = ExtResource( 9 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 32, 40 )
@@ -406,7 +405,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 0/shapes = [  ]
 0/z_index = 0
 1/name = "terrain_support_fg_lava.png 1"
-1/texture = ExtResource( 27 )
+1/texture = ExtResource( 5 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 32, 40 )
@@ -420,7 +419,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 1/shapes = [  ]
 1/z_index = 0
 2/name = "terrain_support_fg.png 2"
-2/texture = ExtResource( 29 )
+2/texture = ExtResource( 8 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 32, 40 )
@@ -434,7 +433,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 2/shapes = [  ]
 2/z_index = 0
 3/name = "terrain_support_bg_lava_top.png 3"
-3/texture = ExtResource( 30 )
+3/texture = ExtResource( 14 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
 3/region = Rect2( -4, 0, 32, 40 )
@@ -448,7 +447,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 3/shapes = [  ]
 3/z_index = 0
 4/name = "terrain_support_bg_lava.png 4"
-4/texture = ExtResource( 24 )
+4/texture = ExtResource( 7 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( -4, 0, 32, 40 )
@@ -462,7 +461,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 4/shapes = [  ]
 4/z_index = 0
 5/name = "terrain_support_bg.png 5"
-5/texture = ExtResource( 26 )
+5/texture = ExtResource( 4 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( -4, 0, 32, 40 )
@@ -476,7 +475,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 5/shapes = [  ]
 5/z_index = 0
 6/name = "rail_short.png 6"
-6/texture = ExtResource( 28 )
+6/texture = ExtResource( 3 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( -4, 6, 32, 16 )
@@ -490,7 +489,7 @@ points = PoolVector2Array( 32, 16, 0, 16, 0, 0, 32, 0 )
 6/shapes = [  ]
 6/z_index = 0
 7/name = "rail_long.png 7"
-7/texture = ExtResource( 22 )
+7/texture = ExtResource( 26 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 6, 32, 16 )
@@ -534,7 +533,6 @@ z_index = 5
 tile_set = SubResource( 14 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
-show_collision = true
 collision_layer = 16
 collision_mask = 16
 format = 1
@@ -583,10 +581,7 @@ shape = SubResource( 19 )
 
 [node name="Boulder Launcher" parent="Map" instance=ExtResource( 32 )]
 position = Vector2( 64, 363 )
-Boulder_ROF = 1.0
-
-[node name="Boulder Spawn" parent="Map" instance=ExtResource( 33 )]
-position = Vector2( 328, 72 )
+Boulder_ROF = 2.0
 
 [node name="Enimies" type="Node2D" parent="."]
 
@@ -605,7 +600,7 @@ motion_mirroring = Vector2( 517, 0 )
 
 [node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
 z_index = -3
-texture = ExtResource( 3 )
+texture = ExtResource( 10 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 517, 272 )
@@ -617,7 +612,7 @@ motion_mirroring = Vector2( 517, 0 )
 
 [node name="Sprite2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 z_index = -2
-texture = ExtResource( 4 )
+texture = ExtResource( 23 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 852, 73, 0, 0 )
@@ -629,7 +624,7 @@ motion_mirroring = Vector2( 517, 0 )
 
 [node name="Sprite3" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
 z_index = -3
-texture = ExtResource( 5 )
+texture = ExtResource( 12 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 517, 272 )
@@ -641,7 +636,7 @@ motion_mirroring = Vector2( 517, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 z_index = -1
-texture = ExtResource( 6 )
+texture = ExtResource( 27 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 517, 272 )
