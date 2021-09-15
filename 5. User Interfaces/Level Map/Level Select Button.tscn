@@ -11,6 +11,7 @@ margin_right = 40.0
 margin_bottom = 40.0
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 1 )
 texture_disabled = ExtResource( 5 )
 script = ExtResource( 3 )
 __meta__ = {
