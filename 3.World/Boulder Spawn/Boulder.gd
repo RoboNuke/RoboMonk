@@ -15,7 +15,7 @@ func _ready():
 func drop(pos):
 	position = pos
 	
-func _process(delta):
+func _process(_delta):
 	velocity += grav
 	position += velocity
 

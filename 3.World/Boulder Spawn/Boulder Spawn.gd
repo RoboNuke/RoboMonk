@@ -25,7 +25,7 @@ func _ready():
 	init_position = position
 	visible = true
 	
-func _process(delta):
+func _process(_delta):
 	if !start:
 		return
 	if drop_timer.is_stopped() and shake_timer.is_stopped():
@@ -58,5 +58,5 @@ func _on_Drop_Timer_timeout():
 	shake_timer.start()
 
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	start = true

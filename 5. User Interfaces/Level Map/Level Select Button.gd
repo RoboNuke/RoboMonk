@@ -7,6 +7,10 @@ var level_path
 func _ready():
 	update_lvl_path()
 
+func _process(_delta):
+	if disabled:
+		$VBoxContainer.visible = false
+
 func _on_TextureButton_pressed():
 	get_tree().change_scene_to(level_path)
 	

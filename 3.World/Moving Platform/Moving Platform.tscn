@@ -47,6 +47,7 @@ playback_speed = 0.5
 "Platform",
 ]]
 collision_layer = 2
+collision_mask = 9
 motion/sync_to_physics = true
 
 [node name="TileMap" type="TileMap" parent="KinematicBody2D"]

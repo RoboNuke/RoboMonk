@@ -1,5 +1,4 @@
-
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/1-3 Tower Crawl.gd" type="Script" id=1]
 [ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/1-3 Camera Script.gd" type="Script" id=2]
@@ -421,6 +420,12 @@ position = Vector2( 162.957, 51.5071 )
 [node name="Path2D" parent="Map/Moving Platform" index="0"]
 curve = SubResource( 25 )
 
+[node name="PathFollow2D" parent="Map/Moving Platform/Path2D" index="0"]
+position = Vector2( -92.2619, -0.0399246 )
+
+[node name="KinematicBody2D" parent="Map/Moving Platform" index="2"]
+position = Vector2( -92.2619, -0.0399246 )
+
 [node name="Enimies" type="Node2D" parent="."]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -523,6 +528,9 @@ rotation = 0.0178779
 position = Vector2( -47.9811, -15.5517 )
 rotation = 3.13608
 curve = SubResource( 26 )
+
+[node name="PathFollow2D" parent="Falling Platform/Moving Platform/Path2D" index="0"]
+position = Vector2( 0, -1.52588e-05 )
 
 [node name="KinematicBody2D" parent="Falling Platform/Moving Platform" index="2"]
 position = Vector2( -47.9811, -15.5517 )

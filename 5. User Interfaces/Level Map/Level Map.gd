@@ -24,13 +24,20 @@ func _ready():
 	
 	for i in range(1):
 		for j in range(5):
-			generate_buttons(worlds[i], levels[i][j])
+			if levels[i][j][0] == "#":
+				print(levels[i][j])
+				levels[i][j] = levels[i][j].right(1)
+				print(levels[i][j])
+				generate_buttons(worlds[i], levels[i][j], true)
+			else:
+				generate_buttons(worlds[i], levels[i][j])
 
 
-func generate_buttons(world : String, name : String):
+func generate_buttons(world : String, name : String, disabled = false):
 	var bb = base_button.instance()
 	bb.set_world(world)
 	bb.set_level(name)
+	bb.disabled = disabled
 	grid.add_child(bb)
 
 
