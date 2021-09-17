@@ -220,6 +220,9 @@ rotation = 1.5708
 shape = SubResource( 1 )
 one_way_collision = true
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1300, 80 )
+
 [connection signal="battery_destroyed" from="Enimies/Battery" to="." method="_on_Battery_battery_destroyed"]
 [connection signal="battery_destroyed" from="Enimies/Battery2" to="." method="_on_Battery2_battery_destroyed"]
 [connection signal="battery_destroyed" from="Enimies/Battery3" to="." method="_on_Battery3_battery_destroyed"]
