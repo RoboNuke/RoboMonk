@@ -254,7 +254,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=9]
 resource_name = "low_close"
 length = 0.8
 tracks/0/type = "value"
@@ -318,7 +318,7 @@ tracks/4/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=10]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Bottom Sprite:region_rect")
@@ -362,7 +362,7 @@ tracks/2/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=11]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("Bottom Sprite:region_rect")
@@ -425,7 +425,7 @@ tracks/4/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=12]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("Bottom Sprite:region_rect")
@@ -512,7 +512,7 @@ tracks/6/keys = {
 "values": [ true, false, true ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=13]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Bottom Sprite:region_rect")
@@ -539,7 +539,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=14]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Top Sprite:region_rect")
@@ -566,7 +566,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=15]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Top Sprite:region_rect")
@@ -593,7 +593,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=16]
 length = 0.9
 tracks/0/type = "value"
 tracks/0/path = NodePath("Top Sprite:region_rect")
@@ -620,10 +620,10 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 16, 15 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 11.6426, 10.086 )
 
 [node name="Dragon Boss" type="KinematicBody2D" groups=[
@@ -635,13 +635,7 @@ collision_layer = 4
 collision_mask = 0
 script = ExtResource( 5 )
 beam_texture = ExtResource( 8 )
-beam_speed = 200.0
-beam_momentum = 25
-BEAM_OFFSET = Vector2( -20, -30 )
 ball_speed = 300
-batters_before_destroy = 1
-total_batteries = 2
-beam_width = 3.0
 
 [node name="Laser Only State Machine" type="Node" parent="."]
 script = ExtResource( 6 )
@@ -662,16 +656,16 @@ anims/high_fire = SubResource( 5 )
 anims/high_gun = SubResource( 6 )
 anims/high_open = SubResource( 7 )
 anims/low = SubResource( 8 )
-anims/low_close = SubResource( 18 )
-anims/low_fire = SubResource( 9 )
-anims/low_gun = SubResource( 10 )
-anims/low_open = SubResource( 11 )
-anims/off = SubResource( 12 )
+anims/low_close = SubResource( 9 )
+anims/low_fire = SubResource( 10 )
+anims/low_gun = SubResource( 11 )
+anims/low_open = SubResource( 12 )
+anims/off = SubResource( 13 )
 
 [node name="Top Player" type="AnimationPlayer" parent="."]
-anims/Fire = SubResource( 13 )
-anims/Idle = SubResource( 14 )
-anims/Recoil = SubResource( 15 )
+anims/Fire = SubResource( 14 )
+anims/Idle = SubResource( 15 )
+anims/Recoil = SubResource( 16 )
 
 [node name="Top Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
@@ -681,7 +675,7 @@ region_rect = Rect2( 42, 0, 42, 25 )
 
 [node name="Base Collision Object" type="CollisionShape2D" parent="."]
 position = Vector2( 0.0936432, -8.84167 )
-shape = SubResource( 16 )
+shape = SubResource( 17 )
 
 [node name="Absorbtion Area" type="Area2D" parent="." groups=[
 "Absorbable",
@@ -692,7 +686,7 @@ script = ExtResource( 4 )
 [node name="Jaw Area" type="CollisionShape2D" parent="Absorbtion Area"]
 modulate = Color( 0, 1, 0.0627451, 1 )
 position = Vector2( -7.5, 13.7874 )
-shape = SubResource( 17 )
+shape = SubResource( 18 )
 disabled = true
 
 [node name="Tween" type="Tween" parent="."]

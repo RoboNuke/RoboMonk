@@ -1,5 +1,7 @@
 extends Node2D
 
+var DEBUG = true
+
 onready var bc1 = $"Battery Cell"
 onready var bc2 = $"Battery Cell2"
 onready var bc3 = $"Battery Cell3"
@@ -31,6 +33,8 @@ func hit(body):
 			_play_deaths()
 			dead = true
 			#self.queue_free()
+	if "Player" in body.get_groups() and DEBUG:
+		_play_deaths()
 
 
 func _process(_delta):
@@ -49,5 +53,6 @@ func _play_deaths():
 func kill():
 	kill_count += 1
 	if kill_count == total_cells:
+		print("I am emiting the signal")
 		emit_signal("battery_destroyed")
 		self.queue_free()

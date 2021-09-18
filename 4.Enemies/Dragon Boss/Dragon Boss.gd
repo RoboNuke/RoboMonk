@@ -26,10 +26,10 @@ var velocity = Vector2.ZERO
 # beam vars
 var beam = preload("res://4.Enemies/Beam/Beam.tscn")
 export(Texture) var beam_texture 
-export var beam_speed = 100.0
-export var beam_momentum = 200
+export var beam_speed = 200
+export var beam_momentum = 25
 export var max_beam_length = 15
-export(Vector2) var BEAM_OFFSET = Vector2(10,30)
+export(Vector2) var BEAM_OFFSET = Vector2(-20,-30)
 var beams_fired = 0
 
 #ball vars
@@ -67,23 +67,30 @@ var restart_pos
 var dead = false
 export var init_collision_mask = 4
 export var floor_collision_mask = 2
-
+export var closest_dist = 50
 signal boss_defeated
 
 func _ready():
 	rng.randomize()
 	#set_collision_mask(init_collision_mask)
 
-func start(pos):
+func start(_player, pos, _restart_pos):
+	player = _player
 	global_position = pos
-	laser_sm.start()
+	restart_pos = _restart_pos
+	call_deferred("set_consts")
 	
-func set_boss_data(data):
-	left_x = data[0]
-	right_x = data[1]
+func set_xs(l,r):
+	left_x = l
+	right_x = r
+	
+func set_consts():
 	beam_rof.set_wait_time(beam_width/beam_speed)
 	
 func _process(_delta):
+	if player != null:
+		if abs(player.global_position.x - global_position.x) < closest_dist:
+			desired_facing_dir = (facing_dir + 1) %2
 	if dead:
 		if tween.is_active():
 			tween.stop_all()
@@ -142,6 +149,7 @@ func _track_player():
 		move_dir = MOVE_DIRS.UP
 	else:
 		move_dir = MOVE_DIRS.DOWN
+		
 
 func _on_Beam_ROF_timeout():
 	if firing:
@@ -209,10 +217,10 @@ func get_beam_loc(b):
 			return(b.BEAM_LOCS.MIDDLE)
 
 func absorbed():
-	print("I have been absorbed, Dragon Boss")
+	#print("I have been absorbed, Dragon Boss")
 	bot_player.stop()
 	bot_player.clear_queue()
-	bot_player.play("Die")
+	#bot_player.play("Die")
 	dead = true
 	set_collision_mask(floor_collision_mask)
 	

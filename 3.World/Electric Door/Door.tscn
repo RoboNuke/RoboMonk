@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://3.World/Electric_Door_64x16.png" type="Texture" id=2]
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends Node2D
+
+onready var door_timer = $\"Door Activation Box/Timer\"
+onready var sprite = $\"Sprite\"
+onready var collision_box = $\"Door Activation Box/CollisionShape2D\"
+onready var electro_box = $\"Door Collider/CollisionShape2D\"
+var flash_frame = 0
+
+export var start_closed = false
+export var open = true
+
+signal passed_through_door
+
+func _ready():
+	if start_closed:
+		close()
+	
+func open(stay_open = false):
+	sprite.frame = 0
+	open = true
+	electro_box.disabled = true
+	if stay_open:
+		collision_box.disabled = true
+
+func close():
+	_on_Door_body_entered(null)
+
+func _on_Door_body_entered(body):
+	emit_signal(\"passed_through_door\")
+	sprite.frame = flash_frame + 1
+	open = false
+	door_timer.start()
+	
+func _on_Timer_timeout():
+	if not open:
+		flash_frame = (flash_frame + 1) % 2
+		sprite.frame = flash_frame + 1
+		door_timer.start()
+"
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 22 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 20, 8 )
+
+[node name="Electric Door" type="Node2D"]
+script = SubResource( 3 )
+
+[node name="Door Activation Box" type="Area2D" parent="."]
+collision_layer = 0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door Activation Box"]
+position = Vector2( 8, 0 )
+shape = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="Door Activation Box"]
+wait_time = 0.1
+one_shot = true
+
+[node name="Door Collider" type="StaticBody2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door Collider"]
+rotation = 1.5708
+shape = SubResource( 2 )
+one_way_collision = true
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 1, 0.753 )
+texture = ExtResource( 2 )
+hframes = 3
+
+[connection signal="body_entered" from="Door Activation Box" to="." method="_on_Door_body_entered"]
+[connection signal="timeout" from="Door Activation Box/Timer" to="." method="_on_Timer_timeout"]

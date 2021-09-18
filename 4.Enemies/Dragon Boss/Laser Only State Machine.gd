@@ -3,7 +3,6 @@ extends StateMachine
 var in_fire_queue = false
 
 func _ready():
-	active = false
 	add_state("idle")
 	add_state("fire_laser")
 	add_state("change_side")
@@ -13,11 +12,7 @@ func _ready():
 	add_state("search_player")
 	add_state("fire_ball")
 	add_state("ping_pong_above")
-
-func start():
-	active = true
 	call_deferred("set_state", states.idle)
-	
 	
 func _state_logic(_delta):
 	#print(state)
@@ -57,8 +52,6 @@ func _state_logic(_delta):
 		states.losing_power:
 			pass
 
-
-
 func _on_Bottom_Player_animation_finished(anim_name):
 	#print(anim_name, " has finished playing")
 	if anim_name == "low_gun" and parent.firing_balls:
@@ -95,7 +88,7 @@ func _get_transition(_delta):
 			if parent.desired_facing_dir == parent.facing_dir:
 				return states.search_player
 		states.losing_power:
-			print("I lost power")
+			#print("I lost power")
 			pass
 		states.destroy_map:
 			if not parent.destroying_map:
@@ -115,21 +108,27 @@ func _get_transition(_delta):
 func _enter_state(new_state, _old_state):
 	match new_state:
 		states.idle:
-			print("Dragon Boss Init::Idling")
+			#print("Dragon Boss Init::Idling")
+			pass
 		states.fire_laser:
-			print("Dragon Boss Init::Firing Laser")
+			#print("Dragon Boss Init::Firing Laser")
 			parent.firing = true
 			parent.top_player.play("Fire")
 		states.change_side:
-			print("Dragon Boss Init::Changing Sides")
+			pass
+			#print("Dragon Boss Init::Changing Sides")
 		states.losing_power:
-			print("Dragon Boss Init::Losing Power")
+			pass
+			#print("Dragon Boss Init::Losing Power")
 		states.destroy_map:
-			print("Dragon Boss Init::Destroying Map")
+			pass
+			#print("Dragon Boss Init::Destroying Map")
 		states.shutdown:
-			print("Dragon Boss Init::Shuting Down")
+			pass
+			#print("Dragon Boss Init::Shuting Down")
 		states.search_player:
-			print("Dragon Boss Init::Search Player")
+			pass
+			#print("Dragon Boss Init::Search Player")
 		states.fire_ball:
 			print("Dragon Boss Init::Fire Ball")
 			parent.firing_balls = true

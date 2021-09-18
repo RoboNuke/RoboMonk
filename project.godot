@@ -167,7 +167,3 @@ locale_filter=[ 1, [  ] ]
 
 common/enable_pause_aware_picking=true
 2d/default_gravity=100
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"
