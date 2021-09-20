@@ -1085,7 +1085,7 @@ format = 1
 tile_data = PoolIntArray( 1441823, 6, 0, 1703950, 6, 0, 1703956, 7, 0, 1835046, 7, 0 )
 
 [node name="Win Area" type="Area2D" parent="Map"]
-position = Vector2( 48, 288 )
+position = Vector2( 48, 285 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Win Area"]
 position = Vector2( 3744, -128 )
@@ -1343,7 +1343,7 @@ position = Vector2( 3856, 107.1 )
 [node name="Key Points" type="Node2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 16 )]
-position = Vector2( 16, 144 )
+position = Vector2( 44.625, 144.625 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 

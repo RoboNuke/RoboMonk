@@ -1,22 +1,19 @@
 extends Control
 
+onready var title_label = $"ColorRect/NinePatchRect/VBoxContainer/Control2/Title Label"
+
 export (PackedScene) var base_button
 export (int) var total_levels = 25
 export (NodePath) var grid
 
-var worlds
 var levels
-
+var worlds
 func _ready():
 	grid = get_node(grid)
+	levels = Globals.levels
+	worlds = Globals.worlds
 	
-	var file = File.new()
-	file.open("res://2. Levels/Level Metadata.json", file.READ)
-	var json = file.get_as_text()
-	var jdata = parse_json(json)
-	worlds = jdata[0]
-	levels = jdata[1]
-	
+	title_label.text = Globals.player_name + "'s " + title_label.text
 	#if !total_levels <= 4:
 	#	column_size()
 	
@@ -24,13 +21,7 @@ func _ready():
 	
 	for i in range(1):
 		for j in range(5):
-			if levels[i][j][0] == "#":
-				print(levels[i][j])
-				levels[i][j] = levels[i][j].right(1)
-				print(levels[i][j])
-				generate_buttons(worlds[i], levels[i][j], true)
-			else:
-				generate_buttons(worlds[i], levels[i][j])
+			generate_buttons(worlds[i], levels[i][j], !Globals.unlocked[i][j])
 
 
 func generate_buttons(world : String, name : String, disabled = false):
@@ -46,3 +37,10 @@ func column_size():
 		grid.columns = total_levels/2
 	else:
 		grid.columns = total_levels/2 + 1
+
+func _on_Back_Button_pressed():
+	get_tree().change_scene_to(Globals.save_menu_scene)
+	
+
+func _on_Exit_Button_pressed():
+	get_tree().quit()

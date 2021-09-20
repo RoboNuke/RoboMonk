@@ -1,0 +1,164 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://5. User Interfaces/Title Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://5. User Interfaces/Textures/Window/512_256/window_undecorated.png" type="Texture" id=2]
+[ext_resource path="res://5. User Interfaces/Win Screen/Win Screen.gd" type="Script" id=3]
+[ext_resource path="res://5. User Interfaces/Textures/Buttons/128x64/button_over.png" type="Texture" id=4]
+[ext_resource path="res://5. User Interfaces/Textures/Buttons/128x64/button_default.png" type="Texture" id=5]
+[ext_resource path="res://5. User Interfaces/Textures/Buttons/128x64/button_down.png" type="Texture" id=6]
+[ext_resource path="res://5. User Interfaces/Textures/Buttons/128x64/button_disabled.png" type="Texture" id=7]
+[ext_resource path="res://5. User Interfaces/Light Purple Outlined.tres" type="DynamicFont" id=8]
+
+[node name="Win Screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.411765, 0.231373, 0.568627, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/NinePatchRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="ColorRect/NinePatchRect/VBoxContainer"]
+margin_right = 517.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ColorRect/NinePatchRect/VBoxContainer"]
+margin_top = 47.0
+margin_right = 517.0
+margin_bottom = 110.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.592157, 0.901961, 0.286275, 1 )
+text = "Congradulations! 
+You Beat the Level!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="ColorRect/NinePatchRect/VBoxContainer"]
+margin_top = 114.0
+margin_right = 517.0
+margin_bottom = 157.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/NinePatchRect/VBoxContainer"]
+margin_top = 161.0
+margin_right = 517.0
+margin_bottom = 225.0
+
+[node name="Control3" type="Control" parent="ColorRect/NinePatchRect/VBoxContainer/HBoxContainer"]
+margin_right = 81.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 25 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Next Level Button" type="TextureButton" parent="ColorRect/NinePatchRect/VBoxContainer/HBoxContainer"]
+margin_left = 85.0
+margin_right = 213.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 7 )
+
+[node name="Next Level Label" type="Label" parent="ColorRect/NinePatchRect/VBoxContainer/HBoxContainer/Next Level Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -62.5
+margin_top = -20.5
+margin_right = 62.5
+margin_bottom = 20.5
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0.827451, 0.627451, 1, 1 )
+text = "Goto
+Next Level"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control4" type="Control" parent="ColorRect/NinePatchRect/VBoxContainer/HBoxContainer"]
+margin_left = 217.0
+margin_right = 299.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 25 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Level Select Button" type="TextureButton" parent="ColorRect/NinePatchRect/VBoxContainer/HBoxContainer"]
+margin_left = 303.0
+margin_right = 431.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 7 )
+
+[node name="Level Select Label" type="Label" parent="ColorRect/NinePatchRect/VBoxContainer/HBoxContainer/Level Select Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -62.5
+margin_top = -20.5
+margin_right = 62.5
+margin_bottom = 20.5
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0.827398, 0.628906, 1, 1 )
+text = "Goto
+Level Select"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control5" type="Control" parent="ColorRect/NinePatchRect/VBoxContainer/HBoxContainer"]
+margin_left = 435.0
+margin_right = 517.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 25 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control3" type="Control" parent="ColorRect/NinePatchRect/VBoxContainer"]
+margin_top = 229.0
+margin_right = 517.0
+margin_bottom = 272.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="pressed" from="ColorRect/NinePatchRect/VBoxContainer/HBoxContainer/Next Level Button" to="." method="_on_Next_Level_Button_pressed"]
+[connection signal="pressed" from="ColorRect/NinePatchRect/VBoxContainer/HBoxContainer/Level Select Button" to="." method="_on_Level_Select_Button_pressed"]

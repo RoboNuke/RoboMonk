@@ -12,7 +12,6 @@ onready var dialog_player = $"Dialog Player"
 var main_menu_scene = Globals.main_menu_scene
 var fall_dist = 700
 
-
 func player_death():
 	print("Better luck next time")
 	get_tree().change_scene_to(main_menu_scene)
@@ -21,7 +20,8 @@ func get_player_start():
 	return player_start.global_position
 
 func player_win():
-	print("Good Job Maty")
+	_update_level()
+	get_tree().change_scene_to(Globals.win_level_screen)
 
 func get_fall_dist():
 	return fall_dist  
@@ -29,3 +29,13 @@ func get_fall_dist():
 func dialog_complete():
 	Globals.unpause_game()
 	print("Dialog Completed")
+
+
+func _update_level():
+	if Globals.level + 1 == 5:
+		Globals.world += 1
+		Globals.level = 0
+	else:
+		Globals.level += 1
+	Globals.unlock_level(Globals.world, Globals.level)
+	

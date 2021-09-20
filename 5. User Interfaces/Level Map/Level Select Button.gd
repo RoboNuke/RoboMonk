@@ -12,6 +12,7 @@ func _process(_delta):
 		$VBoxContainer.visible = false
 
 func _on_TextureButton_pressed():
+	Globals.set_level(level_name)
 	get_tree().change_scene_to(level_path)
 	
 func set_world(world : String):
