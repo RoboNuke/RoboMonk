@@ -108,7 +108,7 @@ func _check_is_valid_wall(rays):
 	for ray in rays:
 		if ray.is_colliding():
 			var dot = acos(Vector2.UP.dot(ray.get_collision_normal()))
-			if dot > PI * 0.35 and dot < PI * .55:
+			if dot > PI * 0.35 and dot < PI * .65:
 				return true
 	return false
 	
@@ -141,10 +141,7 @@ func _jump(wall_jump = false):
 	
 func _face_desired_direction():
 	if desired_look_direction !=  0 and desired_look_direction != facing_direction:
-		transform *= Transform2D.FLIP_X
-		var holder = left_rays
-		left_rays = right_rays
-		right_rays = holder
+		$"Charecter Rig".scale.x = -desired_look_direction
 		facing_direction = desired_look_direction
 	
 func _update_move_direction():
@@ -154,7 +151,6 @@ func _handle_move_input():
 	if !is_dashing and !is_absorbing:
 		velocity.x = lerp(velocity.x, move_direction * move_speed, _get_h_weight())
 		desired_look_direction = move_direction
-		
 	
 func _get_h_weight():
 	if is_grounded or not coyote_timer.is_stopped():

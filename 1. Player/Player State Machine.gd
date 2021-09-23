@@ -44,11 +44,9 @@ func _input(event):
 			parent.velocity.x = 50#########################################
 		if event.is_action_pressed("ui_left") and parent.wall_direction == 1:
 			parent.velocity.x = -50##########################################
-			
 	if not [states.absorbing, states.dashing].has(state):
 		if event.is_action_pressed("action") and not parent.has_dashed:
 			parent._start_absorb()
-			
 	if [states.absorbing].has(state):
 		if event.is_action_released("action") or parent.max_absorb.is_stopped():
 			parent._dash()

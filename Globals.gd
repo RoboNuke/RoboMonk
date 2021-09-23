@@ -18,6 +18,44 @@ var level
 var world
 var unlocked = []
 
+var bg_player = null
+var timer = null
+var music_idx = 0
+var bg_musics
+
+var fx_volume = -16
+var music_volume = -16
+
+func add_ui_music(a,b,c):
+	bg_musics = [a,b,c]
+	
+
+func start_bg_music():
+	print("Called")
+	if bg_player == null:
+		bg_player = AudioStreamPlayer.new()
+		add_child(bg_player)
+		bg_player.bus = "master"
+		bg_player.volume_db = -24
+		
+	bg_player.stream = bg_musics[music_idx]
+	music_idx = (music_idx + 1) % 3
+	bg_player.play()
+	
+	if timer == null:
+		timer = Timer.new()
+		timer.one_shot = true
+		timer.wait_time = 100
+		add_child(timer)
+		timer.connect("timeout", self, "start_bg_music")
+		
+	timer.start()
+	
+func stop_bg_music():
+	if bg_player != null:
+		bg_player.playing = false
+		timer.stop()
+
 func _ready():
 	for i in range(5):
 		unlocked.append([])

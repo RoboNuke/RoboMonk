@@ -2,7 +2,6 @@ extends Level
 
 onready var right_moving_wall = find_node("Right Moving Wall")
 onready var left_moving_wall = find_node("Left Moving Wall")
-onready var wall_moving_timer = find_node("Wall Moving Timer")
 onready var left_tween = find_node("Left Tween")
 onready var right_tween = find_node("Right Tween")
 
@@ -12,9 +11,6 @@ export(float) var wall_move_time = 2
 
 var left_counter = 0
 var right_counter = 0
-
-func _ready():
-	wall_moving_timer.wait_time = wall_move_time
 
 
 func _process(delta):

@@ -1,0 +1,96 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://2. Levels/1. The Chase/1-1 Underground Escape/Textures/cave_magma.tres" type="TileSet" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+onready var pts = find_node(\"Points\")
+onready var player = find_node(\"AnimationPlayer\")
+
+export var total_time = 4.0
+
+func _ready():
+	var animation = Animation.new()
+	animation.length = total_time
+	animation.length = total_time
+	var track_index = animation.add_track(Animation.TYPE_VALUE)
+	animation.track_set_path(track_index, \"KinematicBody2D:position\")
+	animation.track_insert_key(track_index, 0.0, pts.get_children()[0].position)
+	animation.track_insert_key(track_index, total_time/2.0, pts.get_children()[1].position)
+	animation.track_insert_key(track_index, total_time, pts.get_children()[0].position)
+	animation.loop = true
+	player.add_animation(\"Auto\", animation)
+
+"
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 24, 8 )
+
+[sub_resource type="Animation" id=3]
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("KinematicBody2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 256.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("KinematicBody2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 200, 0 ), Vector2( 0, 0 ) ]
+}
+
+[node name="Moving Platform" type="Node2D"]
+script = SubResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="." groups=[
+"Platform",
+]]
+collision_layer = 2
+collision_mask = 9
+motion/sync_to_physics = true
+
+[node name="TileMap" type="TileMap" parent="KinematicBody2D"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+collision_layer = 2
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( -3, 27, 0, -2, 26, 0, -1, 28, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -24, -8 )
+shape = SubResource( 5 )
+
+[node name="Points" type="Node2D" parent="."]
+
+[node name="Position2D" type="Position2D" parent="Points"]
+
+[node name="Position2D2" type="Position2D" parent="Points"]
+position = Vector2( 100, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Auto"
+playback_speed = 0.5
+anims/Auto = SubResource( 3 )
+"anims/ping pong" = SubResource( 4 )

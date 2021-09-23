@@ -1,8 +1,9 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://1. Player/Sprites/main_robotv4_simp.png" type="Texture" id=1]
 [ext_resource path="res://1. Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://1. Player/Player State Machine.gd" type="Script" id=3]
+[ext_resource path="res://1. Player/Charecter Rig.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 47 )
@@ -2363,7 +2364,11 @@ z_index = 5
 collision_mask = 30
 script = ExtResource( 2 )
 
+[node name="State Machine" type="Node" parent="."]
+script = ExtResource( 3 )
+
 [node name="Charecter Rig" type="Node2D" parent="."]
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -2502,7 +2507,6 @@ position = Vector2( 2, 10 )
 shape = SubResource( 1 )
 
 [node name="Ground Rays" type="Node2D" parent="."]
-visible = false
 
 [node name="Left Ray" type="RayCast2D" parent="Ground Rays"]
 position = Vector2( -6, 57 )
@@ -2537,9 +2541,6 @@ one_shot = true
 wait_time = 0.2
 one_shot = true
 
-[node name="State Machine" type="Node" parent="."]
-script = ExtResource( 3 )
-
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource( 38 )
 anim_player = NodePath("../AnimationPlayer")
@@ -2556,7 +2557,6 @@ anims/running = SubResource( 45 )
 "anims/wall slide" = SubResource( 46 )
 
 [node name="Wall Rays" type="Node2D" parent="."]
-visible = false
 
 [node name="Right Rays" type="Node2D" parent="Wall Rays"]
 

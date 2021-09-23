@@ -20,13 +20,10 @@ func _ready():
 
 func _process(delta):
 	if parent.player != null:
-		print(parent.player.global_position.y)
-		print(projectResolution.y)
 		global_position.y = min(parent.player.global_position.y - projectResolution.y/2, 0)
 		
 		if global_position.y > projectResolution.y:
 			global_position.y = min(global_position.y, max_y)
-		print(global_position.y)
 	if trauma:
 		trauma = max(trauma - decay * delta, 0)
 		shake()

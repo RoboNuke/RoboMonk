@@ -1,21 +1,14 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/1-3 Tower Crawl.gd" type="Script" id=1]
 [ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/1-3 Camera Script.gd" type="Script" id=2]
 [ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/Textures/Concrete/terrain_concrete_center_C.png" type="Texture" id=3]
 [ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/Textures/Concrete/twilight_cityscape_concrete.png" type="Texture" id=4]
-[ext_resource path="res://4.Enemies/Long Neck/Long Neck.tscn" type="PackedScene" id=5]
+[ext_resource path="res://3.World/Moving Platform/Moving Platform2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://1. Player/Player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/Textures/Bridge/terrain_bridge_shadowed.png" type="Texture" id=7]
+[ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/Textures/Bridge/bridge_tileset.tres" type="TileSet" id=7]
 [ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/Textures/Bridge/terrain_bridge_support_A.png" type="Texture" id=8]
 [ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/Textures/Bridge/terrain_bridge_support_B.png" type="Texture" id=9]
-[ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/Textures/Bridge/terrain_bridge_A.png" type="Texture" id=10]
-[ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/Textures/Bridge/terrain_bridge_B.png" type="Texture" id=11]
-[ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/Textures/Bridge/terrain_bridge_right.png" type="Texture" id=12]
-[ext_resource path="res://2. Levels/1. The Chase/1-3 Tower Crawl/Textures/Bridge/terrain_bridge_left.png" type="Texture" id=13]
-[ext_resource path="res://3.World/Falling Platform/Falling Platform.tscn" type="PackedScene" id=14]
-[ext_resource path="res://3.World/Moving Platform/Moving Platform.tscn" type="PackedScene" id=15]
-[ext_resource path="res://3.World/Spike Spawn/Spike Spawn.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
@@ -193,129 +186,7 @@ points = PoolVector2Array( 16, 8, 0, 8, 0, 0, 16, 0 )
 } ]
 1/z_index = 0
 
-[sub_resource type="ConvexPolygonShape2D" id=17]
-points = PoolVector2Array( 0, 0, 8, 0, 8, 19.7687, 0, 19.7687 )
-
-[sub_resource type="ConvexPolygonShape2D" id=18]
-points = PoolVector2Array( 0, 0, 0, 0, 8, 0, 8, 19.7687, 0, 20.0013 )
-
-[sub_resource type="ConvexPolygonShape2D" id=19]
-points = PoolVector2Array( 24, 24, 0, 24, 0, 0, 24, 0 )
-
-[sub_resource type="ConvexPolygonShape2D" id=20]
-points = PoolVector2Array( 24, 24, 0, 24, 0, 0, 24, 0 )
-
-[sub_resource type="ConvexPolygonShape2D" id=21]
-points = PoolVector2Array( 8, 24, 0, 24, 0, 0, 8, 0 )
-
-[sub_resource type="TileSet" id=22]
-0/name = "terrain_bridge_A.png 0"
-0/texture = ExtResource( 10 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 0, 8, 24 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 17 )
-0/shape_one_way = false
-0/shape_one_way_margin = 1.0
-0/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 17 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-0/z_index = 0
-1/name = "terrain_bridge_B.png 1"
-1/texture = ExtResource( 11 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 8, 24 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 18 )
-1/shape_one_way = false
-1/shape_one_way_margin = 1.0
-1/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 18 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-1/z_index = 0
-2/name = "terrain_bridge_left.png 2"
-2/texture = ExtResource( 13 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 0, 24, 24 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 19 )
-2/shape_one_way = false
-2/shape_one_way_margin = 1.0
-2/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 19 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-2/z_index = 0
-3/name = "terrain_bridge_right.png 3"
-3/texture = ExtResource( 12 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 0, 0, 24, 24 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 20 )
-3/shape_one_way = false
-3/shape_one_way_margin = 1.0
-3/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 20 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-3/z_index = 0
-4/name = "terrain_bridge_shadowed.png 4"
-4/texture = ExtResource( 7 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 0, 8, 24 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 21 )
-4/shape_one_way = false
-4/shape_one_way_margin = 1.0
-4/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": SubResource( 21 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
-4/z_index = 0
-
-[sub_resource type="TileSet" id=23]
+[sub_resource type="TileSet" id=17]
 0/name = "terrain_bridge_support_B.png 0"
 0/texture = ExtResource( 9 )
 0/tex_offset = Vector2( 0, 0 )
@@ -345,18 +216,23 @@ points = PoolVector2Array( 8, 24, 0, 24, 0, 0, 8, 0 )
 1/shapes = [  ]
 1/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=24]
+[sub_resource type="Animation" id=18]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("KinematicBody2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 256.0, 0.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 64, 48 )
-
-[sub_resource type="Curve2D" id=25]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -92.2619, -0.0399246, 0, 0, 0, 0, 39.2211, -1.3495 )
-}
-
-[sub_resource type="Curve2D" id=26]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 0, -1.52588e-05, 0, 0, 0, 0, -0.078537, -64 )
-}
 
 [node name="1-3 Tower Crawl" type="Node2D"]
 script = ExtResource( 1 )
@@ -380,16 +256,26 @@ position = Vector2( 16, 0 )
 color = Color( 0, 1, 0.227451, 1 )
 polygon = PoolVector2Array( 80, 136, 104, 136, 104, 160, 80, 160 )
 
+[node name="Left Facing Bridge Set" type="TileMap" parent="Map/Left Moving Wall" groups=[
+"Slidable Wall",
+"Wall",
+]]
+rotation = 1.5708
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 8, 16 )
+collision_use_kinematic = true
+collision_layer = 18
+collision_mask = 9
+format = 1
+tile_data = PoolIntArray( -393194, 0, 0, -393193, 0, 0, -393192, 0, 0, -393191, 0, 0, -393190, 0, 0, -393189, 0, 0, -393188, 0, 0, -393187, 0, 0, -393186, 0, 0, -393185, 0, 0, -393184, 0, 0, -393183, 0, 0, -393182, 0, 0, -393181, 0, 0 )
+
 [node name="Right Tween" type="Tween" parent="Map"]
 
 [node name="Left Tween" type="Tween" parent="Map"]
 
-[node name="Wall Moving Timer" type="Timer" parent="Map"]
-
 [node name="Base-Map" type="TileMap" parent="Map" groups=[
 "Wall",
 ]]
-visible = false
 z_index = 1
 tile_set = SubResource( 16 )
 cell_size = Vector2( 8, 8 )
@@ -402,23 +288,21 @@ format = 1
 [node name="Base-Map Bridge" type="TileMap" parent="Map" groups=[
 "Wall",
 ]]
-visible = false
 z_index = 1
-tile_set = SubResource( 22 )
+tile_set = ExtResource( 7 )
 cell_size = Vector2( 8, 8 )
 cell_quadrant_size = 8
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
 collision_layer = 18
 collision_mask = 9
 format = 1
-tile_data = PoolIntArray( -1966058, 1, 0, -1966057, 1, 0, -1966056, 1, 0, -1966055, 1, 0, -1966054, 1, 0, -1966053, 1, 0, -1966052, 1, 0, -1966051, 1, 0, -1966050, 1, 0, -1966049, 1, 0, -1966048, 1, 0, -1966047, 1, 0, -1966046, 1, 0, -1966045, 1, 0, -1966044, 3, 0, -1900517, 1, 0, -1900516, 1, 0, -1900515, 1, 0, -1900514, 1, 0, -1900513, 1, 0, -1900512, 1, 0, -1900511, 1, 0, -1900510, 1, 0, -1900509, 1, 0, -1834991, 1, 0, -1834990, 1, 0, -1638387, 1, 0, -1638386, 1, 0, -1507286, 2, 0, -1310714, 1, 0, -1310713, 1, 0, -1310712, 1, 0, -1310711, 1, 0, -1310710, 1, 0, -1310709, 1, 0, -1310694, 1, 0, -1310693, 1, 0, -1310692, 1, 0, -262101, 2, 0, -131047, 1, 0, -131046, 1, 0, -131045, 1, 0, -131044, 1, 0, -131043, 1, 0, -131042, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 786475, 2, 0, 1179662, 1, 0, 1179663, 1, 0, 1179664, 1, 0, 1179665, 1, 0, 1179666, 1, 0, 1179667, 1, 0, 1179668, 1, 0, 1179669, 1, 0, 1179670, 1, 0, 1507334, 1, 0, 1507335, 1, 0, 1507336, 1, 0, 1507337, 3, 0, 1703952, 0, 0, 1703953, 0, 0, 1703954, 0, 0, 1703955, 0, 0, 1703956, 0, 0, 1703957, 0, 0, 1703979, 2, 0, 1966104, 1, 0, 1966105, 1, 0, 2228251, 2, 0, 2228254, 1, 0, 2424844, 2, 0, 2424847, 1, 0, 2424848, 1, 0, 2424849, 1, 0, 2424850, 1, 0, 2424851, 1, 0, 2424852, 3, 0, 2490406, 0, 0, 2490407, 0, 0, 2490408, 0, 0, 2490409, 0, 0, 2490410, 0, 0, 2621446, 3, 0, 2686980, 1, 0, 2686981, 1, 0, 2752550, 1, 0, 2752551, 1, 0, 2752552, 1, 0, 2752553, 1, 0, 2752554, 1, 0, 2752555, 1, 0, 2752556, 1, 0, 2752557, 1, 0, 2752558, 1, 0, 2752559, 1, 0, 2752560, 1, 0, 2752561, 1, 0, 2752562, 1, 0, 2752563, 1, 0, 2752564, 1, 0, 2752565, 1, 0, 2752566, 1, 0, 2752567, 1, 0, 2752568, 1, 0, 2752569, 1, 0, 2752570, 1, 0, 2752571, 1, 0, 2752572, 1, 0, 2752573, 1, 0, 2752574, 1, 0, 2752575, 1, 0, 2752576, 1, 0, 2818086, 1, 0, 2818087, 1, 0, 2818088, 1, 0, 2818089, 1, 0, 2818090, 1, 0, 2818091, 1, 0, 2818092, 1, 0, 2818093, 1, 0, 2818094, 1, 0, 2818095, 1, 0, 2818096, 1, 0, 2818097, 1, 0, 2818098, 1, 0, 2818099, 1, 0, 2818100, 1, 0, 2818101, 1, 0, 2818102, 1, 0, 2818103, 1, 0, 2818104, 1, 0, 2818105, 1, 0, 2818106, 1, 0, 2818107, 1, 0, 2818108, 1, 0, 2818109, 1, 0, 2818110, 1, 0, 2818111, 1, 0, 2818112, 1, 0, 2883591, 0, 0, 2883592, 0, 0, 2883593, 0, 0, 2883594, 0, 0, 2883595, 0, 0, 2883596, 0, 0, 2883597, 0, 0, 2883598, 0, 0, 2883599, 0, 0, 2883600, 0, 0, 2883601, 0, 0, 2883602, 0, 0, 2883603, 0, 0, 2883604, 0, 0, 2883605, 0, 0, 2883606, 0, 0, 2883607, 0, 0, 2883608, 0, 0, 2883609, 0, 0, 2883610, 0, 0, 2883611, 0, 0, 2883612, 0, 0, 2883613, 0, 0, 2883614, 0, 0, 2883615, 0, 0, 2883616, 0, 0, 2883617, 0, 0, 2883618, 0, 0, 2883619, 0, 0, 2883620, 0, 0, 3014661, 5, 0 )
+tile_data = PoolIntArray( -1966058, 1, 0, -1966057, 1, 0, -1966056, 1, 0, -1966055, 1, 0, -1966054, 1, 0, -1966053, 1, 0, -1966052, 1, 0, -1966051, 1, 0, -1966050, 1, 0, -1966049, 1, 0, -1966048, 1, 0, -1966047, 1, 0, -1966046, 1, 0, -1966045, 1, 0, -1966044, 3, 0, -1900517, 1, 0, -1900516, 1, 0, -1900515, 1, 0, -1900514, 1, 0, -1900513, 1, 0, -1900512, 1, 0, -1900511, 1, 0, -1900510, 1, 0, -1900509, 1, 0, -1834991, 1, 0, -1834990, 1, 0, -1638387, 1, 0, -1638386, 1, 0, -1507286, 2, 0, -1310714, 1, 0, -1310713, 1, 0, -1310712, 1, 0, -1310711, 1, 0, -1310710, 1, 0, -1310709, 1, 0, -1310694, 1, 0, -1310693, 1, 0, -1310692, 1, 0, -262101, 2, 0, -131047, 1, 0, -131046, 1, 0, -131045, 1, 0, -131044, 1, 0, -131043, 1, 0, -131042, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 786475, 2, 0, 1703979, 2, 0, 2228251, 2, 0, 2228254, 1, 0, 2359303, 1, 0, 2359304, 1, 0, 2359305, 1, 0, 2359306, 1, 0, 2359307, 1, 0, 2359308, 1, 0, 2359309, 1, 0, 2359310, 1, 0, 2359311, 1, 0, 2359312, 1, 0, 2359313, 1, 0, 2359314, 1, 0, 2359315, 1, 0, 2359316, 1, 0, 2359317, 1, 0, 2359318, 1, 0, 2424840, 1, 0, 2424841, 1, 0, 2424842, 1, 0, 2424843, 1, 0, 2424844, 1, 0, 2424845, 1, 0, 2424846, 1, 0, 2424847, 1, 0, 2424848, 1, 0, 2424849, 1, 0, 2424850, 1, 0, 2424851, 1, 0, 2424852, 3, 0, 2490406, 0, 0, 2490407, 0, 0, 2490408, 0, 0, 2490409, 0, 0, 2490410, 0, 0, 2621446, 3, 0, 2686980, 1, 0, 2686981, 1, 0, 2752550, 1, 0, 2752551, 1, 0, 2752552, 1, 0, 2752553, 1, 0, 2752554, 1, 0, 2752555, 1, 0, 2752556, 1, 0, 2752557, 1, 0, 2752558, 1, 0, 2752559, 1, 0, 2752560, 1, 0, 2752561, 1, 0, 2752562, 1, 0, 2752563, 1, 0, 2752564, 1, 0, 2752565, 1, 0, 2752566, 1, 0, 2752567, 1, 0, 2752568, 1, 0, 2752569, 1, 0, 2752570, 1, 0, 2752571, 1, 0, 2752572, 1, 0, 2752573, 1, 0, 2752574, 1, 0, 2752575, 1, 0, 2752576, 1, 0, 2818086, 1, 0, 2818087, 1, 0, 2818088, 1, 0, 2818089, 1, 0, 2818090, 1, 0, 2818091, 1, 0, 2818092, 1, 0, 2818093, 1, 0, 2818094, 1, 0, 2818095, 1, 0, 2818096, 1, 0, 2818097, 1, 0, 2818098, 1, 0, 2818099, 1, 0, 2818100, 1, 0, 2818101, 1, 0, 2818102, 1, 0, 2818103, 1, 0, 2818104, 1, 0, 2818105, 1, 0, 2818106, 1, 0, 2818107, 1, 0, 2818108, 1, 0, 2818109, 1, 0, 2818110, 1, 0, 2818111, 1, 0, 2818112, 1, 0, 2883591, 0, 0, 2883592, 0, 0, 2883593, 0, 0, 2883594, 0, 0, 2883595, 0, 0, 2883596, 0, 0, 2883597, 0, 0, 2883598, 0, 0, 2883599, 0, 0, 2883600, 0, 0, 2883601, 0, 0, 2883602, 0, 0, 2883603, 0, 0, 2883604, 0, 0, 2883605, 0, 0, 2883606, 0, 0, 2883607, 0, 0, 2883608, 0, 0, 2883609, 0, 0, 2883610, 0, 0, 2883611, 0, 0, 2883612, 0, 0, 2883613, 0, 0, 2883614, 0, 0, 2883615, 0, 0, 2883616, 0, 0, 2883617, 0, 0, 2883618, 0, 0, 2883619, 0, 0, 2883620, 0, 0, 3014661, 5, 0 )
 
 [node name="Base-Map Bridge2" type="TileMap" parent="Map" groups=[
 "Wall",
 ]]
-visible = false
 z_index = 1
-tile_set = SubResource( 23 )
+tile_set = SubResource( 17 )
 cell_size = Vector2( 8, 8 )
 cell_quadrant_size = 8
 cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
@@ -427,89 +311,19 @@ collision_mask = 9
 format = 1
 tile_data = PoolIntArray( -2424786, 0, 0, -2359250, 0, 0, -2293714, 0, 0, -2228178, 0, 0, -2162642, 0, 0, -2097106, 0, 0, -2031570, 0, 0, -1966034, 0, 0, -1900508, 0, 0, -1900498, 0, 0, -1834972, 0, 0, -1834962, 0, 0, -1769436, 0, 0, -1769426, 0, 0, -1703900, 0, 0, -1703890, 0, 0, -1638364, 0, 0, -1638354, 0, 0, -1572828, 0, 0, -1572818, 0, 0, -1507292, 0, 0, -1507282, 0, 0, -1441756, 0, 0, -1441746, 0, 0, -1376220, 0, 0, -1376210, 0, 0, -1310684, 0, 0, -1310674, 0, 0, -1245148, 0, 0, -1245138, 0, 0, -1179612, 0, 0, -1179602, 0, 0, -1114076, 0, 0, -1114066, 0, 0, -1048540, 0, 0, -1048530, 0, 0, -983004, 0, 0, -982994, 0, 0, -917468, 0, 0, -917458, 0, 0, -851932, 0, 0, -851922, 0, 0, -786396, 0, 0, -786386, 0, 0, -720860, 0, 0, -720850, 0, 0, -655324, 0, 0, -655314, 0, 0, -589788, 0, 0, -589778, 0, 0, -524252, 0, 0, -524242, 0, 0, -458716, 0, 0, -458706, 0, 0, -393180, 0, 0, -393170, 0, 0, -327644, 0, 0, -327634, 0, 0, -262108, 0, 0, -262098, 0, 0, -196572, 0, 0, -196562, 0, 0, -131036, 0, 0, -131026, 0, 0, -65500, 0, 0, -65490, 0, 0, 36, 0, 0, 46, 0, 0, 65572, 0, 0, 65582, 0, 0, 131108, 0, 0, 131118, 0, 0, 196644, 0, 0, 196654, 0, 0, 262180, 0, 0, 262190, 0, 0, 327716, 0, 0, 327726, 0, 0, 393252, 0, 0, 393262, 0, 0, 458788, 0, 0, 458798, 0, 0, 524324, 0, 0, 524334, 0, 0, 589860, 0, 0, 589870, 0, 0, 655396, 0, 0, 655406, 0, 0, 720932, 0, 0, 720942, 0, 0, 786468, 0, 0, 786478, 0, 0, 852004, 0, 0, 852014, 0, 0, 917540, 0, 0, 917550, 0, 0, 983076, 0, 0, 983086, 0, 0, 1048612, 0, 0, 1048622, 0, 0, 1114148, 0, 0, 1114158, 0, 0, 1179684, 0, 0, 1179694, 0, 0, 1245220, 0, 0, 1245230, 0, 0, 1310756, 0, 0, 1310766, 0, 0, 1376292, 0, 0, 1376302, 0, 0, 1441828, 0, 0, 1441838, 0, 0, 1507364, 0, 0, 1507374, 0, 0, 1572900, 0, 0, 1572910, 0, 0, 1638436, 0, 0, 1638446, 0, 0, 1703972, 0, 0, 1703982, 0, 0, 1769508, 0, 0, 1769518, 0, 0, 1835044, 0, 0, 1835054, 0, 0, 1900580, 0, 0, 1900590, 0, 0, 1966116, 0, 0, 1966126, 0, 0, 2031652, 0, 0, 2031662, 0, 0, 2097188, 0, 0, 2097198, 0, 0, 2162724, 0, 0, 2162734, 0, 0, 2228260, 0, 0, 2228270, 0, 0, 2293796, 0, 0, 2359332, 0, 0, 2424868, 0, 0, 2490404, 0, 0, 2555917, 0, 0, 2555924, 0, 0, 2555940, 0, 0, 2621453, 0, 0, 2621460, 0, 0, 2621476, 0, 0, 2686989, 0, 0, 2686996, 0, 0, 2687012, 0, 0, 2752525, 0, 0, 2752532, 0, 0, 2752548, 0, 0, 2818050, 0, 0, 2818052, 0, 0, 2818054, 0, 0, 2818061, 0, 0, 2818068, 0, 0, 2818084, 0, 0, 2883584, 0, 0, 2883586, 0, 0, 2883588, 0, 0, 2883590, 0, 0, 2883597, 0, 0, 2883604, 0, 0, 2883620, 0, 0 )
 
+[node name="Moving Platform" parent="Map" instance=ExtResource( 5 )]
+position = Vector2( 128, 168 )
+
+[node name="AnimationPlayer" parent="Map/Moving Platform" index="2"]
+anims/Auto = SubResource( 18 )
+
 [node name="Win Area" type="Area2D" parent="Map"]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Win Area"]
 position = Vector2( 3744, -128 )
-shape = SubResource( 24 )
-
-[node name="Moving Platform" parent="Map" instance=ExtResource( 15 )]
-visible = false
-position = Vector2( 162.957, 51.5071 )
-
-[node name="Path2D" parent="Map/Moving Platform" index="0"]
-curve = SubResource( 25 )
-
-[node name="PathFollow2D" parent="Map/Moving Platform/Path2D" index="0"]
-position = Vector2( -92.2619, -0.0399246 )
-
-[node name="KinematicBody2D" parent="Map/Moving Platform" index="2"]
-position = Vector2( -92.2619, -0.0399246 )
-
-[node name="Moving Platform2" parent="Map" instance=ExtResource( 15 )]
-visible = false
-position = Vector2( 112.125, -63.8748 )
-rotation = -3.13485
-scale = Vector2( 1, 1 )
-
-[node name="Path2D" parent="Map/Moving Platform2" index="0"]
-position = Vector2( -47.9811, -15.5517 )
-rotation = 3.13608
-curve = SubResource( 26 )
-
-[node name="PathFollow2D" parent="Map/Moving Platform2/Path2D" index="0"]
-position = Vector2( 0, -1.52588e-05 )
-
-[node name="KinematicBody2D" parent="Map/Moving Platform2" index="2"]
-position = Vector2( -47.9811, -15.5517 )
-rotation = 3.13608
-
-[node name="Falling Platform" parent="Map" instance=ExtResource( 14 )]
-visible = false
-position = Vector2( 48, 0 )
-rotation = 3.13046
-scale = Vector2( 1, 1 )
+shape = SubResource( 19 )
 
 [node name="Enimies" type="Node2D" parent="."]
-visible = false
-
-[node name="Spike Spawn" parent="Enimies" instance=ExtResource( 16 )]
-position = Vector2( 224, 48 )
-rotation = 1.5694
-
-[node name="Long Neck" parent="Enimies" instance=ExtResource( 5 )]
-position = Vector2( 220.817, 21.7735 )
-rotation = -1.60927
-scale = Vector2( 1.5, 1.5 )
-
-[node name="Long Neck2" parent="Enimies" instance=ExtResource( 5 )]
-position = Vector2( 48.0313, -112 )
-rotation = 1.55749
-
-[node name="Spike Spawn2" parent="Enimies" instance=ExtResource( 16 )]
-position = Vector2( 303.999, 80.0004 )
-rotation = -1.56021
-scale = Vector2( 1.5, 1.5 )
-
-[node name="Spike Spawn3" parent="Enimies" instance=ExtResource( 16 )]
-position = Vector2( 304, -63.9996 )
-rotation = -1.56021
-scale = Vector2( 1.5, 1.5 )
-
-[node name="Spike Spawn4" parent="Enimies" instance=ExtResource( 16 )]
-position = Vector2( 224, -208 )
-rotation = 1.55749
-scale = Vector2( 1.5, 1.5 )
-
-[node name="Spike Spawn5" parent="Enimies" instance=ExtResource( 16 )]
-position = Vector2( 224, -63.9997 )
-rotation = 1.55749
-scale = Vector2( 1.5, 1.5 )
-
-[node name="Spike Spawn6" parent="Enimies" instance=ExtResource( 16 )]
-position = Vector2( 62.9512, 17.416 )
-rotation = -1.60204
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_base_scale = Vector2( 0.25, 1 )
@@ -578,4 +392,3 @@ script = ExtResource( 2 )
 [connection signal="visibility_changed" from="Camera2D" to="Camera2D" method="_on_Camera2D_visibility_changed"]
 
 [editable path="Map/Moving Platform"]
-[editable path="Map/Moving Platform2"]

@@ -39,7 +39,7 @@ func spawn_spike():
 	s.set("velocity", spike_speed)
 	s.set("momentum", spike_momentum)
 	get_tree().root.call_deferred("add_child",s)
-	s.drop(global_position + Vector2(0, DROP_OFFSET))
+	s.drop(global_position + Vector2(0, DROP_OFFSET).rotated(deg2rad(rotation_degrees)), deg2rad(rotation_degrees))
 
 func _on_Area2D_body_entered(_body):
 	spawn_spike()
