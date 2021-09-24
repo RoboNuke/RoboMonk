@@ -195,11 +195,6 @@ func _fire_ball():
 			b.set('velocity', ball_speed)
 			b.set("momentum", beam_momentum)
 			get_tree().root.add_child(b)
-			# get random direction on on side we facing
-			var angle = deg2rad(rng.randf_range(20,70))
-		#var angle = deg2rad(45)
-		
-			#angle = -angle if facing_dir == FACE_DIRS.RIGHT else angle
 			ang = -ang if facing_dir==FACE_DIRS.RIGHT else ang
 			var dir = Vector2.UP.rotated(deg2rad(ang)).normalized()
 			dir = -dir #if facing_dir == FACE_DIRS.LEFT else dir

@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://4.Enemies/Long Neck/Long Neck.gd" type="Script" id=1]
 [ext_resource path="res://4.Enemies/Long Neck/Long Neck State Machine.gd" type="Script" id=2]
@@ -8,11 +8,13 @@
 [ext_resource path="res://4.Enemies/Long Neck/Fire Sprite.gd" type="Script" id=6]
 [ext_resource path="res://addons/luisboch.field_of_view/field_of_view.gd" type="Script" id=7]
 [ext_resource path="res://4.Enemies/Bullet/Bullet Textures/small_green.png" type="Texture" id=8]
+[ext_resource path="res://4.Enemies/Long Neck/Absorb_Particles.gd" type="Script" id=9]
+[ext_resource path="res://3.World/Absorbable Texture/absorbable_animatedtexture.tres" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 6.5, 5 )
+extents = Vector2( 6.5, 16 )
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=30]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -75,7 +77,7 @@ tracks/4/keys = {
 "values": [ 5 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=31]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -138,7 +140,7 @@ tracks/4/keys = {
 "values": [ 6 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=32]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -201,7 +203,7 @@ tracks/4/keys = {
 "values": [ 15 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=33]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -264,7 +266,7 @@ tracks/4/keys = {
 "values": [ 16 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=34]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -327,7 +329,7 @@ tracks/4/keys = {
 "values": [ 7 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=35]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -390,7 +392,7 @@ tracks/4/keys = {
 "values": [ 8 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=36]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -453,7 +455,7 @@ tracks/4/keys = {
 "values": [ 9 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=37]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -516,7 +518,7 @@ tracks/4/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=38]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -579,7 +581,7 @@ tracks/4/keys = {
 "values": [ 11 ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=39]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -642,7 +644,7 @@ tracks/4/keys = {
 "values": [ 12 ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=40]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -705,7 +707,7 @@ tracks/4/keys = {
 "values": [ 13 ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=41]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -768,7 +770,7 @@ tracks/4/keys = {
 "values": [ 14 ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=42]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -831,7 +833,7 @@ tracks/4/keys = {
 "values": [ 5 ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=43]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -894,7 +896,7 @@ tracks/4/keys = {
 "values": [ 6 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=44]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -957,7 +959,7 @@ tracks/4/keys = {
 "values": [ 15 ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=45]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -1020,7 +1022,7 @@ tracks/4/keys = {
 "values": [ 16 ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=46]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -1083,7 +1085,7 @@ tracks/4/keys = {
 "values": [ 7 ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=47]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -1146,7 +1148,7 @@ tracks/4/keys = {
 "values": [ 8 ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=48]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -1209,7 +1211,7 @@ tracks/4/keys = {
 "values": [ 9 ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=49]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -1272,7 +1274,7 @@ tracks/4/keys = {
 "values": [ 10 ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=50]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -1335,7 +1337,7 @@ tracks/4/keys = {
 "values": [ 11 ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=51]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -1398,7 +1400,7 @@ tracks/4/keys = {
 "values": [ 12 ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=52]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -1461,7 +1463,7 @@ tracks/4/keys = {
 "values": [ 13 ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=53]
 length = 0.25
 tracks/0/type = "value"
 tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/Long Neck/Sprite:frame")
@@ -1668,7 +1670,15 @@ func _process(_delta):
 "
 
 [sub_resource type="RectangleShape2D" id=29]
-extents = Vector2( 6.5, 5 )
+extents = Vector2( 6.5, 16 )
+
+[sub_resource type="ParticlesMaterial" id=54]
+emission_shape = 2
+emission_box_extents = Vector3( 8, 16, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
 
 [node name="Long Neck" type="KinematicBody2D" groups=[
 "Absorbable",
@@ -1684,7 +1694,7 @@ bullet_texture = ExtResource( 8 )
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -5 )
+position = Vector2( 0, -16 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -1693,35 +1703,36 @@ texture = ExtResource( 4 )
 centered = false
 hframes = 14
 vframes = 2
+frame = 22
 
 [node name="ROF" type="Timer" parent="."]
 one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Left_0 = SubResource( 2 )
-anims/Left_1 = SubResource( 3 )
-anims/Left_10 = SubResource( 4 )
-anims/Left_11 = SubResource( 5 )
-anims/Left_2 = SubResource( 6 )
-anims/Left_3 = SubResource( 7 )
-anims/Left_4 = SubResource( 8 )
-anims/Left_5 = SubResource( 9 )
-anims/Left_6 = SubResource( 10 )
-anims/Left_7 = SubResource( 11 )
-anims/Left_8 = SubResource( 12 )
-anims/Left_9 = SubResource( 13 )
-anims/Right_0 = SubResource( 14 )
-anims/Right_1 = SubResource( 15 )
-anims/Right_10 = SubResource( 16 )
-anims/Right_11 = SubResource( 17 )
-anims/Right_2 = SubResource( 18 )
-anims/Right_3 = SubResource( 19 )
-anims/Right_4 = SubResource( 20 )
-anims/Right_5 = SubResource( 21 )
-anims/Right_6 = SubResource( 22 )
-anims/Right_7 = SubResource( 23 )
-anims/Right_8 = SubResource( 24 )
-anims/Right_9 = SubResource( 25 )
+anims/Left_0 = SubResource( 30 )
+anims/Left_1 = SubResource( 31 )
+anims/Left_10 = SubResource( 32 )
+anims/Left_11 = SubResource( 33 )
+anims/Left_2 = SubResource( 34 )
+anims/Left_3 = SubResource( 35 )
+anims/Left_4 = SubResource( 36 )
+anims/Left_5 = SubResource( 37 )
+anims/Left_6 = SubResource( 38 )
+anims/Left_7 = SubResource( 39 )
+anims/Left_8 = SubResource( 40 )
+anims/Left_9 = SubResource( 41 )
+anims/Right_0 = SubResource( 42 )
+anims/Right_1 = SubResource( 43 )
+anims/Right_10 = SubResource( 44 )
+anims/Right_11 = SubResource( 45 )
+anims/Right_2 = SubResource( 46 )
+anims/Right_3 = SubResource( 47 )
+anims/Right_4 = SubResource( 48 )
+anims/Right_5 = SubResource( 49 )
+anims/Right_6 = SubResource( 50 )
+anims/Right_7 = SubResource( 51 )
+anims/Right_8 = SubResource( 52 )
+anims/Right_9 = SubResource( 53 )
 script = ExtResource( 3 )
 
 [node name="Fire Sprite" type="Sprite" parent="."]
@@ -1756,8 +1767,16 @@ script = SubResource( 28 )
 
 [node name="Absorb Box" type="CollisionShape2D" parent="Absorbtion Area"]
 modulate = Color( 0, 1, 0.0862745, 1 )
-position = Vector2( 0, -7 )
+position = Vector2( 0, -18 )
 shape = SubResource( 29 )
+
+[node name="Particles2D" type="Particles2D" parent="Absorbtion Area/Absorb Box"]
+position = Vector2( 0, 2 )
+amount = 4
+lifetime = 0.25
+process_material = SubResource( 54 )
+texture = ExtResource( 10 )
+script = ExtResource( 9 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="State Machine" method="_on_AnimationPlayer_animation_finished"]
 [connection signal="target_enter" from="Fire Sprite/FieldOfView" to="." method="_on_FieldOfView_target_enter"]
