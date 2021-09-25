@@ -1,9 +1,8 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://1. Player/Sprites/main_robotv4_simp.png" type="Texture" id=1]
 [ext_resource path="res://1. Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://1. Player/Player State Machine.gd" type="Script" id=3]
-[ext_resource path="res://1. Player/Charecter Rig.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 47 )
@@ -2368,7 +2367,6 @@ script = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Charecter Rig" type="Node2D" parent="."]
-script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
