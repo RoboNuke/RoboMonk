@@ -121,7 +121,7 @@ position = Vector2( 3824, -176 )
 [node name="Key Points" type="Node2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 192, 176 )
+position = Vector2( 64, 240 )
 
 [connection signal="body_entered" from="Map/Win Area" to="." method="_on_Win_Area_body_entered"]
 [connection signal="visibility_changed" from="Camera2D" to="Camera2D" method="_on_Camera2D_visibility_changed"]

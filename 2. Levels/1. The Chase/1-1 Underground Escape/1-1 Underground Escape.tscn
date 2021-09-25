@@ -396,7 +396,7 @@ extents = Vector2( 6.5, 5 )
 [sub_resource type="Animation" id=26]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -408,7 +408,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -420,7 +420,7 @@ tracks/1/keys = {
 "values": [ 5 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -432,7 +432,7 @@ tracks/2/keys = {
 "values": [ -5 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -444,7 +444,7 @@ tracks/3/keys = {
 "values": [ -7 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -459,7 +459,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=27]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -471,7 +471,7 @@ tracks/0/keys = {
 "values": [ 2 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -483,7 +483,7 @@ tracks/1/keys = {
 "values": [ 6 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -495,7 +495,7 @@ tracks/2/keys = {
 "values": [ -6 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -507,7 +507,7 @@ tracks/3/keys = {
 "values": [ -8 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -522,7 +522,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=28]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -534,7 +534,7 @@ tracks/0/keys = {
 "values": [ 20 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -546,7 +546,7 @@ tracks/1/keys = {
 "values": [ 15 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -558,7 +558,7 @@ tracks/2/keys = {
 "values": [ -15 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -570,7 +570,7 @@ tracks/3/keys = {
 "values": [ -17 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -585,7 +585,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=29]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -597,7 +597,7 @@ tracks/0/keys = {
 "values": [ 22 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -609,7 +609,7 @@ tracks/1/keys = {
 "values": [ 16 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -621,7 +621,7 @@ tracks/2/keys = {
 "values": [ -16 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -633,7 +633,7 @@ tracks/3/keys = {
 "values": [ -18 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -648,7 +648,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=30]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -660,7 +660,7 @@ tracks/0/keys = {
 "values": [ 4 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -672,7 +672,7 @@ tracks/1/keys = {
 "values": [ 7 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -684,7 +684,7 @@ tracks/2/keys = {
 "values": [ -7 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -696,7 +696,7 @@ tracks/3/keys = {
 "values": [ -9 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -711,7 +711,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=31]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -723,7 +723,7 @@ tracks/0/keys = {
 "values": [ 6 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -735,7 +735,7 @@ tracks/1/keys = {
 "values": [ 8 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -747,7 +747,7 @@ tracks/2/keys = {
 "values": [ -8 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -759,7 +759,7 @@ tracks/3/keys = {
 "values": [ -10 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -774,7 +774,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=32]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -786,7 +786,7 @@ tracks/0/keys = {
 "values": [ 8 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -798,7 +798,7 @@ tracks/1/keys = {
 "values": [ 9 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -810,7 +810,7 @@ tracks/2/keys = {
 "values": [ -9 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -822,7 +822,7 @@ tracks/3/keys = {
 "values": [ -11 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -837,7 +837,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=33]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -849,7 +849,7 @@ tracks/0/keys = {
 "values": [ 10 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -861,7 +861,7 @@ tracks/1/keys = {
 "values": [ 10 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -873,7 +873,7 @@ tracks/2/keys = {
 "values": [ -10 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -885,7 +885,7 @@ tracks/3/keys = {
 "values": [ -12 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -900,7 +900,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=34]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -912,7 +912,7 @@ tracks/0/keys = {
 "values": [ 12 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -924,7 +924,7 @@ tracks/1/keys = {
 "values": [ 11 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -936,7 +936,7 @@ tracks/2/keys = {
 "values": [ -11 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -948,7 +948,7 @@ tracks/3/keys = {
 "values": [ -13 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -963,7 +963,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=35]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -975,7 +975,7 @@ tracks/0/keys = {
 "values": [ 14 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -987,7 +987,7 @@ tracks/1/keys = {
 "values": [ 12 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -999,7 +999,7 @@ tracks/2/keys = {
 "values": [ -12 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1011,7 +1011,7 @@ tracks/3/keys = {
 "values": [ -14 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1026,7 +1026,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=36]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1038,7 +1038,7 @@ tracks/0/keys = {
 "values": [ 16 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1050,7 +1050,7 @@ tracks/1/keys = {
 "values": [ 13 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1062,7 +1062,7 @@ tracks/2/keys = {
 "values": [ -13 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1074,7 +1074,7 @@ tracks/3/keys = {
 "values": [ -15 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1089,7 +1089,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=37]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1101,7 +1101,7 @@ tracks/0/keys = {
 "values": [ 18 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1113,7 +1113,7 @@ tracks/1/keys = {
 "values": [ 14 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1125,7 +1125,7 @@ tracks/2/keys = {
 "values": [ -14 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1137,7 +1137,7 @@ tracks/3/keys = {
 "values": [ -16 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1152,7 +1152,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=38]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1164,7 +1164,7 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1176,7 +1176,7 @@ tracks/1/keys = {
 "values": [ 5 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1188,7 +1188,7 @@ tracks/2/keys = {
 "values": [ -5 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1200,7 +1200,7 @@ tracks/3/keys = {
 "values": [ -7 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1215,7 +1215,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=39]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1227,7 +1227,7 @@ tracks/0/keys = {
 "values": [ 3 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1239,7 +1239,7 @@ tracks/1/keys = {
 "values": [ 6 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1251,7 +1251,7 @@ tracks/2/keys = {
 "values": [ -6 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1263,7 +1263,7 @@ tracks/3/keys = {
 "values": [ -8 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1278,7 +1278,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=40]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1290,7 +1290,7 @@ tracks/0/keys = {
 "values": [ 21 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1302,7 +1302,7 @@ tracks/1/keys = {
 "values": [ 15 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1314,7 +1314,7 @@ tracks/2/keys = {
 "values": [ -15 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1326,7 +1326,7 @@ tracks/3/keys = {
 "values": [ -17 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1341,7 +1341,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=41]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1353,7 +1353,7 @@ tracks/0/keys = {
 "values": [ 23 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1365,7 +1365,7 @@ tracks/1/keys = {
 "values": [ 16 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1377,7 +1377,7 @@ tracks/2/keys = {
 "values": [ -16 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1389,7 +1389,7 @@ tracks/3/keys = {
 "values": [ -18 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1404,7 +1404,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=42]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1416,7 +1416,7 @@ tracks/0/keys = {
 "values": [ 5 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1428,7 +1428,7 @@ tracks/1/keys = {
 "values": [ 7 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1440,7 +1440,7 @@ tracks/2/keys = {
 "values": [ -7 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1452,7 +1452,7 @@ tracks/3/keys = {
 "values": [ -9 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1467,7 +1467,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=43]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1479,7 +1479,7 @@ tracks/0/keys = {
 "values": [ 7 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1491,7 +1491,7 @@ tracks/1/keys = {
 "values": [ 8 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1503,7 +1503,7 @@ tracks/2/keys = {
 "values": [ -8 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1515,7 +1515,7 @@ tracks/3/keys = {
 "values": [ -10 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1530,7 +1530,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=44]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1542,7 +1542,7 @@ tracks/0/keys = {
 "values": [ 9 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1554,7 +1554,7 @@ tracks/1/keys = {
 "values": [ 9 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1566,7 +1566,7 @@ tracks/2/keys = {
 "values": [ -9 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1578,7 +1578,7 @@ tracks/3/keys = {
 "values": [ -11 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1593,7 +1593,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=45]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1605,7 +1605,7 @@ tracks/0/keys = {
 "values": [ 11 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1617,7 +1617,7 @@ tracks/1/keys = {
 "values": [ 10 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1629,7 +1629,7 @@ tracks/2/keys = {
 "values": [ -10 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1641,7 +1641,7 @@ tracks/3/keys = {
 "values": [ -12 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1656,7 +1656,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=46]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1668,7 +1668,7 @@ tracks/0/keys = {
 "values": [ 13 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1680,7 +1680,7 @@ tracks/1/keys = {
 "values": [ 11 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1692,7 +1692,7 @@ tracks/2/keys = {
 "values": [ -11 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1704,7 +1704,7 @@ tracks/3/keys = {
 "values": [ -13 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1719,7 +1719,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=47]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1731,7 +1731,7 @@ tracks/0/keys = {
 "values": [ 15 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1743,7 +1743,7 @@ tracks/1/keys = {
 "values": [ 12 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1755,7 +1755,7 @@ tracks/2/keys = {
 "values": [ -12 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1767,7 +1767,7 @@ tracks/3/keys = {
 "values": [ -14 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1782,7 +1782,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=48]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1794,7 +1794,7 @@ tracks/0/keys = {
 "values": [ 17 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1806,7 +1806,7 @@ tracks/1/keys = {
 "values": [ 13 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1818,7 +1818,7 @@ tracks/2/keys = {
 "values": [ -13 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1830,7 +1830,7 @@ tracks/3/keys = {
 "values": [ -15 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1845,7 +1845,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=49]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1857,7 +1857,7 @@ tracks/0/keys = {
 "values": [ 19 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1869,7 +1869,7 @@ tracks/1/keys = {
 "values": [ 14 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1881,7 +1881,7 @@ tracks/2/keys = {
 "values": [ -14 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1893,7 +1893,7 @@ tracks/3/keys = {
 "values": [ -16 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1925,7 +1925,7 @@ extents = Vector2( 6.5, 5 )
 [sub_resource type="Animation" id=53]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -1937,7 +1937,7 @@ tracks/0/keys = {
 "values": [ 0 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -1949,7 +1949,7 @@ tracks/1/keys = {
 "values": [ 5 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -1961,7 +1961,7 @@ tracks/2/keys = {
 "values": [ -5 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1973,7 +1973,7 @@ tracks/3/keys = {
 "values": [ -7 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -1988,7 +1988,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=54]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2000,7 +2000,7 @@ tracks/0/keys = {
 "values": [ 2 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2012,7 +2012,7 @@ tracks/1/keys = {
 "values": [ 6 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2024,7 +2024,7 @@ tracks/2/keys = {
 "values": [ -6 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2036,7 +2036,7 @@ tracks/3/keys = {
 "values": [ -8 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2051,7 +2051,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=55]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2063,7 +2063,7 @@ tracks/0/keys = {
 "values": [ 20 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2075,7 +2075,7 @@ tracks/1/keys = {
 "values": [ 15 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2087,7 +2087,7 @@ tracks/2/keys = {
 "values": [ -15 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2099,7 +2099,7 @@ tracks/3/keys = {
 "values": [ -17 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2114,7 +2114,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=56]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2126,7 +2126,7 @@ tracks/0/keys = {
 "values": [ 22 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2138,7 +2138,7 @@ tracks/1/keys = {
 "values": [ 16 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2150,7 +2150,7 @@ tracks/2/keys = {
 "values": [ -16 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2162,7 +2162,7 @@ tracks/3/keys = {
 "values": [ -18 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2177,7 +2177,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=57]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2189,7 +2189,7 @@ tracks/0/keys = {
 "values": [ 4 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2201,7 +2201,7 @@ tracks/1/keys = {
 "values": [ 7 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2213,7 +2213,7 @@ tracks/2/keys = {
 "values": [ -7 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2225,7 +2225,7 @@ tracks/3/keys = {
 "values": [ -9 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2240,7 +2240,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=58]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2252,7 +2252,7 @@ tracks/0/keys = {
 "values": [ 6 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2264,7 +2264,7 @@ tracks/1/keys = {
 "values": [ 8 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2276,7 +2276,7 @@ tracks/2/keys = {
 "values": [ -8 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2288,7 +2288,7 @@ tracks/3/keys = {
 "values": [ -10 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2303,7 +2303,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=59]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2315,7 +2315,7 @@ tracks/0/keys = {
 "values": [ 8 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2327,7 +2327,7 @@ tracks/1/keys = {
 "values": [ 9 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2339,7 +2339,7 @@ tracks/2/keys = {
 "values": [ -9 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2351,7 +2351,7 @@ tracks/3/keys = {
 "values": [ -11 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2366,7 +2366,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=60]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2378,7 +2378,7 @@ tracks/0/keys = {
 "values": [ 10 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2390,7 +2390,7 @@ tracks/1/keys = {
 "values": [ 10 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2402,7 +2402,7 @@ tracks/2/keys = {
 "values": [ -10 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2414,7 +2414,7 @@ tracks/3/keys = {
 "values": [ -12 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2429,7 +2429,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=61]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2441,7 +2441,7 @@ tracks/0/keys = {
 "values": [ 12 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2453,7 +2453,7 @@ tracks/1/keys = {
 "values": [ 11 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2465,7 +2465,7 @@ tracks/2/keys = {
 "values": [ -11 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2477,7 +2477,7 @@ tracks/3/keys = {
 "values": [ -13 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2492,7 +2492,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=62]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2504,7 +2504,7 @@ tracks/0/keys = {
 "values": [ 14 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2516,7 +2516,7 @@ tracks/1/keys = {
 "values": [ 12 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2528,7 +2528,7 @@ tracks/2/keys = {
 "values": [ -12 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2540,7 +2540,7 @@ tracks/3/keys = {
 "values": [ -14 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2555,7 +2555,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=63]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2567,7 +2567,7 @@ tracks/0/keys = {
 "values": [ 16 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2579,7 +2579,7 @@ tracks/1/keys = {
 "values": [ 13 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2591,7 +2591,7 @@ tracks/2/keys = {
 "values": [ -13 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2603,7 +2603,7 @@ tracks/3/keys = {
 "values": [ -15 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2618,7 +2618,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=64]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2630,7 +2630,7 @@ tracks/0/keys = {
 "values": [ 18 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2642,7 +2642,7 @@ tracks/1/keys = {
 "values": [ 14 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2654,7 +2654,7 @@ tracks/2/keys = {
 "values": [ -14 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2666,7 +2666,7 @@ tracks/3/keys = {
 "values": [ -16 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2681,7 +2681,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=65]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2693,7 +2693,7 @@ tracks/0/keys = {
 "values": [ 1 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2705,7 +2705,7 @@ tracks/1/keys = {
 "values": [ 5 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2717,7 +2717,7 @@ tracks/2/keys = {
 "values": [ -5 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2729,7 +2729,7 @@ tracks/3/keys = {
 "values": [ -7 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2744,7 +2744,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=66]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2756,7 +2756,7 @@ tracks/0/keys = {
 "values": [ 3 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2768,7 +2768,7 @@ tracks/1/keys = {
 "values": [ 6 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2780,7 +2780,7 @@ tracks/2/keys = {
 "values": [ -6 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2792,7 +2792,7 @@ tracks/3/keys = {
 "values": [ -8 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2807,7 +2807,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=67]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2819,7 +2819,7 @@ tracks/0/keys = {
 "values": [ 21 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2831,7 +2831,7 @@ tracks/1/keys = {
 "values": [ 15 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2843,7 +2843,7 @@ tracks/2/keys = {
 "values": [ -15 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2855,7 +2855,7 @@ tracks/3/keys = {
 "values": [ -17 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2870,7 +2870,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=68]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2882,7 +2882,7 @@ tracks/0/keys = {
 "values": [ 23 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2894,7 +2894,7 @@ tracks/1/keys = {
 "values": [ 16 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2906,7 +2906,7 @@ tracks/2/keys = {
 "values": [ -16 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2918,7 +2918,7 @@ tracks/3/keys = {
 "values": [ -18 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2933,7 +2933,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=69]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -2945,7 +2945,7 @@ tracks/0/keys = {
 "values": [ 5 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -2957,7 +2957,7 @@ tracks/1/keys = {
 "values": [ 7 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -2969,7 +2969,7 @@ tracks/2/keys = {
 "values": [ -7 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -2981,7 +2981,7 @@ tracks/3/keys = {
 "values": [ -9 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -2996,7 +2996,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=70]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -3008,7 +3008,7 @@ tracks/0/keys = {
 "values": [ 7 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -3020,7 +3020,7 @@ tracks/1/keys = {
 "values": [ 8 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -3032,7 +3032,7 @@ tracks/2/keys = {
 "values": [ -8 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -3044,7 +3044,7 @@ tracks/3/keys = {
 "values": [ -10 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -3059,7 +3059,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=71]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -3071,7 +3071,7 @@ tracks/0/keys = {
 "values": [ 9 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -3083,7 +3083,7 @@ tracks/1/keys = {
 "values": [ 9 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -3095,7 +3095,7 @@ tracks/2/keys = {
 "values": [ -9 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -3107,7 +3107,7 @@ tracks/3/keys = {
 "values": [ -11 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -3122,7 +3122,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=72]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -3134,7 +3134,7 @@ tracks/0/keys = {
 "values": [ 11 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -3146,7 +3146,7 @@ tracks/1/keys = {
 "values": [ 10 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -3158,7 +3158,7 @@ tracks/2/keys = {
 "values": [ -10 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -3170,7 +3170,7 @@ tracks/3/keys = {
 "values": [ -12 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -3185,7 +3185,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=73]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -3197,7 +3197,7 @@ tracks/0/keys = {
 "values": [ 13 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -3209,7 +3209,7 @@ tracks/1/keys = {
 "values": [ 11 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -3221,7 +3221,7 @@ tracks/2/keys = {
 "values": [ -11 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -3233,7 +3233,7 @@ tracks/3/keys = {
 "values": [ -13 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -3248,7 +3248,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=74]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -3260,7 +3260,7 @@ tracks/0/keys = {
 "values": [ 15 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -3272,7 +3272,7 @@ tracks/1/keys = {
 "values": [ 12 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -3284,7 +3284,7 @@ tracks/2/keys = {
 "values": [ -12 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -3296,7 +3296,7 @@ tracks/3/keys = {
 "values": [ -14 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -3311,7 +3311,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=75]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -3323,7 +3323,7 @@ tracks/0/keys = {
 "values": [ 17 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -3335,7 +3335,7 @@ tracks/1/keys = {
 "values": [ 13 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -3347,7 +3347,7 @@ tracks/2/keys = {
 "values": [ -13 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -3359,7 +3359,7 @@ tracks/3/keys = {
 "values": [ -15 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -3374,7 +3374,7 @@ tracks/4/keys = {
 [sub_resource type="Animation" id=76]
 length = 0.25
 tracks/0/type = "value"
-tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
+tracks/0/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -3386,7 +3386,7 @@ tracks/0/keys = {
 "values": [ 19 ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
+tracks/1/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:shape:extents:y")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -3398,7 +3398,7 @@ tracks/1/keys = {
 "values": [ 14 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
+tracks/2/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/CollisionShape2D:position:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -3410,7 +3410,7 @@ tracks/2/keys = {
 "values": [ -14 ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
+tracks/3/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:position:y")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -3422,7 +3422,7 @@ tracks/3/keys = {
 "values": [ -16 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6066/@@5905/@@5906/@@5907/@@5908/@@5909/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
+tracks/4/path = NodePath("/root/EditorNode/@@580/@@581/@@589/@@591/@@595/@@599/@@600/@@601/@@617/@@618/@@627/@@628/@@6060/@@5899/@@5900/@@5901/@@5902/@@5903/1-1 Underground Escape/Enimies/Long Neck2/Absorbtion Area/Absorb Box:shape:extents:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
