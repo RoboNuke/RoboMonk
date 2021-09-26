@@ -63,3 +63,21 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="Timers" type="Node2D" parent="."]
+
+[node name="Coyote Timer" type="Timer" parent="Timers"]
+wait_time = 0.1
+one_shot = true
+
+[node name="Jump Buffer" type="Timer" parent="Timers"]
+wait_time = 0.1
+one_shot = true
+
+[node name="Maximum Absorb" type="Timer" parent="Timers"]
+wait_time = 3.0
+one_shot = true
+
+[node name="Dash Timer" type="Timer" parent="Timers"]
+wait_time = 0.2
+one_shot = true

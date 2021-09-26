@@ -14,7 +14,4 @@ func _check_rays(rays):
 	
 func _process(_delta):
 	parent.on_wall_side = int(_check_rays(right_rays.get_children())) - int(_check_rays(left_rays.get_children()))
-	if parent.on_wall_side == parent.DIRS.LEFT:
-		print("Wall on left!")
-	if parent.on_wall_side == parent.DIRS.RIGHT:
-		print("Wall on right!")
+

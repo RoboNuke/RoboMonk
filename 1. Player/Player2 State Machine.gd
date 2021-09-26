@@ -22,8 +22,8 @@ func _input(event):
 		if event.is_action_pressed("ui_up"):
 			if parent.can_jump():
 				parent.jump()
-			#else:
-			#	parent.jump_buffer.start()
+			else:
+				parent.tried_to_jump()
 
 func _update_move_direction():
 	parent.move_direction = (-int(Input.is_action_pressed("ui_left")) + 

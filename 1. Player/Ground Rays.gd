@@ -9,7 +9,6 @@ func is_grounded():
 		ray.force_raycast_update()
 		if ray.is_colliding():
 			parent.grounded = true
-			print("Grounded")
 			return true
 	parent.grounded = false
 	return false

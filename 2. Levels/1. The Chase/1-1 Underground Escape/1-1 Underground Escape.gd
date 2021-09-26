@@ -22,7 +22,7 @@ func _ready():
 	
 func dialog_complete():
 	Globals.unpause_game()
-	#player.set_fall_dist(fall_dist) ###################################FIX LATER
+	player.set_fall_dist(fall_dist) 
 	player.visible = true
 	rumble()
 	Globals.stop_bg_music()

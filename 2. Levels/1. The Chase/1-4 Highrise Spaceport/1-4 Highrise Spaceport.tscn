@@ -330,12 +330,6 @@ position = Vector2( 3824, -176 )
 
 [node name="Key Points" type="Node2D" parent="."]
 
-[node name="Position2D" type="Position2D" parent="Key Points"]
-position = Vector2( 672, 0 )
-
-[node name="Position2D2" type="Position2D" parent="Key Points"]
-position = Vector2( 912, -160 )
-
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 64, 240 )
 
