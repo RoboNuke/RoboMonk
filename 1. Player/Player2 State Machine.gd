@@ -24,6 +24,9 @@ func _input(event):
 				parent.jump()
 			else:
 				parent.tried_to_jump()
+	if [states.jumping].has(state):
+		if event.is_action_released("ui_up"): 
+			parent.release_jump()
 
 func _update_move_direction():
 	parent.move_direction = (-int(Input.is_action_pressed("ui_left")) + 
@@ -33,13 +36,36 @@ func _update_move_direction():
 func _get_transition(_delta):
 	match state:
 		states.idling:
-			pass
+			if !parent.grounded:
+				if parent.velocity.y < 0:
+					return states.jumping
+				elif parent.velocity.y > 0:
+					return states.falling
+			elif abs(parent.velocity.x) > 1:
+				return states.running
 		states.running:
-			pass
+			if !parent.grounded:
+				if parent.velocity.y < 0:
+					return states.jumping
+				elif parent.velocity.y > 0:
+					return states.falling
+			elif abs(parent.velocity.x) < 1:
+				return states.idling
 		states.jumping:
-			pass
+			if parent.grounded:
+				if abs(parent.velocity.x) > idling_cutoff:
+					return states.running
+				else:
+					return states.idling
+			else:
+				if parent.velocity.y > 0:
+					return states.falling
 		states.falling:
-			pass
+			if parent.grounded:
+				if abs(parent.velocity.x) > idling_cutoff:
+					return states.running
+				else:
+					return states.idling
 		states.absorbing:
 			pass
 		states.dashing:
@@ -49,22 +75,7 @@ func _get_transition(_delta):
 
 
 func _enter_state(new_state, _old_state):
-		#print("reduce mod")
-	match new_state:
-		states.running:
-			print("running")
-		states.idling:
-			print("idling")
-		states.falling:
-			print("falling")
-		states.jumping:
-			print("jumping")
-		states.dashing:
-			print("dashing")
-		states.absorbing:
-			print("absorbing")
-		states.wall_sliding:
-			print("wall sliding")
+	parent.label.text = states.keys()[new_state]
 			
 
 func _exit_state(_old_state, _new_state):
