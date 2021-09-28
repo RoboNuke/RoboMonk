@@ -10,6 +10,7 @@ onready var label = find_node("Label")
 
 # constants
 var FLOOR_NORMAL = Vector2.UP
+var IDLE_CUTOFF = 1.5
 enum DIRS {LEFT=-1, NONE=0, RIGHT=1}
 var max_fall_dist = 1000
 
@@ -36,19 +37,24 @@ var min_jump_velocity
 var max_jump_height = 3.5 * Globals.TILE_WIDTH
 var min_jump_height = 0.8 * Globals.TILE_WIDTH
 var jump_duration = .3
-
+var wall_slide_gravity
+var wall_jump_velocity
+export var wall_slide_gravity_modifier = 10.0
 
 func _ready():
 	gravity = 2 * max_jump_height / pow(jump_duration, 2)
 	max_jump_velocity = -sqrt(2 * gravity * max_jump_height)
 	min_jump_velocity = -sqrt(2 * gravity * min_jump_height)
-	#WALL_JUMP_FORCE = Vector2(.5,.95) * max_jump_velocity
+	wall_slide_gravity = gravity / wall_slide_gravity_modifier
+	wall_jump_velocity = Vector2(.5,.95) * max_jump_velocity
+	print("Wall Jump Velocity: ", wall_jump_velocity)
 
 func apply_gravity(delta):
-	if coyote_timer.is_stopped():
+	if is_on_wall() and is_falling():
+		velocity.y += wall_slide_gravity * delta
+	elif coyote_timer.is_stopped():
 		velocity.y += gravity * delta
-		if jumping and velocity.y > 0:
-			print("Jump to false")
+		if jumping and is_falling():
 			jumping = false
 	
 func apply_movement():
@@ -72,6 +78,7 @@ func apply_movement():
 		jump_buffer_timer.stop()
 		jump()
 	
+
 func set_fall_dist(fall_dist):
 	max_fall_dist = fall_dist
 	
@@ -86,6 +93,11 @@ func tried_to_jump():
 func release_jump():
 	if velocity.y < min_jump_velocity:
 		velocity.y = min_jump_velocity
+
+func wall_jump():
+	jumping = true
+	velocity = wall_jump_velocity
+	velocity.x *= on_wall_side
 
 func jump():
 	coyote_timer.stop()
@@ -110,3 +122,19 @@ func _get_h_weight():
 			return 0.0
 		else:
 			return 0.1
+
+# interface
+func is_grounded():
+	return grounded
+	
+func is_falling():
+	return velocity.y > 0
+	
+func is_jumping():
+	return jumping
+	
+func is_running():
+	return abs(velocity.x) > IDLE_CUTOFF
+
+func is_on_wall():
+	return on_wall_side != 0

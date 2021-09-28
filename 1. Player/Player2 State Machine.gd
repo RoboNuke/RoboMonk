@@ -16,7 +16,7 @@ func _state_logic(delta):
 	parent.apply_x_velocity()
 	parent.apply_gravity(delta)
 	parent.apply_movement()
-	
+
 func _input(event):
 	if [states.idling, states.running].has(state):
 		if event.is_action_pressed("ui_up"):
@@ -27,51 +27,72 @@ func _input(event):
 	if [states.jumping].has(state):
 		if event.is_action_released("ui_up"): 
 			parent.release_jump()
+	if [states.wall_sliding].has(state):
+		if event.is_action_pressed("ui_up"):
+			parent.wall_jump()
+
 
 func _update_move_direction():
 	parent.move_direction = (-int(Input.is_action_pressed("ui_left")) + 
-								int(Input.is_action_pressed("ui_right")))
+							  int(Input.is_action_pressed("ui_right")))
 
-		
 func _get_transition(_delta):
 	match state:
 		states.idling:
-			if !parent.grounded:
-				if parent.velocity.y < 0:
+			if !parent.is_grounded():
+				if parent.is_jumping():
 					return states.jumping
-				elif parent.velocity.y > 0:
+				elif parent.is_falling():
 					return states.falling
-			elif abs(parent.velocity.x) > 1:
+				elif parent.is_on_wall():
+					return states.wall_sliding
+			elif parent.is_running():
 				return states.running
 		states.running:
-			if !parent.grounded:
-				if parent.velocity.y < 0:
+			if parent.is_on_wall():
+				return states.wall_sliding
+			if !parent.is_grounded():
+				if parent.is_jumping():
 					return states.jumping
-				elif parent.velocity.y > 0:
+				elif parent.is_falling():
 					return states.falling
-			elif abs(parent.velocity.x) < 1:
+				elif parent.is_on_wall():
+					return states.wall_sliding
+			elif !parent.is_running():
 				return states.idling
 		states.jumping:
-			if parent.grounded:
-				if abs(parent.velocity.x) > idling_cutoff:
+			if parent.is_grounded():
+				if parent.is_running():
 					return states.running
 				else:
 					return states.idling
-			else:
-				if parent.velocity.y > 0:
+			elif parent.is_falling():
 					return states.falling
+			elif parent.is_on_wall():
+				return states.wall_sliding
 		states.falling:
-			if parent.grounded:
-				if abs(parent.velocity.x) > idling_cutoff:
+			if parent.is_grounded():
+				if parent.is_running():
 					return states.running
 				else:
 					return states.idling
+			if parent.is_on_wall():
+				return states.wall_sliding
 		states.absorbing:
 			pass
 		states.dashing:
 			pass
 		states.wall_sliding:
-			pass	
+			if parent.is_grounded():
+				if parent.is_running():
+					return states.running
+				else:
+					return states.idling
+			if !parent.is_on_wall():
+				if parent.is_falling():
+					return states.falling
+				elif parent.is_jumping():
+					return states.jumping
 
 
 func _enter_state(new_state, _old_state):
