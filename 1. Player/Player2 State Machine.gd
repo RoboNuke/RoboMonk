@@ -97,6 +97,7 @@ func _get_transition(_delta):
 
 func _enter_state(new_state, _old_state):
 	parent.label.text = states.keys()[new_state]
+	print(states.keys()[new_state])
 			
 
 func _exit_state(_old_state, _new_state):

@@ -8,10 +8,14 @@ func _check_rays(rays):
 	for ray in rays:
 		ray.force_raycast_update()
 		if ray.is_colliding():
-			return true
-	return false
+			#print(ray.get_collider().get_parent().get_velocity())
+			return [true, ray.get_collider().get_parent().get_velocity()]
+			
+	return [false, Vector2.ZERO]
 	
 	
 func _process(_delta):
-	parent.on_wall_side = int(_check_rays(right_rays.get_children())) - int(_check_rays(left_rays.get_children()))
-
+	var left_collider = _check_rays(left_rays.get_children())
+	var right_collider = _check_rays(right_rays.get_children())
+	parent.on_wall_side = int(right_collider[0]) - int(left_collider[0])
+	parent.velocity += left_collider[1] + right_collider[1]

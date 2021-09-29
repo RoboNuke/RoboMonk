@@ -1,12 +1,15 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://1. Player/Ground Rays.gd" type="Script" id=1]
 [ext_resource path="res://1. Player/Player2.gd" type="Script" id=2]
 [ext_resource path="res://1. Player/Wall Rays.gd" type="Script" id=3]
 [ext_resource path="res://1. Player/Player2 State Machine.gd" type="Script" id=4]
 [ext_resource path="res://5. User Interfaces/PixelMechaBold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://3.World/Electric_Door_64x16.png" type="Texture" id=6]
+[ext_resource path="res://1. Player/Player_Sprite.gd" type="Script" id=7]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=5]
+custom_solver_bias = 0.08
 extents = Vector2( 8, 16 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -14,10 +17,14 @@ outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 5 )
 
+[sub_resource type="CircleShape2D" id=4]
+radius = 8.0
+
 [node name="Player2" type="KinematicBody2D"]
 position = Vector2( 0, -16 )
 collision_mask = 30
 script = ExtResource( 2 )
+wall_slide_gravity_modifier = 25.0
 
 [node name="State Machine" type="Node2D" parent="."]
 script = ExtResource( 4 )
@@ -30,24 +37,24 @@ script = ExtResource( 3 )
 [node name="RayCast2D4" type="RayCast2D" parent="Wall Rays/Right Rays"]
 position = Vector2( 8, 14 )
 cast_to = Vector2( 4, 0 )
-collision_mask = 2
+collision_mask = 32
 
 [node name="RayCast2D5" type="RayCast2D" parent="Wall Rays/Right Rays"]
 position = Vector2( 8, -14 )
 cast_to = Vector2( 4, 0 )
-collision_mask = 2
+collision_mask = 32
 
 [node name="Left Rays" type="Node2D" parent="Wall Rays"]
 
 [node name="RayCast2D4" type="RayCast2D" parent="Wall Rays/Left Rays"]
-position = Vector2( -8, 14 )
+position = Vector2( -6, 14 )
 cast_to = Vector2( -4, 0 )
-collision_mask = 2
+collision_mask = 32
 
 [node name="RayCast2D5" type="RayCast2D" parent="Wall Rays/Left Rays"]
-position = Vector2( -8, -14 )
+position = Vector2( -6, -14 )
 cast_to = Vector2( -4, 0 )
-collision_mask = 2
+collision_mask = 32
 
 [node name="Ground Rays" type="Node2D" parent="."]
 script = ExtResource( 1 )
@@ -68,7 +75,7 @@ cast_to = Vector2( 0, 2 )
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 5 )
 
 [node name="Timers" type="Node2D" parent="."]
 
@@ -102,3 +109,21 @@ uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 6 )
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -8 )
+shape = SubResource( 4 )
+disabled = true
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+shape = SubResource( 4 )
+disabled = true
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 8 )
+shape = SubResource( 4 )
+disabled = true

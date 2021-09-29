@@ -46,23 +46,25 @@ func _ready():
 	max_jump_velocity = -sqrt(2 * gravity * max_jump_height)
 	min_jump_velocity = -sqrt(2 * gravity * min_jump_height)
 	wall_slide_gravity = gravity / wall_slide_gravity_modifier
-	wall_jump_velocity = Vector2(.5,.95) * max_jump_velocity
+	wall_jump_velocity = Vector2(0.5,.95) * max_jump_velocity
 	print("Wall Jump Velocity: ", wall_jump_velocity)
 
 func apply_gravity(delta):
 	if is_on_wall() and is_falling():
 		velocity.y += wall_slide_gravity * delta
+		#velocity.x = 25 
 	elif coyote_timer.is_stopped():
 		velocity.y += gravity * delta
 		if jumping and is_falling():
 			jumping = false
-	
+
 func apply_movement():
 	
 	var was_on_floor = ground_rays.is_grounded()
 	
 	var snap: Vector2 = Vector2(0,5) if !jumping and !dashing and was_on_floor else Vector2.ZERO
-	velocity = move_and_slide_with_snap(velocity, snap, FLOOR_NORMAL, false, 4, deg2rad(60))
+	
+	velocity = move_and_slide_with_snap(velocity, snap, FLOOR_NORMAL, false, 4, deg2rad(60), false)
 	
 	# See if he has fallen below max_fall_dist
 	check_has_fallen()
@@ -134,7 +136,7 @@ func is_jumping():
 	return jumping
 	
 func is_running():
-	return abs(velocity.x) > IDLE_CUTOFF
+	return abs(velocity.x) > IDLE_CUTOFF and move_direction != 0
 
 func is_on_wall():
-	return on_wall_side != 0
+	return on_wall_side != 0 and !grounded
