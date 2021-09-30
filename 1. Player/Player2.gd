@@ -29,7 +29,6 @@ var velocity = Vector2.ZERO
 var move_direction = DIRS.NONE
 var MOVE_SPEED = 9 * Globals.TILE_WIDTH
 
-
 # Jump Parameters
 var gravity = 100
 var max_jump_velocity
@@ -41,6 +40,10 @@ var wall_slide_gravity
 var wall_jump_velocity
 export var wall_slide_gravity_modifier = 10.0
 
+# dash vars
+var absorbed_momentum = 0
+var has_dashed = false
+
 func _ready():
 	gravity = 2 * max_jump_height / pow(jump_duration, 2)
 	max_jump_velocity = -sqrt(2 * gravity * max_jump_height)
@@ -50,9 +53,10 @@ func _ready():
 	print("Wall Jump Velocity: ", wall_jump_velocity)
 
 func apply_gravity(delta):
+	if dashing or absorbing:
+		return 
 	if is_on_wall() and is_falling():
 		velocity.y += wall_slide_gravity * delta
-		#velocity.x = 25 
 	elif coyote_timer.is_stopped():
 		velocity.y += gravity * delta
 		if jumping and is_falling():
@@ -74,6 +78,9 @@ func apply_movement():
 	if not grounded and was_on_floor and not jumping:# and not dashing:
 		coyote_timer.start()
 		velocity.y = 0
+	
+	if has_dashed and grounded:
+		reset_dash()
 	
 	# checks if the jump_buffer window was pressed and jumps if met
 	if grounded and !jump_buffer_timer.is_stopped() and velocity.y == 0:
@@ -112,7 +119,8 @@ func can_jump():
 	return ground_rays.is_grounded() or !coyote_timer.is_stopped()
 
 func apply_x_velocity():
-	velocity.x = lerp(velocity.x, move_direction * MOVE_SPEED, _get_h_weight())
+	if !absorbing and !dashing:
+		velocity.x = lerp(velocity.x, move_direction * MOVE_SPEED, _get_h_weight())
 
 func _get_h_weight():
 	if grounded: # or not coyote_timer.is_stopped():
@@ -125,6 +133,40 @@ func _get_h_weight():
 		else:
 			return 0.1
 
+func start_absorbing():
+	absorb_timer.start()
+	velocity = Vector2(0,0)
+	absorbing = true
+	absorbed_momentum = 0
+
+func _absorb(collided_object):
+	absorbed_momentum += collided_object.get_momentum()
+	collided_object.absorbed()    
+
+func _on_Maximum_Absorb_timeout():
+	dash()
+	
+func dash():
+	var dash_direction = Vector2.ZERO
+	absorbing = false
+	dashing = true
+	absorb_timer.stop()
+	dash_timer.start()
+	dash_direction.x = (-int(Input.is_action_pressed("ui_left")) + int(Input.is_action_pressed("ui_right")))
+	dash_direction.y = (-int(Input.is_action_pressed("ui_up")) + int(Input.is_action_pressed("ui_down")))
+	
+	velocity = dash_direction.normalized() * absorbed_momentum
+	
+func end_dash():
+	has_dashed = true
+	dashing = false
+
+func reset_dash():
+	has_dashed = false
+	
+func _on_Dash_Timer_timeout():
+	end_dash()
+	
 # interface
 func is_grounded():
 	return grounded
@@ -140,3 +182,25 @@ func is_running():
 
 func is_on_wall():
 	return on_wall_side != 0 and !grounded
+	
+func is_absorbing():
+	return absorbing
+	
+func is_dashing():
+	return dashing
+	
+func can_absorb():
+	return !has_dashed
+
+
+func hit(hitter):
+	if absorbing and "Absorbable" in hitter.get_groups():
+		_absorb(hitter)
+	elif "Deadly Floor" in hitter.get_groups():
+		print("Hit deadly floor")
+		emit_signal("player_killed")
+	elif "Wall" in hitter.get_groups():
+		return
+	else:
+		emit_signal("player_killed")
+

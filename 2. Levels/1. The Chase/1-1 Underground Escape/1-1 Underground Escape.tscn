@@ -3856,13 +3856,12 @@ z_index = 100
 stream = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 10 )]
-position = Vector2( 64, 203.5 )
+position = Vector2( 112, 196 )
 
 [connection signal="body_entered" from="Map/Win Area" to="." method="_on_Win_Area_body_entered"]
 [connection signal="visibility_changed" from="Camera2D" to="Camera2D" method="_on_Camera2D_visibility_changed"]
 [connection signal="timeout" from="Rumble Timer" to="." method="_on_Rumble_Timer_timeout"]
 [connection signal="dialog_complete" from="Dialog Player" to="." method="_on_Dialog_Player_dialog_complete"]
-[connection signal="player_killed" from="Player" to="." method="_on_Player_player_killed"]
 
 [editable path="Map/Moving Platform"]
 [editable path="Map/Moving Platform2"]

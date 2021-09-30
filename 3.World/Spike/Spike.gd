@@ -30,7 +30,19 @@ func absorbed():
 func _on_Boulder_body_entered(body):
 	if "Player" in body.get_groups():
 		body.hit(self)
-		#print("Hit PLayer")
+		print("Hit PLayer")
+	elif "Hittable" in body.get_groups():
+		body.hit(self)
+	elif "Wall" in body.get_groups():
+		pass
+		#print("Hit Wall")
+	self.queue_free()
+
+
+func _on_Spike_body_entered(body):
+	if "Player" in body.get_groups():
+		body.hit(self)
+		print("Hit PLayer")
 	elif "Hittable" in body.get_groups():
 		body.hit(self)
 	elif "Wall" in body.get_groups():

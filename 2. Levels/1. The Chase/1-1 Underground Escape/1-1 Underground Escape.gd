@@ -27,7 +27,7 @@ func dialog_complete():
 	rumble()
 	Globals.stop_bg_music()
 	bg_music_player.volume_db = Globals.music_volume
-	bg_music_player.play()
+	#bg_music_player.play()
 
 func rumble():
 	camera.add_trauma(4)

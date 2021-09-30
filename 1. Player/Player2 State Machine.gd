@@ -30,74 +30,58 @@ func _input(event):
 	if [states.wall_sliding].has(state):
 		if event.is_action_pressed("ui_up"):
 			parent.wall_jump()
+	if not [states.absorbing, states.dashing].has(state):
+		if event.is_action_pressed("action") and parent.can_absorb():
+			parent.start_absorbing()    
+	if [states.absorbing].has(state):
+		if event.is_action_released("action") or !parent.is_absorbing():
+			parent.dash()
 
 
 func _update_move_direction():
 	parent.move_direction = (-int(Input.is_action_pressed("ui_left")) + 
 							  int(Input.is_action_pressed("ui_right")))
 
+func standard_transition():
+	if parent.is_absorbing():
+		return states.absorbing
+	if parent.is_grounded():
+		if parent.is_running():
+			return states.running
+		else:
+			return states.idling
+	if !parent.is_on_wall():
+		if parent.is_falling():
+			return states.falling
+		elif parent.is_jumping():
+			return states.jumping
+	else:
+		return states.wall_sliding
+
 func _get_transition(_delta):
+	var out
 	match state:
 		states.idling:
-			if !parent.is_grounded():
-				if parent.is_jumping():
-					return states.jumping
-				elif parent.is_falling():
-					return states.falling
-				elif parent.is_on_wall():
-					return states.wall_sliding
-			elif parent.is_running():
-				return states.running
+			return standard_transition()
 		states.running:
-			if parent.is_on_wall():
-				return states.wall_sliding
-			if !parent.is_grounded():
-				if parent.is_jumping():
-					return states.jumping
-				elif parent.is_falling():
-					return states.falling
-				elif parent.is_on_wall():
-					return states.wall_sliding
-			elif !parent.is_running():
-				return states.idling
+			return standard_transition()
 		states.jumping:
-			if parent.is_grounded():
-				if parent.is_running():
-					return states.running
-				else:
-					return states.idling
-			elif parent.is_falling():
-					return states.falling
-			elif parent.is_on_wall():
-				return states.wall_sliding
+			return standard_transition()
 		states.falling:
-			if parent.is_grounded():
-				if parent.is_running():
-					return states.running
-				else:
-					return states.idling
-			if parent.is_on_wall():
-				return states.wall_sliding
+			return standard_transition()
 		states.absorbing:
-			pass
+			if parent.is_dashing():
+				return states.dashing
 		states.dashing:
-			pass
+			if !parent.is_dashing():
+				return standard_transition()
 		states.wall_sliding:
-			if parent.is_grounded():
-				if parent.is_running():
-					return states.running
-				else:
-					return states.idling
-			if !parent.is_on_wall():
-				if parent.is_falling():
-					return states.falling
-				elif parent.is_jumping():
-					return states.jumping
+			return standard_transition()
 
 
 func _enter_state(new_state, _old_state):
 	parent.label.text = states.keys()[new_state]
-	print(states.keys()[new_state])
+	#print(states.keys()[new_state])
 			
 
 func _exit_state(_old_state, _new_state):
