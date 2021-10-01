@@ -26,6 +26,15 @@ var bg_musics
 var fx_volume = -16
 var music_volume = -16
 
+
+#useful enums
+enum DIRS {LEFT=-1, NONE=0, RIGHT=1}
+
+# global constants
+var FLOOR_NORMAL = Vector2.UP
+var IDLE_CUTOFF = 1.5
+
+
 func add_ui_music(a,b,c):
 	bg_musics = [a,b,c]
 	

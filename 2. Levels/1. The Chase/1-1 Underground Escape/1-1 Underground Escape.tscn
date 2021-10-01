@@ -3856,7 +3856,7 @@ z_index = 100
 stream = ExtResource( 1 )
 
 [node name="Player" parent="." instance=ExtResource( 10 )]
-position = Vector2( 112, 196 )
+position = Vector2( 32, 207 )
 
 [connection signal="body_entered" from="Map/Win Area" to="." method="_on_Win_Area_body_entered"]
 [connection signal="visibility_changed" from="Camera2D" to="Camera2D" method="_on_Camera2D_visibility_changed"]
