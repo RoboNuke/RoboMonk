@@ -30,11 +30,17 @@ func _get_transition(_delta):
 func _enter_state(new_state, _old_state):
 	match new_state:
 		states.search:
-			parent.animation_player.play("Search")
+			parent.head_player.play("Search")
+			parent.body_player.play("Idle")
 			print("Walker2::Searching")
 		states.chase:
+			parent.body_player.play("Walk")
+			parent.head_player.play("Idle")
 			print("Walker2::Chasing")
 		states.attack:
+			parent.body_player.play("Idle")
+			parent.head_player.play("Idle")
+			
 			print("Walker2::Attacking")
 
 func _exit_state(old_state, _new_state):

@@ -3,7 +3,8 @@ extends KinematicBody2D
 onready var fov = find_node("FieldOfView")
 onready var rof_timer = find_node("Rate Of Fire")
 onready var weapon = find_node("Shoulder")
-onready var animation_player = find_node("AnimationPlayer")
+onready var body_player = find_node("Body Animation Player")
+onready var head_player = find_node("Head Animation Player")
 
 # game variables
 var player = null
