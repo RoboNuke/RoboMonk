@@ -176,9 +176,7 @@ anims/Idle = SubResource( 4 )
 anims/Walk = SubResource( 3 )
 
 [node name="Shoulder" type="Position2D" parent="."]
-visible = false
-position = Vector2( 0, -20 )
-rotation = 0.191986
+position = Vector2( 0, -13.3333 )
 script = ExtResource( 6 )
 bullet = ExtResource( 8 )
 bullet_texture = ExtResource( 7 )
@@ -192,6 +190,8 @@ collision_mask = 3
 position = Vector2( 10, 0 )
 
 [node name="Rate Of Fire" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( 0, 2 )
