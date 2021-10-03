@@ -11,7 +11,7 @@ var player = null
 var CLOSEST_DISTANCE = 2
 var SNAP = Vector2(0, 5)
 var velocity = Vector2.ZERO
-var speed = 100
+var speed = 5#100
 
 # state variables
 var in_warn_area = false
@@ -30,9 +30,11 @@ func update_move_direction():
 		move_direction = Globals.DIRS.NONE
 
 func search():
-	print("I'm Searching")
+	pass
+	#print("I'm Searching")
 	
 func chase():
+	weapon.look_at(player.position)
 	if abs(global_position.x - player.position.x) > CLOSEST_DISTANCE:
 		velocity = move_direction * speed * Vector2.RIGHT
 	else:

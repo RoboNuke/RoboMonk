@@ -51,7 +51,7 @@ tracks/1/path = NodePath("Node2D/Head Sprite:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/keys = {
 "times": PoolRealArray( 0, 0.33, 0.66, 1, 1.32, 1.65, 2, 2.33, 2.66, 3, 3.33, 3.66, 3.99 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
