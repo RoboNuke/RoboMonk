@@ -11,7 +11,7 @@ var player = null
 var CLOSEST_DISTANCE = 2
 var SNAP = Vector2(0, 5)
 var velocity = Vector2.ZERO
-var speed = 5#100
+var speed = 100
 
 # state variables
 var in_warn_area = false

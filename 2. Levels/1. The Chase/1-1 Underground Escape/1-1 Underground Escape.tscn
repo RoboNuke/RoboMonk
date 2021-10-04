@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=2]
+[gd_scene load_steps=101 format=2]
 
 [ext_resource path="res://2. Levels/1. The Chase/1-1 Underground Escape/Sound Effects/Ludum Dare 30 - Track 6.wav" type="AudioStream" id=1]
 [ext_resource path="res://2. Levels/1. The Chase/1-1 Underground Escape/Backgrounds/bg2.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://4.Enemies/crawlerv2/Crawler.tscn" type="PackedScene" id=15]
 [ext_resource path="res://3.World/Dialog/Dialog Player.tscn" type="PackedScene" id=16]
 [ext_resource path="res://3.World/Boulder Spawn/Boulder Spawn.tscn" type="PackedScene" id=17]
+[ext_resource path="res://4.Enemies/Long Neck2/Long Neck.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -3600,6 +3601,7 @@ position = Vector2( 3744, -128 )
 shape = SubResource( 9 )
 
 [node name="Enimies" type="Node2D" parent="."]
+z_index = 1
 
 [node name="Crawler" parent="Enimies" instance=ExtResource( 6 )]
 position = Vector2( 705, 239 )
@@ -3743,6 +3745,9 @@ shape = SubResource( 78 )
 
 [node name="Crawler4" parent="Enimies" instance=ExtResource( 15 )]
 position = Vector2( 449.955, 207 )
+
+[node name="Long Neck3" parent="Enimies" instance=ExtResource( 18 )]
+position = Vector2( 1015.5, 207.849 )
 
 [node name="Boulder Spawn" parent="." instance=ExtResource( 17 )]
 position = Vector2( 1992, -80 )

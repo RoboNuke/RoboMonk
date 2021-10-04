@@ -17,6 +17,8 @@ func _state_logic(_delta):
 			parent.chase()
 	
 func _std_transition():
+	if parent.player:
+		return states.chase
 	if parent.can_attack():
 		return states.attack
 	if parent.can_chase():
@@ -36,6 +38,7 @@ func _enter_state(new_state, _old_state):
 		states.chase:
 			parent.body_player.play("Walk")
 			parent.head_player.play("Idle")
+			
 			print("Walker2::Chasing")
 		states.attack:
 			parent.body_player.play("Idle")
@@ -45,3 +48,4 @@ func _enter_state(new_state, _old_state):
 
 func _exit_state(old_state, _new_state):
 	pass
+		
